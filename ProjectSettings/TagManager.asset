@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemies
+  - Hazards
+  - Projectiles
+  - Interactables
+  - Background
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2694822619
+    locked: 0
+  - name: Platforms
+    uniqueID: 131420227
+    locked: 0
+  - name: Interactables
+    uniqueID: 4218747565
+    locked: 0
+  - name: UI
+    uniqueID: 4116249899
+    locked: 0
+  - name: Enemies
+    uniqueID: 3446275881
+    locked: 0
+  - name: Player
+    uniqueID: 1468452803
+    locked: 0
+  - name: Projectiles
+    uniqueID: 79733393
     locked: 0
