@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,1414 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d903fe0c0908a84da76c06324596135
+      internalID: 450424774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 672
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32a888842146d241bb02ad177bf85e4
+      internalID: -1834097320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_2
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 672
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56cbfef81b81734a9f8bd0958682aec
+      internalID: 1793722659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 672
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dcf979c2c335546b6d999a05dacc48
+      internalID: 368899917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 672
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5ec4b1d60fd7b4fb48a95c83fbe408
+      internalID: -1963961317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_5
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 672
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eb36c6fbfec0a49bed73ef2833aff4
+      internalID: 2083098676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_6
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 672
+        width: 100
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2750a8e9c7793de4eb15b9ae2e3d4c08
+      internalID: -839919518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 602
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e617cb9f97ed842952e9eb27705650
+      internalID: 921530546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 602
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de1bb528b7e59b4e8d4482d1d166bc8
+      internalID: 2041719327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_9
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 584
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539d71211097e7745bdca2ccbc4e3b00
+      internalID: -962437558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_10
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 584
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce6a7f34b7200f44b6a9f73236c9607
+      internalID: 1200681533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 604
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07b6922137a0234b9ce4e02320d0cff
+      internalID: 1881995747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_12
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 576
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6267ccc88811cf4c9ad4bae8ac758a5
+      internalID: 239550926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_13
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 576
+        width: 36
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db792b95cbbac214cb9e326df0a6211c
+      internalID: 1783075126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_14
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 548
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a63f49762fc8c4a86bcba216198cec
+      internalID: -1069696859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 486
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e20d920f882914cb6c5dd112c9a08e
+      internalID: -908228501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 486
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b923ea8792fa994e9a1a3f38375846b
+      internalID: 725379708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_17
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 480
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb2d317e2ec120419d847493fac5793
+      internalID: 709279457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ede2147d14be624eadd575077e4d9f0
+      internalID: 1472683012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_19
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 413
+        width: 82
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c78bb7ddb784346ac4a3eaab313bff
+      internalID: 2106011708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_20
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 384
+        width: 130
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d20dbeba4f2e149bd34710270817e7
+      internalID: 1689175291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_21
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 397
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fdfe8566924824e822000232111c23
+      internalID: 2068549479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 394
+        width: 96
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768add6baf72abb47b47e7bad25b2704
+      internalID: -307677153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_23
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 344
+        width: 82
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e626bb2aca6ad0f458e7f0505ea8610b
+      internalID: -2110755986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0c5b3aa2c1faf4abd020eeb868a22a
+      internalID: 1062787215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_25
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 264
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac8a4a46b3b2e042ad9c8018b77ec8d
+      internalID: 329867550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_26
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 265
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc6d67c4cf83d342bdc4974e1f77207
+      internalID: -1166759457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_27
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdea620cd01f9940ae85ebfffd7c61a
+      internalID: 1633005307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_28
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 240
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0367341f7e06974db9fbebb7089fb57
+      internalID: -801929682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 144
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a37ef11a70e824c997805d63534cba
+      internalID: 1643795743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_30
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 39
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3586edb733b6e484fa410f6623826f21
+      internalID: 2042473709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_31
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 96
+        width: 98
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec315854c592704c8ecde948c575fa6
+      internalID: 2123186153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 160
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a50adc20fdd41241abb31da705bb5a5
+      internalID: 841599367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_33
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 103
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11eae8d59e47d394386e15e51e60a5a1
+      internalID: -686109414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_34
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1
+        width: 67
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b223c191578a33246ab238774a3c858a
+      internalID: -265731200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_35
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1
+        width: 67
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a24cf234d7157e4baad9118f6581bfd
+      internalID: 686251463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_36
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1
+        width: 67
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a959f3b2b052e242b2d2e25c02693be
+      internalID: -2093084172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_37
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 138
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425621648d9b24648ba878f11e03fbde
+      internalID: -1055254475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_38
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 86
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd02125ef42d694d8c1dabc79eb0834
+      internalID: 1996034239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_39
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 64
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101748d7e9b55934ab33e3a712bf76f6
+      internalID: 919084488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563d39a165a0120409e3090cea343222
+      internalID: -362241551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_41
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83de7689ad8bddc4d952a69b4b48fbf7
+      internalID: 1074705647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_42
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf1a45d9cd3c47438b3048c471b6c6e
+      internalID: 766597325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_43
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 16
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbc0b45c40f9d14aa278ef0f3e35707
+      internalID: -427394747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 720
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a170f2913787a0e49978bbd44a48be79
+      internalID: 165678208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9284ebf7b2ee944682c01bc52a0463f
+      internalID: -1070332064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_46
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 720
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578c1c8fd9c250249964da9816ab8078
+      internalID: 24683200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_47
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 720
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9449360a23913e45929a70caa427bc4
+      internalID: 1797566270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_48
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 720
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bfe7ec7578428419e2e65f8a258928
+      internalID: 37324620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_49
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 720
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a29a1a6e1c0c74fa4f5773c362dbb4
+      internalID: -59027195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_50
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 480
+        width: 143
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99703235b6fd37b46bdd15a894619834
+      internalID: -211933143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_51
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 480
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3dc3a0622adbd4691991aef6e17042
+      internalID: 241802176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74fb2de7e6cf524eb127c5ef2aead2b
+      internalID: -1135504489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_53
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433a86fb365f2734cb0d40109a745515
+      internalID: -1362303534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58236ca6d3fcca4aa15d6b1978854b0
+      internalID: 2133875818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_55
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f30a4f1726ec8419669a14e98043f8
+      internalID: -437230955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1de0fd2fc73b447bf98406dfa017f1
+      internalID: -1922204702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_57
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 347
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6261488130c6974f9a6793766538678
+      internalID: -935392131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_58
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 347
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a48475c8e4180c49a6f0daaf9c29767
+      internalID: -1815938979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_59
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 320
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d2dac7e3ffc184987e38fff60aa131
+      internalID: -1975474281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cb5434cdc22384eb7e48b032dd2682
+      internalID: -1217062193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_61
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 48
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e127821aa54fd4cb1439d3ae69cb6f
+      internalID: -768584029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_62
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 96
+        width: 98
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7a71dfe9bbc8c4d8e043795c057ab3
+      internalID: 1942428752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_63
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b4e8f95f344024885393c179a3ba3f
+      internalID: 769549108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_64
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 182
+        width: 72
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afd44dc8e70edd4196154c98626e820
+      internalID: -1655889540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_65
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 124
+        width: 72
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214d25b33881d5d46a7dce0c10f64153
+      internalID: -891552938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SciFiFurniture1.1_66
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 604
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa230e5cb4139764382737e34e5cd3dc
+      internalID: 2143174251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +1521,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SciFiFurniture1.1_2: 1793722659
+      SciFiFurniture1.1_59: -1975474281
+      SciFiFurniture1.1_35: 686251463
+      SciFiFurniture1.1_22: -307677153
+      SciFiFurniture1.1_58: -1815938979
+      SciFiFurniture1.1_39: 919084488
+      SciFiFurniture1.1_46: 24683200
+      SciFiFurniture1.1_9: -962437558
+      SciFiFurniture1.1_44: 165678208
+      SciFiFurniture1.1_23: -2110755986
+      SciFiFurniture1.1_30: 2042473709
+      SciFiFurniture1.1_20: 1689175291
+      SciFiFurniture1.1_51: 241802176
+      SciFiFurniture1.1_28: -801929682
+      SciFiFurniture1.1_62: 1942428752
+      SciFiFurniture1.1_53: -1362303534
+      SciFiFurniture1.1_21: 2068549479
+      SciFiFurniture1.1_63: 769549108
+      SciFiFurniture1.1_34: -265731200
+      SciFiFurniture1.1_4: -1963961317
+      SciFiFurniture1.1_12: 239550926
+      SciFiFurniture1.1_47: 1797566270
+      SciFiFurniture1.1_56: -1922204702
+      SciFiFurniture1.1_10: 1200681533
+      SciFiFurniture1.1_18: 1472683012
+      SciFiFurniture1.1_65: -891552938
+      SciFiFurniture1.1_37: -1055254475
+      SciFiFurniture1.1_25: 329867550
+      SciFiFurniture1.1_7: 921530546
+      SciFiFurniture1.1_11: 1881995747
+      SciFiFurniture1.1_55: -437230955
+      SciFiFurniture1.1_13: 1783075126
+      SciFiFurniture1.1_24: 1062787215
+      SciFiFurniture1.1_0: 450424774
+      SciFiFurniture1.1_49: -59027195
+      SciFiFurniture1.1_5: 2083098676
+      SciFiFurniture1.1_8: 2041719327
+      SciFiFurniture1.1_31: 2123186153
+      SciFiFurniture1.1_19: 2106011708
+      SciFiFurniture1.1_1: -1834097320
+      SciFiFurniture1.1_38: 1996034239
+      SciFiFurniture1.1_33: -686109414
+      SciFiFurniture1.1_48: 37324620
+      SciFiFurniture1.1_42: 766597325
+      SciFiFurniture1.1_66: 2143174251
+      SciFiFurniture1.1_54: 2133875818
+      SciFiFurniture1.1_15: -908228501
+      SciFiFurniture1.1_6: -839919518
+      SciFiFurniture1.1_32: 841599367
+      SciFiFurniture1.1_61: -768584029
+      SciFiFurniture1.1_27: 1633005307
+      SciFiFurniture1.1_17: 709279457
+      SciFiFurniture1.1_3: 368899917
+      SciFiFurniture1.1_45: -1070332064
+      SciFiFurniture1.1_64: -1655889540
+      SciFiFurniture1.1_57: -935392131
+      SciFiFurniture1.1_43: -427394747
+      SciFiFurniture1.1_60: -1217062193
+      SciFiFurniture1.1_52: -1135504489
+      SciFiFurniture1.1_41: 1074705647
+      SciFiFurniture1.1_16: 725379708
+      SciFiFurniture1.1_50: -211933143
+      SciFiFurniture1.1_26: -1166759457
+      SciFiFurniture1.1_14: -1069696859
+      SciFiFurniture1.1_36: -2093084172
+      SciFiFurniture1.1_29: 1643795743
+      SciFiFurniture1.1_40: -362241551
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

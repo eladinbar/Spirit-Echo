@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 384
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ca3e8dc191cc04fb8e8f7544d2a60d
+      internalID: -374770684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 384
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15d569156b491d42959e0a4c5b6ebc5
+      internalID: -291118105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 384
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b456278b05b8640a2db9ae31fcbd6c
+      internalID: 1344760201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 288
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42321f0fbeef8564a86fbe46e1d9a95e
+      internalID: -147808645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 288
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a67f35f07c951459d009f28dc1e939
+      internalID: -1184004823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 288
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baf0a5e7003fbf4ab65cf0424fdef53
+      internalID: -1546094017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 192
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd70a2b13078d24eb0975aeec98817b
+      internalID: -902128976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 192
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a5cd57eef484741b488d6da3461629
+      internalID: -1048417713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_8
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 192
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c2debb4781d874d9bd0260fc14ac4f
+      internalID: -812439090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 96
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ee8954adf516240be58dea03a24bce
+      internalID: 1286122927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_10
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 96
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6473c0b263f37ff46bd73b5119e06dec
+      internalID: 2085521287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_11
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 96
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac969fe86d5a0a54b8fd315c61294dfa
+      internalID: 222458965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a35f8e00ffa104ca808d53d2ef0e38
+      internalID: -91809516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-Monitors-Sheet-14Frames_13
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 100
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21625c3bdb6087c49b0b096e2765fda5
+      internalID: 1371828824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +408,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Animated-Monitors-Sheet-14Frames_4: -1184004823
+      Animated-Monitors-Sheet-14Frames_12: -91809516
+      Animated-Monitors-Sheet-14Frames_6: -902128976
+      Animated-Monitors-Sheet-14Frames_7: -1048417713
+      Animated-Monitors-Sheet-14Frames_11: 222458965
+      Animated-Monitors-Sheet-14Frames_13: 1371828824
+      Animated-Monitors-Sheet-14Frames_5: -1546094017
+      Animated-Monitors-Sheet-14Frames_10: 2085521287
+      Animated-Monitors-Sheet-14Frames_1: -291118105
+      Animated-Monitors-Sheet-14Frames_2: 1344760201
+      Animated-Monitors-Sheet-14Frames_8: -812439090
+      Animated-Monitors-Sheet-14Frames_0: -374770684
+      Animated-Monitors-Sheet-14Frames_3: -147808645
+      Animated-Monitors-Sheet-14Frames_9: 1286122927
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

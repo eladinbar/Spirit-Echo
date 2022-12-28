@@ -1,17 +1,28 @@
 using System.Collections;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class PresentHandler : MonoBehaviour {
     private TilemapRenderer rend;
+    private PolygonCollider2D boundingBox;
+    private CinemachineConfiner cinemachineConfiner;
+    private bool isFirstCreated = true;
+    
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+
+    private void Awake() {
+        rend = GetComponent<TilemapRenderer>();
+        if (TryGetComponent(out PolygonCollider2D boundingBox)) {
+            this.boundingBox = boundingBox;
+            cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
+        }
+    }
 
     private void Start() {
-        rend = GetComponent<TilemapRenderer>();
-        Material material = rend.material;
-        Color color = material.color;
-        //Color alpha [0, 1] Transparent <--> Opaque
-        color.a = 1f;
-        material.color = color;
+        if (boundingBox)
+            cinemachineConfiner.m_BoundingShape2D = boundingBox;
+        isFirstCreated = false;
     }
     
     private IEnumerator FadeIn() {
@@ -35,7 +46,14 @@ public class PresentHandler : MonoBehaviour {
         this.gameObject.SetActive(false);
     }
 
-    public void StartFading(bool toPresent) {
-        StartCoroutine(toPresent ? nameof(FadeIn) : nameof(FadeOut));
+    public void OnEnable() {
+        if (boundingBox)
+            cinemachineConfiner.m_BoundingShape2D = boundingBox;
+        if(!isFirstCreated)
+            StartCoroutine(nameof(FadeIn));
+    }
+    
+    public void StartFading() {
+        StartCoroutine(nameof(FadeOut));
     }
 }

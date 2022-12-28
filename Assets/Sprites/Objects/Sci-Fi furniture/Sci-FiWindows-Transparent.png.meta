@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 218
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d29efd3f7fe64d47ae7d86c718dbbbf
+      internalID: -1562919340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 218
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c075e50a21f9b42a64b54953c85fbb
+      internalID: -1411828397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 200
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8204da8e7b47841b49e2f496306710
+      internalID: 290868441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 200
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e046eaa61bad1e74581104641cfd9721
+      internalID: -819651065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 220
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ded1ae0c7470134181274c675acc9d9
+      internalID: -1649906517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 102
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa043d13cf796a4295a75334cea6326
+      internalID: 1415412043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 102
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf41a38860abfd4ea239c71901b49da
+      internalID: -1294858850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 6
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc1b47acb5a6a543a928e2d9861ad25
+      internalID: 754056748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_8
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 26
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027d3f4a163359b4aa323b64dc037f17
+      internalID: 985964534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 7
+        width: 39
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d748251461b5ab74fba7200c2a9f0910
+      internalID: -1533586130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sci-FiWindows-Transparent_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 29
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f721b5f24701f4095c1b3135e6e94f
+      internalID: -1530751562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +345,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sci-FiWindows-Transparent_4: -1649906517
+      Sci-FiWindows-Transparent_0: -1562919340
+      Sci-FiWindows-Transparent_3: -819651065
+      Sci-FiWindows-Transparent_8: 985964534
+      Sci-FiWindows-Transparent_2: 290868441
+      Sci-FiWindows-Transparent_7: 754056748
+      Sci-FiWindows-Transparent_1: -1411828397
+      Sci-FiWindows-Transparent_9: -1533586130
+      Sci-FiWindows-Transparent_6: -1294858850
+      Sci-FiWindows-Transparent_10: -1530751562
+      Sci-FiWindows-Transparent_5: 1415412043
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

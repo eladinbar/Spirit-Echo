@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 288
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173aabd102ebacd478e957a58996e14e
+      internalID: 858418430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 288
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf6bfde1ad99af46b8ed50091c094ec
+      internalID: 702928988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 288
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76868af9a01017b46818d39d193a655e
+      internalID: -980356690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 192
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209844d55fecd4d4ea801f83a37a7d53
+      internalID: 20040467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 192
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262fb7a5480014a4394a79cda84aaccb
+      internalID: 853138299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 192
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9879f2f9cd58df14eb9691dd01709e94
+      internalID: 1394647359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 96
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4cb57421b84ae43899245821abc223
+      internalID: 1936019687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 96
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d57e4010b00624f8f6eb26ab58ad88
+      internalID: -594594818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 96
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbaddb9a9d012b34fa89d9e150d3ed0c
+      internalID: 868881608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e607aff783348d141844eb717a67eafb
+      internalID: 932729420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa41fb1ee4e303448bfcc406948d3b1
+      internalID: -877335632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated-RadarMonitor-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb39d49c5254e57448fd7eefbc6d7e38
+      internalID: -1894746090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Animated-RadarMonitor-Sheet_4: 853138299
+      Animated-RadarMonitor-Sheet_9: 932729420
+      Animated-RadarMonitor-Sheet_5: 1394647359
+      Animated-RadarMonitor-Sheet_11: -1894746090
+      Animated-RadarMonitor-Sheet_1: 702928988
+      Animated-RadarMonitor-Sheet_10: -877335632
+      Animated-RadarMonitor-Sheet_6: 1936019687
+      Animated-RadarMonitor-Sheet_8: 868881608
+      Animated-RadarMonitor-Sheet_7: -594594818
+      Animated-RadarMonitor-Sheet_0: 858418430
+      Animated-RadarMonitor-Sheet_2: -980356690
+      Animated-RadarMonitor-Sheet_3: 20040467
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

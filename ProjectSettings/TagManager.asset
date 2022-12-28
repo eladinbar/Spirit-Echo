@@ -44,11 +44,17 @@ TagManager:
   - name: Background
     uniqueID: 2694822619
     locked: 0
+  - name: Objects
+    uniqueID: 3305745601
+    locked: 0
   - name: Platforms
     uniqueID: 131420227
     locked: 0
   - name: Interactables
     uniqueID: 4218747565
+    locked: 0
+  - name: Hazards
+    uniqueID: 1525220771
     locked: 0
   - name: UI
     uniqueID: 4116249899

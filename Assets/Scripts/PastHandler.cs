@@ -1,12 +1,24 @@
 using System.Collections;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class PastHandler : MonoBehaviour {
     private TilemapRenderer rend;
+    private PolygonCollider2D boundingBox;
+    private CinemachineConfiner cinemachineConfiner;
+    
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+
+    private void Awake() {
+        rend = GetComponent<TilemapRenderer>();
+        if (TryGetComponent(out PolygonCollider2D boundingBox)) {
+            this.boundingBox = boundingBox;
+            cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
+        }
+    }
 
     private void Start() {
-        rend = GetComponent<TilemapRenderer>();
         Material material = rend.material;
         Color color = material.color;
         //Color alpha [0, 1] Transparent <--> Opaque
@@ -36,7 +48,13 @@ public class PastHandler : MonoBehaviour {
         this.gameObject.SetActive(false);
     }
 
-    public void StartFading(bool toPresent) {
-        StartCoroutine(toPresent ? nameof(FadeOut) : nameof(FadeIn));
+    public void OnEnable() {
+        if (boundingBox)
+            cinemachineConfiner.m_BoundingShape2D = boundingBox;
+        StartCoroutine(nameof(FadeIn));
+    }
+
+    public void StartFading() {
+        StartCoroutine(nameof(FadeOut));
     }
 }

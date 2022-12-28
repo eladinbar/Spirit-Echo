@@ -15,9 +15,11 @@ public class PlayerMechanics : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
-    [SerializeField] AudioClip deathSFX;
+    [SerializeField] AudioClip timeTravelSFX;
     
     AudioSource audioSource;
+    AudioSource pastTilemapAudioSource;
+    AudioSource presentTilemapAudioSource;
 
     [Header("Tilemaps")]
     [SerializeField] GameObject presentTilemap;
@@ -25,8 +27,10 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] GameObject pastTilemap;
     [SerializeField] GameObject pastBackgroundTilemap;
     
-    [SerializeField] PastHandler[] pastHandlers;
-    [SerializeField] PresentHandler[] presentHandlers;
+    PastHandler pastTilemapHandler;
+    PastHandler pastBackgroundHandler;
+    PresentHandler presentTilemapHandler;
+    PresentHandler presentBackgroundHandler;
     
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
@@ -40,6 +44,12 @@ public class PlayerMechanics : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         feetCollider = GetComponent<BoxCollider2D>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
+        pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
+        pastBackgroundHandler = pastBackgroundTilemap.GetComponent<PastHandler>();
+        presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
+        presentBackgroundHandler = presentBackgroundTilemap.GetComponent<PresentHandler>();
+        pastTilemapAudioSource = pastTilemap.GetComponent<AudioSource>();
+        presentTilemapAudioSource = presentTilemap.GetComponent<AudioSource>();
     }
     
     void Update() {
@@ -60,9 +70,8 @@ public class PlayerMechanics : MonoBehaviour
     void OnJump(InputValue value) {
         if (isAlive) {
             bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-
             if (value.isPressed && playerCanJump) {
-                //audioSource.PlayOneShot(jumpSFX);
+                audioSource.PlayOneShot(jumpSFX);
                 playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
             }
         }
@@ -70,20 +79,25 @@ public class PlayerMechanics : MonoBehaviour
 
     void OnTraverseTime() {
         if (isAlive) {
+            audioSource.PlayOneShot(timeTravelSFX);
+            
             bool toPresent = pastTilemap.activeSelf;
             if (toPresent) {
                 presentTilemap.SetActive(true);
                 presentBackgroundTilemap.SetActive(true);
+                pastTilemapHandler.StartFading();
+                pastBackgroundHandler.StartFading();
+                pastTilemapAudioSource.Stop();
+                presentTilemapAudioSource.Play();
             }
             else {
                 pastTilemap.SetActive(true);
                 pastBackgroundTilemap.SetActive(true);
+                presentTilemapHandler.StartFading();
+                presentBackgroundHandler.StartFading();
+                presentTilemapAudioSource.Stop();
+                pastTilemapAudioSource.Play();
             }
-
-            pastHandlers[0].StartFading(toPresent);
-            pastHandlers[1].StartFading(toPresent);
-            presentHandlers[0].StartFading(toPresent);
-            presentHandlers[1].StartFading(toPresent);
         }
     }
     

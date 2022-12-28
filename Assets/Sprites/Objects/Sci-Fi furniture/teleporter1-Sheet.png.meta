@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: teleporter1-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 432
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51e939b65d60b74c91e040f2ff7f114
+      internalID: -1321197337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 432
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26824c467adc6a842b46124a91363120
+      internalID: 637566614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 432
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16176777c254f14f9f3f45778681bc4
+      internalID: -382130511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 432
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c546891b494ce42bcf7509202a4993
+      internalID: -307088960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 288
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500a451c186b3284b9eb71be59e75d5a
+      internalID: -1387837686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 288
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb6b7acdba649e4ca344b40e836c947
+      internalID: 541671503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 288
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9765c113f5d1a1b40bfb2b33a2643d60
+      internalID: 2083925296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 288
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c6f8e165f1ef4498ec58ca5cf50d63
+      internalID: -2031153494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 144
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa39148a741f374bb360292df40ac99
+      internalID: 956873572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 144
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e71b6d8d55cb8f46b1f40382b63f13a
+      internalID: -1849667226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 144
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db561f0e78a44fa4d9baad954e40147a
+      internalID: -876452165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 144
+        width: 118
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0abcfac1bb33741922aafdef858c81
+      internalID: -1972669979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63ba6b3a950fd64eb64feff68942675
+      internalID: 1810670725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69c311b1897d9e47981e616bb30a499
+      internalID: -523004344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 0
+        width: 118
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b4f80155ee32b43b8100b2a97063ca
+      internalID: 1613524869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teleporter1-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 118
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0713759665557746a631cb3d47a4aa9
+      internalID: 761478188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +450,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teleporter1-Sheet_14: 1613524869
+      teleporter1-Sheet_11: -1972669979
+      teleporter1-Sheet_1: 637566614
+      teleporter1-Sheet_5: 541671503
+      teleporter1-Sheet_9: -1849667226
+      teleporter1-Sheet_3: -307088960
+      teleporter1-Sheet_8: 956873572
+      teleporter1-Sheet_0: -1321197337
+      teleporter1-Sheet_10: -876452165
+      teleporter1-Sheet_6: 2083925296
+      teleporter1-Sheet_7: -2031153494
+      teleporter1-Sheet_13: -523004344
+      teleporter1-Sheet_15: 761478188
+      teleporter1-Sheet_12: 1810670725
+      teleporter1-Sheet_4: -1387837686
+      teleporter1-Sheet_2: -382130511
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
