@@ -18,20 +18,14 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] AudioClip timeTravelSFX;
     
     AudioSource audioSource;
-    AudioSource pastTilemapAudioSource;
-    AudioSource presentTilemapAudioSource;
 
     [Header("Tilemaps")]
     [SerializeField] GameObject presentTilemap;
-    [SerializeField] GameObject presentBackgroundTilemap;
     [SerializeField] GameObject pastTilemap;
-    [SerializeField] GameObject pastBackgroundTilemap;
-    
+
     PastHandler pastTilemapHandler;
-    PastHandler pastBackgroundHandler;
     PresentHandler presentTilemapHandler;
-    PresentHandler presentBackgroundHandler;
-    
+
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
     BoxCollider2D feetCollider;
@@ -45,11 +39,7 @@ public class PlayerMechanics : MonoBehaviour
         feetCollider = GetComponent<BoxCollider2D>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
         pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
-        pastBackgroundHandler = pastBackgroundTilemap.GetComponent<PastHandler>();
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
-        presentBackgroundHandler = presentBackgroundTilemap.GetComponent<PresentHandler>();
-        pastTilemapAudioSource = pastTilemap.GetComponent<AudioSource>();
-        presentTilemapAudioSource = presentTilemap.GetComponent<AudioSource>();
     }
     
     void Update() {
@@ -62,8 +52,6 @@ public class PlayerMechanics : MonoBehaviour
     void OnMove(InputValue value) {
         if (isAlive) {
             moveInput = value.Get<Vector2>();
-
-            
         }
     }
 
@@ -84,19 +72,11 @@ public class PlayerMechanics : MonoBehaviour
             bool toPresent = pastTilemap.activeSelf;
             if (toPresent) {
                 presentTilemap.SetActive(true);
-                presentBackgroundTilemap.SetActive(true);
                 pastTilemapHandler.StartFading();
-                pastBackgroundHandler.StartFading();
-                pastTilemapAudioSource.Stop();
-                presentTilemapAudioSource.Play();
             }
             else {
                 pastTilemap.SetActive(true);
-                pastBackgroundTilemap.SetActive(true);
                 presentTilemapHandler.StartFading();
-                presentBackgroundHandler.StartFading();
-                presentTilemapAudioSource.Stop();
-                pastTilemapAudioSource.Play();
             }
         }
     }

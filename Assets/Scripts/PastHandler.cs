@@ -5,17 +5,25 @@ using UnityEngine.Tilemaps;
 
 public class PastHandler : MonoBehaviour {
     private TilemapRenderer rend;
-    private PolygonCollider2D boundingBox;
     private CinemachineConfiner cinemachineConfiner;
+    private AudioSource audioSource;
+
+    [Header("Children")] 
+    [SerializeField] GameObject backgroundTilemap;
+    private PolygonCollider2D boundingBox;
+    private TilemapRenderer backgroundRend;
+    [SerializeField] GameObject objectTilemap;
+    private TilemapRenderer objectRend;
     
     [SerializeField] CinemachineVirtualCamera virtualCamera;
 
     private void Awake() {
         rend = GetComponent<TilemapRenderer>();
-        if (TryGetComponent(out PolygonCollider2D boundingBox)) {
-            this.boundingBox = boundingBox;
-            cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
-        }
+        boundingBox = backgroundTilemap.GetComponent<PolygonCollider2D>();
+        backgroundRend = backgroundTilemap.GetComponent<TilemapRenderer>();
+        objectRend = objectTilemap.GetComponent<TilemapRenderer>();
+        cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start() {
@@ -27,9 +35,9 @@ public class PastHandler : MonoBehaviour {
         this.gameObject.SetActive(false);
     }
 
-    private IEnumerator FadeIn() {
+    private IEnumerator FadeIn(Renderer render) {
         for (float opacity = 0.05f; opacity <= 1f; opacity += 0.05f) {
-            Material material = rend.material;
+            Material material = render.material;
             Color color = material.color;
             color.a = opacity;
             material.color = color;
@@ -37,9 +45,9 @@ public class PastHandler : MonoBehaviour {
         }
     }
 
-    private IEnumerator FadeOut() {
+    private IEnumerator FadeOut(Renderer render) {
         for (float opacity = 1f; opacity >= 0f; opacity -= 0.05f) {
-            Material material = rend.material;
+            Material material = render.material;
             Color color = material.color;
             color.a = opacity;
             material.color = color;
@@ -49,12 +57,23 @@ public class PastHandler : MonoBehaviour {
     }
 
     public void OnEnable() {
-        if (boundingBox)
-            cinemachineConfiner.m_BoundingShape2D = boundingBox;
-        StartCoroutine(nameof(FadeIn));
+        StartCoroutine(FadeIn(this.rend));
+        
+        backgroundTilemap.SetActive(true);
+        cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
+        StartCoroutine(FadeIn(backgroundRend));
+        
+        objectTilemap.SetActive(true);
+        StartCoroutine(FadeIn(objectRend));
+        
+        audioSource.Play();
     }
 
     public void StartFading() {
-        StartCoroutine(nameof(FadeOut));
+        StartCoroutine(FadeOut(objectRend));
+        StartCoroutine(FadeOut(backgroundRend));
+        StartCoroutine(FadeOut(this.rend));
+        
+        audioSource.Stop();
     }
 }

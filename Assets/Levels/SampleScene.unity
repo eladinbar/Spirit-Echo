@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 283886763}
   - component: {fileID: 283886765}
   - component: {fileID: 283886764}
-  - component: {fileID: 283886766}
   m_Layer: 9
   m_Name: Lab Objects Tilemap
   m_TagString: Untagged
@@ -325,19 +324,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &283886766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283886762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442dd9d2fc04850ae4592e5c5607af1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1252526922}
 --- !u!1 &517595200
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +363,7 @@ Transform:
   - {fileID: 529642734}
   - {fileID: 2020099089}
   m_Father: {fileID: 582546121}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &517595202
 TilemapRenderer:
@@ -5249,6 +5235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3647c7784f4b809287c74d1c8adbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundTilemap: {fileID: 1327458671}
+  objectTilemap: {fileID: 2020099088}
   virtualCamera: {fileID: 1252526922}
 --- !u!82 &517595209
 AudioSource:
@@ -5590,8 +5578,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2099569996}
   - {fileID: 517595201}
+  - {fileID: 2099569996}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5906,9 +5894,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
   timeTravelSFX: {fileID: 8300000, guid: 853cf01e832734848bba5a4cd1e1643d, type: 3}
   presentTilemap: {fileID: 517595200}
-  presentBackgroundTilemap: {fileID: 1327458671}
   pastTilemap: {fileID: 2099569995}
-  pastBackgroundTilemap: {fileID: 1954683554}
 --- !u!61 &831097331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6132,7 +6118,6 @@ GameObject:
   - component: {fileID: 1327458674}
   - component: {fileID: 1327458673}
   - component: {fileID: 1327458675}
-  - component: {fileID: 1327458676}
   m_Layer: 12
   m_Name: Mossy Background Tilemap
   m_TagString: Untagged
@@ -6442,19 +6427,6 @@ PolygonCollider2D:
       - {x: -11.551144, y: -3.6693912}
       - {x: 0.5496472, y: -3.669391}
       - {x: 4.7267504, y: -3.657368}
---- !u!114 &1327458676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327458671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3647c7784f4b809287c74d1c8adbe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1252526922}
 --- !u!1 &1914141831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6543,7 +6515,6 @@ GameObject:
   - component: {fileID: 1954683557}
   - component: {fileID: 1954683556}
   - component: {fileID: 1954683558}
-  - component: {fileID: 1954683559}
   m_Layer: 12
   m_Name: Lab Background Tilemap
   m_TagString: Untagged
@@ -7395,19 +7366,6 @@ PolygonCollider2D:
       - {x: -11.551144, y: -3.6693912}
       - {x: 0.5496472, y: -3.669391}
       - {x: 4.7267504, y: -3.657368}
---- !u!114 &1954683559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954683554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442dd9d2fc04850ae4592e5c5607af1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1252526922}
 --- !u!1 &2020099088
 GameObject:
   m_ObjectHideFlags: 0
@@ -7419,7 +7377,6 @@ GameObject:
   - component: {fileID: 2020099089}
   - component: {fileID: 2020099091}
   - component: {fileID: 2020099090}
-  - component: {fileID: 2020099092}
   m_Layer: 9
   m_Name: Mossy Decorations&Hazards Tilemap
   m_TagString: Untagged
@@ -7577,19 +7534,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &2020099092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020099088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3647c7784f4b809287c74d1c8adbe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1252526922}
 --- !u!1 &2099569995
 GameObject:
   m_ObjectHideFlags: 0
@@ -7628,7 +7572,7 @@ Transform:
   - {fileID: 1954683555}
   - {fileID: 283886763}
   m_Father: {fileID: 582546121}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2099569997
 TilemapRenderer:
@@ -9044,6 +8988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2442dd9d2fc04850ae4592e5c5607af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundTilemap: {fileID: 1954683554}
+  objectTilemap: {fileID: 283886762}
   virtualCamera: {fileID: 1252526922}
 --- !u!82 &2099570003
 AudioSource:
