@@ -24,9 +24,7 @@ public class PastHandler : MonoBehaviour {
         objectRend = objectTilemap.GetComponent<TilemapRenderer>();
         cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void Start() {
+        
         Material material = rend.material;
         Color color = material.color;
         //Color alpha [0, 1] Transparent <--> Opaque

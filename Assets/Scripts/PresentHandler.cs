@@ -28,8 +28,6 @@ public class PresentHandler : MonoBehaviour {
     }
 
     private void Start() {
-        if (boundingBox)
-            cinemachineConfiner.m_BoundingShape2D = boundingBox;
         isFirstCreated = false;
     }
     
