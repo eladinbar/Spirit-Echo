@@ -315,6 +315,6 @@ MonoBehaviour:
   runSpeed: 5
   jumpSpeed: 5
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
-  timeTravelSFX: {fileID: 8300000, guid: 853cf01e832734848bba5a4cd1e1643d, type: 3}
+  timeTravelSFX: {fileID: 8300000, guid: a825a35aeb93dc244ba0ee758d61579a, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}

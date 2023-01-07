@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 283886764}
   m_Layer: 9
   m_Name: Lab Objects Tilemap
-  m_TagString: Untagged
+  m_TagString: Rendered
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 517595208}
   m_Layer: 6
   m_Name: Mossy Tilemap
-  m_TagString: Untagged
+  m_TagString: Tilemap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,7 +371,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 131420227
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.012000024, y: 0.012000024, z: 0}
@@ -5203,7 +5203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundTilemap: {fileID: 1327458671}
-  objectTilemap: {fileID: 2020099088}
   virtualCamera: {fileID: 1252526922}
 --- !u!82 &517595209
 AudioSource:
@@ -5313,7 +5312,7 @@ GameObject:
   - component: {fileID: 529642735}
   m_Layer: 12
   m_Name: Cave Green Background
-  m_TagString: Untagged
+  m_TagString: Rendered
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5466,7 +5465,7 @@ GameObject:
   - component: {fileID: 1327458675}
   m_Layer: 12
   m_Name: Mossy Background Tilemap
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5787,7 +5786,7 @@ GameObject:
   - component: {fileID: 1954683558}
   m_Layer: 12
   m_Name: Lab Background Tilemap
-  m_TagString: Untagged
+  m_TagString: Rendered
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6649,7 +6648,7 @@ GameObject:
   - component: {fileID: 2020099090}
   m_Layer: 9
   m_Name: Mossy Decorations&Hazards Tilemap
-  m_TagString: Untagged
+  m_TagString: Rendered
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6822,7 +6821,7 @@ GameObject:
   - component: {fileID: 2099570002}
   m_Layer: 6
   m_Name: Lab Tilemap
-  m_TagString: Untagged
+  m_TagString: Tilemap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6883,7 +6882,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 131420227
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
@@ -8259,7 +8258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundTilemap: {fileID: 1954683554}
-  objectTilemap: {fileID: 283886762}
   virtualCamera: {fileID: 1252526922}
 --- !u!82 &2099570003
 AudioSource:

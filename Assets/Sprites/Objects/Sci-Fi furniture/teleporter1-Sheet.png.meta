@@ -113,7 +113,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_1
+      name: teleporter1-Sheet_4
       rect:
         serializedVersion: 2
         x: 157
@@ -134,7 +134,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_2
+      name: teleporter1-Sheet_8
       rect:
         serializedVersion: 2
         x: 301
@@ -155,7 +155,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_3
+      name: teleporter1-Sheet_12
       rect:
         serializedVersion: 2
         x: 445
@@ -176,7 +176,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_4
+      name: teleporter1-Sheet_1
       rect:
         serializedVersion: 2
         x: 13
@@ -197,7 +197,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,7 +218,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_6
+      name: teleporter1-Sheet_9
       rect:
         serializedVersion: 2
         x: 301
@@ -239,7 +239,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_7
+      name: teleporter1-Sheet_13
       rect:
         serializedVersion: 2
         x: 445
@@ -260,7 +260,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_8
+      name: teleporter1-Sheet_2
       rect:
         serializedVersion: 2
         x: 13
@@ -281,7 +281,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_9
+      name: teleporter1-Sheet_6
       rect:
         serializedVersion: 2
         x: 157
@@ -302,7 +302,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,7 +323,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,15 +336,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_11
+      name: teleporter1-Sheet_14
       rect:
         serializedVersion: 2
         x: 445
-        y: 144
+        y: 145
         width: 118
         height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_12
+      name: teleporter1-Sheet_3
       rect:
         serializedVersion: 2
         x: 13
@@ -365,7 +365,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_13
+      name: teleporter1-Sheet_7
       rect:
         serializedVersion: 2
         x: 157
@@ -386,7 +386,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teleporter1-Sheet_14
+      name: teleporter1-Sheet_11
       rect:
         serializedVersion: 2
         x: 301
@@ -407,7 +407,7 @@ TextureImporter:
         width: 118
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,8 +427,8 @@ TextureImporter:
         y: 0
         width: 118
         height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,22 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      teleporter1-Sheet_14: 1613524869
-      teleporter1-Sheet_11: -1972669979
-      teleporter1-Sheet_1: 637566614
+      teleporter1-Sheet_14: -1972669979
+      teleporter1-Sheet_11: 1613524869
       teleporter1-Sheet_5: 541671503
-      teleporter1-Sheet_9: -1849667226
-      teleporter1-Sheet_3: -307088960
-      teleporter1-Sheet_8: 956873572
+      teleporter1-Sheet_9: 2083925296
+      teleporter1-Sheet_1: -1387837686
+      teleporter1-Sheet_3: 1810670725
+      teleporter1-Sheet_8: -382130511
       teleporter1-Sheet_0: -1321197337
       teleporter1-Sheet_10: -876452165
-      teleporter1-Sheet_6: 2083925296
-      teleporter1-Sheet_7: -2031153494
-      teleporter1-Sheet_13: -523004344
+      teleporter1-Sheet_6: -1849667226
+      teleporter1-Sheet_7: -523004344
+      teleporter1-Sheet_13: -2031153494
       teleporter1-Sheet_15: 761478188
-      teleporter1-Sheet_12: 1810670725
-      teleporter1-Sheet_4: -1387837686
-      teleporter1-Sheet_2: -382130511
+      teleporter1-Sheet_12: -307088960
+      teleporter1-Sheet_4: 637566614
+      teleporter1-Sheet_2: 956873572
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

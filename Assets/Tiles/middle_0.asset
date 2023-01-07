@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SciFiFurniture1.1_20
+  m_Name: middle_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1689175291, guid: e131f1c266826c942b8ca241881e1d4a, type: 3}
+  m_Sprite: {fileID: -1381418430, guid: f54ac04594fdac245b7c4b830ed68c21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -32,5 +32,5 @@ MonoBehaviour:
     e32: 0
     e33: 1
   m_InstancedGameObject: {fileID: 0}
-  m_Flags: 0
+  m_Flags: 1
   m_ColliderType: 1
