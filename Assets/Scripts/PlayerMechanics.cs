@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,8 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int Death = Animator.StringToHash("Death");
+    
+    public static PlayerMechanics Instance { get; private set; }
     
     [Header("Movement Speed")]
     [SerializeField] float runSpeed = 5f;
@@ -31,7 +34,11 @@ public class PlayerMechanics : MonoBehaviour
     BoxCollider2D feetCollider;
     CapsuleCollider2D bodyCollider;
     bool isAlive = true;
-    
+
+    void Awake() {
+        Instance = this;
+    }
+
     void Start()    {
         audioSource = GetComponent<AudioSource>();
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -47,6 +54,10 @@ public class PlayerMechanics : MonoBehaviour
             Run();
             Jump();
         }
+    }
+
+    public Vector2 GetPosition() {
+        return this.transform.position;
     }
 
     void OnMove(InputValue value) {
