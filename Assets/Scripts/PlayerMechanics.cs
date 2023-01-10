@@ -6,6 +6,8 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int Death = Animator.StringToHash("Death");
+    public bool jumpEnabled = true;
+    
     
     [Header("Movement Speed")]
     [SerializeField] float runSpeed = 5f;
@@ -57,8 +59,8 @@ public class PlayerMechanics : MonoBehaviour
 
     void OnJump(InputValue value) {
         if (isAlive) {
-            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-            if (value.isPressed && playerCanJump) {
+            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground") );
+            if (value.isPressed && playerCanJump && jumpEnabled) {
                 audioSource.PlayOneShot(jumpSFX);
                 playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
             }
