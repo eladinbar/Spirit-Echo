@@ -11,11 +11,16 @@ public class BringerOfDeathMechanics : EnemyMechanics {
         bringerAnimator = GetComponent<Animator>();
     }
     
+    protected override void Start() {
+        base.Start();
+        hitPoints = 100;
+    }
+    
     protected override void Update() {
         base.Update();
         Walk();
     }
-    
+
     void Walk() {
         bool bringerIsWalking = Mathf.Abs(this.enemyRigidbody.velocity.x) > Mathf.Epsilon;
         bringerAnimator.SetBool(IsWalking, bringerIsWalking);

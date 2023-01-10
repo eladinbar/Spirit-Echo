@@ -10,7 +10,7 @@ public class EnemyMechanics : MonoBehaviour {
     
     [SerializeField] protected float moveSpeed = 1f;
     [SerializeField] protected int pointsPerKill = 50;
-    [SerializeField] protected int hitPoints = 100;
+    [SerializeField] protected int hitPoints = 1;
     [SerializeField] protected float aggroRange = 5f;
     
     protected Rigidbody2D enemyRigidbody;
@@ -35,7 +35,7 @@ public class EnemyMechanics : MonoBehaviour {
         state = State.Roaming;
     }
 
-    protected void Start() {
+    protected virtual void Start() {
         currentPosition = this.transform.position;
         roamPosition = GetRoamingPosition();
     }
