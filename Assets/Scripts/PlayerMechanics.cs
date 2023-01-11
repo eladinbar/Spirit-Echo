@@ -16,16 +16,20 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Movement Speed")]
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    
     [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
     [SerializeField] Vector2 damagedKick = new Vector2(-3f, 5f);
+    [SerializeField] Vector2 hitKick = new Vector2(-5f, 2f);
     
     Vector2 moveInput;
     
     [Header("Health")]
     [SerializeField] int hitPoints = 1;
+    private float invulnerabilityTime = 1f;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
+    [SerializeField] AudioClip hurtSFX;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] AudioClip timeTravelSFX;
     
@@ -38,11 +42,16 @@ public class PlayerMechanics : MonoBehaviour
     PastHandler pastTilemapHandler;
     PresentHandler presentTilemapHandler;
 
+    // Physics
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
     BoxCollider2D feetCollider;
     CapsuleCollider2D bodyCollider;
+    
+    // States
     bool isAlive = true;
+    public bool unlockedTimeTraversal = true;
+    private float timeTraversalDelay = 5f;
 
     void Awake() {
         Instance = this;
@@ -62,7 +71,14 @@ public class PlayerMechanics : MonoBehaviour
         if (isAlive) {
             Run();
             Jump();
+            
+            DeductTimers();
         }
+    }
+
+    private void DeductTimers() {
+        invulnerabilityTime -= Time.deltaTime;
+        timeTraversalDelay -= Time.deltaTime;
     }
 
     public Vector2 GetPosition() {
@@ -77,7 +93,6 @@ public class PlayerMechanics : MonoBehaviour
 
     void OnJump(InputValue value) {
         if (isAlive) {
-            print("Player is touching hazard? " + feetCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")));
             bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Hazards"));
             if (value.isPressed && playerCanJump) {
                 audioSource.PlayOneShot(jumpSFX);
@@ -87,8 +102,9 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void OnTraverseTime() {
-        if (isAlive) {
+        if (isAlive && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
+            timeTraversalDelay = 3f;
             
             bool toPresent = pastTilemap.activeSelf;
             if (toPresent) {
@@ -118,19 +134,30 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void Jump() {
-        bool playerIsJumping = Mathf.Abs(playerRigidbody.velocity.y) > Mathf.Epsilon;
+        bool playerIsJumping = Mathf.Abs(playerRigidbody.velocity.y) > 0.01f;
         playerAnimator.SetBool(IsJumping, playerIsJumping);
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
-        if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive)
-            TakeDamage();
+        if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
+            TakeDamage(other);
+            invulnerabilityTime = 1f;
+        }
     }
 
-    void TakeDamage() {
+    void OnCollisionEnter2D(Collision2D col) {
+        Collider2D other = col.collider;
+        if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
+            TakeDamage(other);
+            invulnerabilityTime = 1f;
+        }
+    }
+
+    void TakeDamage(Collider2D other) {
         hitPoints--;
+        audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(WasHurt);
-        playerRigidbody.velocity = damagedKick;
+        playerRigidbody.velocity = other.CompareTag("Hazard") ? damagedKick : hitKick;
         if(hitPoints <= 0)
             Die();
     }

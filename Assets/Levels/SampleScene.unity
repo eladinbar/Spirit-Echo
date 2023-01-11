@@ -233,7 +233,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741824
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -5213,7 +5213,7 @@ AudioSource:
   m_GameObject: {fileID: 517595200}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
   m_audioClip: {fileID: 8300000, guid: f019106fb3cc2194cae81f2e14d9a913, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8268,7 +8268,7 @@ AudioSource:
   m_GameObject: {fileID: 2099569995}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
   m_audioClip: {fileID: 8300000, guid: df6098804b87be74884007f4ad6e1e29, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -8362,6 +8362,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3228914905770855011, guid: 94a6b7f7eae27264599531f3af15b23c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
     - target: {fileID: 3228914905770855013, guid: 94a6b7f7eae27264599531f3af15b23c, type: 3}
       propertyPath: pastTilemap
       value: 
@@ -8490,6 +8494,14 @@ PrefabInstance:
     - target: {fileID: 7307948621252504959, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.245259
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54026544
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}

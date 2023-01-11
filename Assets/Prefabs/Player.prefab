@@ -314,7 +314,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   jumpSpeed: 5
+  deathKick: {x: 0, y: 10}
+  damagedKick: {x: -3, y: 5}
+  hitPoints: 1
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
+  hurtSFX: {fileID: 8300000, guid: 338d7f42fd2808e41a56baf8e86dca61, type: 3}
+  deathSFX: {fileID: 0}
   timeTravelSFX: {fileID: 8300000, guid: a825a35aeb93dc244ba0ee758d61579a, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
