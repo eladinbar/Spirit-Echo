@@ -16,9 +16,7 @@ public class PlayerMechanics : MonoBehaviour
     private const float STAY_INVULNERABILITY_TIME = 0.1f;
     private const float TIME_TRAVERSAL_COOLDOWN = 3f;
     private const float DASH_COOLDOWN = 1f;
-    
     public static PlayerMechanics Instance { get; private set; }
-    
     [Header("Stats")]
     
     [Header("Movement Speed")]
@@ -29,20 +27,21 @@ public class PlayerMechanics : MonoBehaviour
     
     [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
     [SerializeField] Vector2 damagedKick = new Vector2(-3f, 5f);
+    private Vector2 damagedKickReverse = new Vector2(-3f, -5f);
     [SerializeField] Vector2 hitKick = new Vector2(-5f, 2f);
     
     Vector2 moveInput;
     
     [Header("Health")]
     [SerializeField] int hitPoints = 1;
-    private float invulnerabilityTime = 1f;
+    private float invulnerabilityTime = 0.5f;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
     [SerializeField] AudioClip hurtSFX;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] AudioClip timeTravelSFX;
-    
+
     AudioSource audioSource;
 
     [Header("Tilemaps")]
@@ -61,6 +60,7 @@ public class PlayerMechanics : MonoBehaviour
     
     // States
     bool isAlive = true;
+    bool isFlipped = false;
     
     public bool unlockedTimeTraversal = true;
     private float timeTraversalDelay = 0f;
@@ -88,7 +88,7 @@ public class PlayerMechanics : MonoBehaviour
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
         trailRenderer = GetComponent<TrailRenderer>();
     }
-    
+
     void Update() {
         if (isAlive) {
             DeductTimers();
@@ -147,7 +147,7 @@ public class PlayerMechanics : MonoBehaviour
         if (isAlive && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
             timeTraversalDelay = 3f;
-            
+
             bool toPresent = pastTilemap.activeSelf;
             if (toPresent) {
                 presentTilemap.SetActive(true);
@@ -159,12 +159,12 @@ public class PlayerMechanics : MonoBehaviour
             }
         }
     }
-    
+
     void FlipSprite(bool playerIsRunning, float moveSpeed) {
         if (playerIsRunning)
             transform.localScale = new Vector2(Mathf.Sign(moveSpeed), transform.localScale.y);
     }
-    
+
     void Run() {
         Vector2 runVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
         playerRigidbody.velocity = runVelocity;
@@ -192,6 +192,22 @@ public class PlayerMechanics : MonoBehaviour
     void Jump() {
         bool playerIsJumping = Mathf.Abs(playerRigidbody.velocity.y) > 0.01f;
         playerAnimator.SetBool(IsJumping, playerIsJumping);
+    }
+
+
+    void OnFlip()
+    {
+        if (isFlipped)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, 1, transform.localScale.z);
+            playerRigidbody.gravityScale = 1;
+        }
+        else 
+        {
+            transform.localScale = new Vector3(transform.localScale.x, -1, transform.localScale.z);
+            playerRigidbody.gravityScale = -1;
+        }
+        isFlipped = !isFlipped;
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
@@ -231,3 +247,4 @@ public class PlayerMechanics : MonoBehaviour
         // FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 }
+   
