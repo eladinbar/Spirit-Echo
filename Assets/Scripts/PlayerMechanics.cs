@@ -1,13 +1,21 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMechanics : MonoBehaviour
 {
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
+    private static readonly int Dashing = Animator.StringToHash("dashing");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
+    private static readonly int DoubleJump = Animator.StringToHash("doubleJump");
     private static readonly int WasHurt = Animator.StringToHash("wasHurt");
     private static readonly int Death = Animator.StringToHash("Death");
+
+    private const float ENTER_INVULNERABILITY_TIME = 0.5f;
+    private const float STAY_INVULNERABILITY_TIME = 0.1f;
+    private const float TIME_TRAVERSAL_COOLDOWN = 3f;
+    private const float DASH_COOLDOWN = 1f;
     
     public static PlayerMechanics Instance { get; private set; }
     
@@ -16,6 +24,8 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Movement Speed")]
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float doubleJumpSpeed = 4f;
+    [SerializeField] float dashSpeed = 24f;
     
     [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
     [SerializeField] Vector2 damagedKick = new Vector2(-3f, 5f);
@@ -47,11 +57,22 @@ public class PlayerMechanics : MonoBehaviour
     Animator playerAnimator;
     BoxCollider2D feetCollider;
     CapsuleCollider2D bodyCollider;
+    TrailRenderer trailRenderer;
     
     // States
     bool isAlive = true;
+    
     public bool unlockedTimeTraversal = true;
-    private float timeTraversalDelay = 5f;
+    private float timeTraversalDelay = 0f;
+
+    public bool unlockedDoubleJump = true;
+    private bool canDoubleJump = false;
+
+    public bool unlockedDash = true;
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingTime = 0.2f;
+    private float dashCooldown = 1f;
 
     void Awake() {
         Instance = this;
@@ -65,20 +86,25 @@ public class PlayerMechanics : MonoBehaviour
         bodyCollider = GetComponent<CapsuleCollider2D>();
         pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
     
     void Update() {
         if (isAlive) {
+            DeductTimers();
+            
+            if (isDashing)
+                return;
+            
             Run();
             Jump();
-            
-            DeductTimers();
         }
     }
 
     private void DeductTimers() {
         invulnerabilityTime -= Time.deltaTime;
         timeTraversalDelay -= Time.deltaTime;
+        dashCooldown -= Time.deltaTime;
     }
 
     public Vector2 GetPosition() {
@@ -93,11 +119,27 @@ public class PlayerMechanics : MonoBehaviour
 
     void OnJump(InputValue value) {
         if (isAlive) {
-            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Hazards"));
+            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+            canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump;
             if (value.isPressed && playerCanJump) {
                 audioSource.PlayOneShot(jumpSFX);
                 playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
+                canDoubleJump = true;
+            } else if (value.isPressed && canDoubleJump) {
+                audioSource.PlayOneShot(jumpSFX);
+                playerRigidbody.velocity += new Vector2(0f, doubleJumpSpeed);
+                playerAnimator.SetTrigger(DoubleJump);
+                canDoubleJump = false;
             }
+        }
+    }
+
+    void OnDash() {
+        canDash = canDash || feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        if (isAlive && dashCooldown <= Mathf.Epsilon && canDash) {
+            StartCoroutine(Dash());
+            canDash = false;
+            dashCooldown = DASH_COOLDOWN;
         }
     }
 
@@ -133,23 +175,41 @@ public class PlayerMechanics : MonoBehaviour
         FlipSprite(playerIsRunning, runVelocity.x);
     }
 
+    private IEnumerator Dash() {
+        isDashing = true;
+        playerAnimator.SetTrigger(Dashing);
+        float originalGravity = playerRigidbody.gravityScale;
+        playerRigidbody.gravityScale = 0f;
+        playerRigidbody.velocity = new Vector2(this.transform.localScale.x * dashSpeed, 0f);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        playerRigidbody.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+    }
+
     void Jump() {
         bool playerIsJumping = Mathf.Abs(playerRigidbody.velocity.y) > 0.01f;
         playerAnimator.SetBool(IsJumping, playerIsJumping);
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Tilemap"))
+            canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
             TakeDamage(other);
-            invulnerabilityTime = 1f;
+            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
         }
     }
 
     void OnCollisionEnter2D(Collision2D col) {
         Collider2D other = col.collider;
+        if (other.CompareTag("Tilemap"))
+            canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
             TakeDamage(other);
-            invulnerabilityTime = 1f;
+            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
         }
     }
 
@@ -158,6 +218,7 @@ public class PlayerMechanics : MonoBehaviour
         audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(WasHurt);
         playerRigidbody.velocity = other.CompareTag("Hazard") ? damagedKick : hitKick;
+        canDoubleJump = true;
         if(hitPoints <= 0)
             Die();
     }
