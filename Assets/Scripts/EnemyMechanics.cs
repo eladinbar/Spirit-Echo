@@ -3,13 +3,13 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class EnemyMechanics : MonoBehaviour {
-    private enum State {
+    protected enum State {
         Roaming,
-        ChaseTarget
+        ChaseTarget,
+        Attacking
     }
     
     [SerializeField] protected float moveSpeed = 1f;
-    [SerializeField] protected int pointsPerKill = 50;
     [SerializeField] protected int hitPoints = 1;
     [SerializeField] protected float aggroRange = 5f;
     
@@ -18,11 +18,9 @@ public class EnemyMechanics : MonoBehaviour {
     
     protected Vector2 currentPosition;
     protected Vector2 roamPosition;
-    private State state;
+    protected State state;
     
     private float waitTimeInPosition = 0f;
-
-    public int PointsPerKill => pointsPerKill;
 
     public int HitPoints {
         get => hitPoints;
@@ -41,6 +39,8 @@ public class EnemyMechanics : MonoBehaviour {
     }
     
     protected virtual void Update() {
+        FindTarget();
+        
         switch (state) {
             case State.Roaming:
                 if (waitTimeInPosition <= Mathf.Epsilon || enemyRigidbody.velocity.x > Mathf.Epsilon) {
@@ -57,18 +57,16 @@ public class EnemyMechanics : MonoBehaviour {
                 else
                     waitTimeInPosition -= Time.deltaTime;
                 
-                FindTarget();
                 break;
             
             case State.ChaseTarget:
                 MoveTo(PlayerMechanics.Instance.GetPosition());
                 break;
         }
-        
     }
 
-    void MoveTo(Vector2 roamPosition) {
-        if (this.transform.position.x - roamPosition.x > Mathf.Epsilon)
+    void MoveTo(Vector2 movePosition) {
+        if (this.transform.position.x - movePosition.x > Mathf.Epsilon)
             moveSpeed = moveSpeed < 0 ? moveSpeed : -moveSpeed;
         else
             moveSpeed = moveSpeed > 0 ? moveSpeed : -moveSpeed;
@@ -92,22 +90,25 @@ public class EnemyMechanics : MonoBehaviour {
         return currentPosition + direction * Random.Range(2, 10);
     }
 
-    void FindTarget() {
+    protected virtual void FindTarget() {
         Vector2 enemyPosition = this.transform.position;
-        bool canSeeTarget = Math.Abs(enemyPosition.x - PlayerMechanics.Instance.GetPosition().x) < aggroRange &&
-                            Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 0.01f;  
-        if (canSeeTarget) {
-            // Player within target range
-            state = State.ChaseTarget;
-        }
+        bool canSeeTarget = CanSeeTarget(aggroRange);
+        bool canSeeTargetByRange = Math.Abs(enemyPosition.x - PlayerMechanics.Instance.GetPosition().x) < aggroRange &&
+                                   Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 1f; // Old
+        
+        state = canSeeTarget ? State.ChaseTarget : State.Roaming;
     }
 
-    void CanSeeTarget(float distance) {
-        Vector2 endOfSight = this.transform.position + Vector3.right * distance; 
+    protected bool CanSeeTarget(float distance) {
+        Vector3 facingDirection = Vector3.left * Mathf.Sign(this.transform.localScale.x);
+
+        Vector2 endOfSight = this.transform.position + facingDirection * distance; 
         
         RaycastHit2D raycastHit = Physics2D.Linecast(this.transform.position, endOfSight, 1 << LayerMask.NameToLayer("Player"));
+
+        return raycastHit.collider != null;
     }
-    
+
     void OnTriggerEnter2D(Collider2D collider2d) {
         if (wallDetector.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             moveSpeed = -moveSpeed;
@@ -118,6 +119,6 @@ public class EnemyMechanics : MonoBehaviour {
     }
 
     void FlipSprite() {
-        transform.localScale = new Vector2(-Mathf.Sign(moveSpeed), transform.localScale.y);
+        this.transform.localScale = new Vector2(-Mathf.Sign(moveSpeed), transform.localScale.y);
     }
 }
