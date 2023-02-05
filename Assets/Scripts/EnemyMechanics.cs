@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,9 +8,13 @@ public class EnemyMechanics : MonoBehaviour {
         Attacking
     }
     
+    private const float MIN_WAIT_TIME = 1f;
+    private const float MAX_WAIT_TIME = 5f;
+    
     [SerializeField] protected float moveSpeed = 1f;
     [SerializeField] protected int hitPoints = 1;
     [SerializeField] protected float aggroRange = 5f;
+    [SerializeField] protected float blindAggroRange = 1.5f;
     
     protected Rigidbody2D enemyRigidbody;
     protected BoxCollider2D wallDetector;
@@ -20,12 +23,14 @@ public class EnemyMechanics : MonoBehaviour {
     protected Vector2 roamPosition;
     protected State state;
     
-    private float waitTimeInPosition = 0f;
+    protected float waitTimeInPosition = 0f;
 
     public int HitPoints {
         get => hitPoints;
         set => hitPoints = value;
     }
+
+    public float MoveSpeed => moveSpeed;
 
     protected virtual void Awake() {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -40,32 +45,43 @@ public class EnemyMechanics : MonoBehaviour {
     
     protected virtual void Update() {
         FindTarget();
+        DeductTimers();
         
         switch (state) {
             case State.Roaming:
-                if (waitTimeInPosition <= Mathf.Epsilon || enemyRigidbody.velocity.x > Mathf.Epsilon) {
-                    MoveTo(roamPosition);
-                    const float reachedPositionDistance = 1f;
-                    if (Vector2.Distance(this.transform.position, roamPosition) < reachedPositionDistance) {
-                        // Reached Roam Position
-                        waitTimeInPosition = Random.Range(1f, 5f);
-                        enemyRigidbody.velocity = new Vector2(0, 0f);
-                        roamPosition = GetRoamingPosition(); // Get a new roaming position
-                    }
-                    currentPosition = this.transform.position;
-                }
-                else
-                    waitTimeInPosition -= Time.deltaTime;
-                
+                Roam();
                 break;
             
             case State.ChaseTarget:
-                MoveTo(PlayerMechanics.Instance.GetPosition());
+                ChaseTarget();
                 break;
         }
     }
 
+    protected virtual void DeductTimers() {
+        waitTimeInPosition -= Time.deltaTime;
+    }
+
+    internal virtual void Roam() {
+        if (waitTimeInPosition <= Mathf.Epsilon || enemyRigidbody.velocity.x > Mathf.Epsilon) {
+            MoveTo(roamPosition);
+            const float reachedPositionDistance = 1f;
+            if (Vector2.Distance(this.transform.position, roamPosition) < reachedPositionDistance) {
+                // Reached Roam Position - remain idle for 'waitTimeInPosition' seconds
+                waitTimeInPosition = Random.Range(MIN_WAIT_TIME, MAX_WAIT_TIME);
+                enemyRigidbody.velocity = Vector2.zero;
+                roamPosition = GetRoamingPosition(); // Get a new roaming position
+            }
+            currentPosition = this.transform.position;
+        }
+    }
+
+    internal virtual void ChaseTarget() {
+        MoveTo(PlayerMechanics.Instance.GetPosition());
+    }
+
     void MoveTo(Vector2 movePosition) {
+        // Determine movement direction
         if (this.transform.position.x - movePosition.x > Mathf.Epsilon)
             moveSpeed = moveSpeed < 0 ? moveSpeed : -moveSpeed;
         else
@@ -91,31 +107,56 @@ public class EnemyMechanics : MonoBehaviour {
     }
 
     protected virtual void FindTarget() {
-        Vector2 enemyPosition = this.transform.position;
-        bool canSeeTarget = CanSeeTarget(aggroRange);
-        bool canSeeTargetByRange = Math.Abs(enemyPosition.x - PlayerMechanics.Instance.GetPosition().x) < aggroRange &&
-                                   Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 1f; // Old
+        bool canSeeTarget = CanSeeTarget(aggroRange, blindAggroRange);
+        // bool canSeeTargetByRange = Math.Abs(enemyPosition.x - PlayerMechanics.Instance.GetPosition().x) < aggroRange &&
+        //                            Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 1f; // Old
         
         state = canSeeTarget ? State.ChaseTarget : State.Roaming;
     }
 
-    protected bool CanSeeTarget(float distance) {
+    protected bool CanSeeTarget(float distance, float blindDistance) {
+        Vector3 enemyPosition = this.transform.position;
         Vector3 facingDirection = Vector3.left * Mathf.Sign(this.transform.localScale.x);
 
-        Vector2 endOfSight = this.transform.position + facingDirection * distance; 
+        Vector2 endOfSight = enemyPosition + facingDirection * distance;
+        Vector2 blindEndOfSight = enemyPosition - facingDirection * blindDistance;
         
-        RaycastHit2D raycastHit = Physics2D.Linecast(this.transform.position, endOfSight, 1 << LayerMask.NameToLayer("Player"));
-
-        return raycastHit.collider != null;
+        RaycastHit2D raycastHit = Physics2D.Linecast(enemyPosition, endOfSight, 1 << LayerMask.NameToLayer("Player"));
+        RaycastHit2D blindRaycastHit = Physics2D.Linecast(enemyPosition, blindEndOfSight, 1 << LayerMask.NameToLayer("Player"));
+        
+        //TODO - debug
+        if(raycastHit.collider != null)
+            Debug.DrawLine(transform.position, raycastHit.point, Color.red);
+        else
+            Debug.DrawLine(transform.position, endOfSight, Color.green);
+        if(blindRaycastHit.collider != null)
+            Debug.DrawLine(transform.position, blindRaycastHit.point, Color.black);
+        else
+            Debug.DrawLine(transform.position, blindEndOfSight, Color.blue);
+        //TODO - debug
+        
+        return raycastHit.collider != null || blindRaycastHit.collider != null;
     }
 
     void OnTriggerEnter2D(Collider2D collider2d) {
+        waitTimeInPosition = 0f;
+        if (state == State.Attacking) {
+            // Target is within range - wait longer
+            waitTimeInPosition += Random.Range(MIN_WAIT_TIME*2, MAX_WAIT_TIME*2);
+            enemyRigidbody.velocity = Vector2.zero;
+        }
         if (wallDetector.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
             moveSpeed = -moveSpeed;
             FlipSprite();
-            // Get new roaming position in direction of movement
+            // Get new roaming position in direction of movement - remain idle for 'waitTimeInPosition/2' seconds
+            waitTimeInPosition += Random.Range(MIN_WAIT_TIME/2, MAX_WAIT_TIME/2);
+            enemyRigidbody.velocity = Vector2.zero;
             roamPosition = Mathf.Sign(moveSpeed) < 0 ? GetLeftRoamingPosition() : GetRightRoamingPosition();
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collider2d) {
+        enemyRigidbody.velocity = Vector2.zero;
     }
 
     void FlipSprite() {

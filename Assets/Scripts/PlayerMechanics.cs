@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,8 +28,8 @@ public class PlayerMechanics : MonoBehaviour
     
     [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
     [SerializeField] Vector2 damagedKick = new Vector2(-3f, 5f);
-    private Vector2 damagedKickReverse = new Vector2(-3f, -5f);
-    [SerializeField] Vector2 hitKick = new Vector2(-5f, 2f);
+    private Vector2 damagedKickReverse;
+    [SerializeField] Vector2 hitKick = new Vector2(-5f, 0f);
     
     Vector2 moveInput;
     
@@ -56,8 +57,7 @@ public class PlayerMechanics : MonoBehaviour
     Animator playerAnimator;
     BoxCollider2D feetCollider;
     CapsuleCollider2D bodyCollider;
-    TrailRenderer trailRenderer;
-    
+
     // States
     bool isAlive = true;
     bool isFlipped = false;
@@ -86,7 +86,7 @@ public class PlayerMechanics : MonoBehaviour
         bodyCollider = GetComponent<CapsuleCollider2D>();
         pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
-        trailRenderer = GetComponent<TrailRenderer>();
+        damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
     }
 
     void Update() {
@@ -107,7 +107,7 @@ public class PlayerMechanics : MonoBehaviour
         dashCooldown -= Time.deltaTime;
     }
 
-    public Vector2 GetPosition() {
+    public Vector3 GetPosition() {
         return this.transform.position;
     }
 
@@ -181,9 +181,7 @@ public class PlayerMechanics : MonoBehaviour
         float originalGravity = playerRigidbody.gravityScale;
         playerRigidbody.gravityScale = 0f;
         playerRigidbody.velocity = new Vector2(this.transform.localScale.x * dashSpeed, 0f);
-        trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashingTime);
-        trailRenderer.emitting = false;
         playerRigidbody.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
@@ -214,26 +212,42 @@ public class PlayerMechanics : MonoBehaviour
         if (other.CompareTag("Tilemap"))
             canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other);
+            TakeDamage(other, damagedKick);
             invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
-        Collider2D other = col.collider;
+    private void OnTriggerStay2D(Collider2D other) {
+        if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
+            TakeDamage(other, damagedKick);
+            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        Collider2D other = collision.collider;
         if (other.CompareTag("Tilemap"))
             canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other);
+            TakeDamage(other, damagedKick);
             invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
         }
     }
 
-    void TakeDamage(Collider2D other) {
-        hitPoints--;
+    private void OnCollisionStay2D(Collision2D collision) {
+        Collider2D other = collision.collider;
+        if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
+            TakeDamage(other, damagedKick);
+            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+        }
+    }
+
+    public void TakeDamage(Behaviour other, Vector2 kick, int damage=1) {
+        hitPoints -= damage;
         audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(WasHurt);
-        playerRigidbody.velocity = other.CompareTag("Hazard") ? damagedKick : hitKick;
+        print("Kick vector" + kick);
+        playerRigidbody.AddForce(kick, ForceMode2D.Force);
         canDoubleJump = true;
         if(hitPoints <= 0)
             Die();
