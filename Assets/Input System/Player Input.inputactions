@@ -316,6 +316,39 @@
                 },
                 {
                     "name": "1D Axis",
+                    "id": "1ba102a6-c9d9-458a-92b0-61a5e06b8261",
+                    "path": "1DAxis",
+                    "interactions": "MultiTap(tapDelay=0.3)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "664a978d-bce7-4872-9c18-9c8073ac9f4a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "7026f4c0-e1ab-49d9-a62e-0ff96381b3d3",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
                     "id": "2decccab-2d6d-4800-8176-a03a5e838dbd",
                     "path": "1DAxis",
                     "interactions": "MultiTap(tapDelay=0.3)",
@@ -337,42 +370,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Positive",
+                    "name": "negative",
                     "id": "c256e8e6-4021-4f85-be1c-477009c88e49",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "1ba102a6-c9d9-458a-92b0-61a5e06b8261",
-                    "path": "1DAxis",
-                    "interactions": "MultiTap(tapDelay=0.3)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "Negative",
-                    "id": "664a978d-bce7-4872-9c18-9c8073ac9f4a",
                     "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Positive",
-                    "id": "7026f4c0-e1ab-49d9-a62e-0ff96381b3d3",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
