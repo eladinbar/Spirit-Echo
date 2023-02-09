@@ -38,9 +38,8 @@ public class PastHandler : MonoBehaviour {
         children = new Dictionary<Transform, Renderer>();
 
         foreach (Transform child in this.gameObject.transform) {
-            if (child.gameObject.CompareTag("Rendered") || child.gameObject.CompareTag("Background")) {
-                if (!child.gameObject.CompareTag("Background"))
-                    children.Add(child, child.GetComponent<Renderer>());
+            if (!child.gameObject.CompareTag("Background")) {
+                children.Add(child, child.GetComponent<Renderer>());
             }
         }
     }

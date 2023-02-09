@@ -1,0 +1,58 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PauseMenu : MonoBehaviour {
+    public static bool gameIsPaused = false;
+
+    private GameSession gameSession;
+    private PlayerInput playerInput;
+
+    [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject settingsPanel;
+
+    void Start() {
+        gameSession = FindObjectOfType<GameSession>();
+        playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.Escape))
+            if (gameIsPaused)
+                Resume();
+            else
+                Pause();
+    }
+
+    public void Resume() {
+        pauseMenuUI.SetActive(false);
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        playerInput.ActivateInput();
+        gameIsPaused = false;
+    }
+
+    void Pause() {
+        settingsPanel.SetActive(false);
+        pauseMenuUI.SetActive(true);
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        playerInput.DeactivateInput();
+        gameIsPaused = true;
+    }
+
+    public void LoadMenu() {
+        Time.timeScale = 1f;
+        gameSession.ReturnToMainMenu();
+    }
+
+    public void QuitGame() {
+        // save any game data here
+        #if UNITY_EDITOR
+            // 'UnityEditor.EditorApplication.isPlaying' needs to be set to false to end the game
+            // Since 'Application.Quit()' does not work in the editor
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+}

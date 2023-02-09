@@ -157,7 +157,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 22bf07a682e59fa42aa362a5ffa09c31, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -213,7 +213,7 @@ AudioSource:
   m_GameObject: {fileID: 3228914905770855036}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -314,7 +314,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   jumpSpeed: 5
+  doubleJumpSpeed: 5
+  dashSpeed: 24
+  deathKick: {x: 0, y: 10}
+  damagedKick: {x: -3, y: 5}
+  hitKick: {x: -5, y: 0}
+  hitPoints: 1
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
-  timeTravelSFX: {fileID: 8300000, guid: 853cf01e832734848bba5a4cd1e1643d, type: 3}
+  hurtSFX: {fileID: 8300000, guid: 338d7f42fd2808e41a56baf8e86dca61, type: 3}
+  deathSFX: {fileID: 0}
+  timeTravelSFX: {fileID: 8300000, guid: a825a35aeb93dc244ba0ee758d61579a, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
+  unlockedTimeTraversal: 1
+  unlockedDoubleJump: 1
+  unlockedDash: 1
