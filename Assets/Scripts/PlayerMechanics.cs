@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,8 +11,8 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int WasHurt = Animator.StringToHash("wasHurt");
     private static readonly int Death = Animator.StringToHash("Death");
 
-    private const float ENTER_INVULNERABILITY_TIME = 0.5f;
-    private const float STAY_INVULNERABILITY_TIME = 0.1f;
+    private const float DAMAGED_INVULNERABILITY_TIME = 0.5f;
+    private const float KNOCKBACK_TIME = 0.25f;
     private const float TIME_TRAVERSAL_COOLDOWN = 3f;
     private const float DASH_COOLDOWN = 1f;
     public static PlayerMechanics Instance { get; private set; }
@@ -27,7 +25,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] float dashSpeed = 24f;
     
     [SerializeField] Vector2 deathKick = new Vector2(0f, 10f);
-    [SerializeField] Vector2 damagedKick = new Vector2(-3f, 5f);
+    [SerializeField] Vector2 damagedKick = new Vector2(0f, 5f);
     private Vector2 damagedKickReverse;
     [SerializeField] Vector2 hitKick = new Vector2(-5f, 0f);
     
@@ -36,6 +34,7 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Health")]
     [SerializeField] int hitPoints = 1;
     private float invulnerabilityTime = 0.5f;
+    private float knockbackTime = 0f;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
@@ -103,6 +102,7 @@ public class PlayerMechanics : MonoBehaviour
 
     private void DeductTimers() {
         invulnerabilityTime -= Time.deltaTime;
+        knockbackTime -= Time.deltaTime;
         timeTraversalDelay -= Time.deltaTime;
         dashCooldown -= Time.deltaTime;
     }
@@ -155,7 +155,7 @@ public class PlayerMechanics : MonoBehaviour
     void OnTraverseTime() {
         if (isAlive && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
-            timeTraversalDelay = 3f;
+            timeTraversalDelay = TIME_TRAVERSAL_COOLDOWN;
 
             bool toPresent = pastTilemap.activeSelf;
             if (toPresent) {
@@ -175,8 +175,12 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void Run() {
-        Vector2 runVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
-        playerRigidbody.velocity = runVelocity;
+        Vector2 runVelocity = playerRigidbody.velocity;
+        
+        if (knockbackTime <= Mathf.Epsilon) {
+            runVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
+            playerRigidbody.velocity = runVelocity;
+        }
 
         bool playerIsRunning = Mathf.Abs(runVelocity.x) > Mathf.Epsilon;
         playerAnimator.SetBool(IsRunning, playerIsRunning);
@@ -221,16 +225,21 @@ public class PlayerMechanics : MonoBehaviour
         if (other.CompareTag("Tilemap"))
             canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other, damagedKick);
-            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+            Vector2 kick = !isFlipped ? damagedKick : damagedKickReverse;
+            TakeDamage(other, kick);
         }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other, damagedKick);
-            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+            Vector2 kick = !isFlipped ? damagedKick : damagedKickReverse;
+            TakeDamage(other, kick);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("Tilemap"))
+            canDoubleJump = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -238,28 +247,33 @@ public class PlayerMechanics : MonoBehaviour
         if (other.CompareTag("Tilemap"))
             canDash = true;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other, damagedKick);
-            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+            Vector2 kick = !isFlipped ? damagedKick : damagedKickReverse;
+            TakeDamage(other, kick);
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
         Collider2D other = collision.collider;
         if ((other.CompareTag("Enemy") || other.CompareTag("Hazard")) && isAlive && invulnerabilityTime <= Mathf.Epsilon) {
-            TakeDamage(other, damagedKick);
-            invulnerabilityTime = ENTER_INVULNERABILITY_TIME;
+            Vector2 kick = !isFlipped ? damagedKick : damagedKickReverse;
+            TakeDamage(other, kick);
         }
+    }
+
+    private void Knockback(Vector2 kick) {
+        knockbackTime = KNOCKBACK_TIME;
+        playerRigidbody.velocity = kick;
     }
 
     public void TakeDamage(Behaviour other, Vector2 kick, int damage=1) {
         hitPoints -= damage;
         audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(WasHurt);
-        print("Kick vector" + kick);
-        playerRigidbody.AddForce(kick, ForceMode2D.Force);
-        canDoubleJump = true;
         if(hitPoints <= 0)
             Die();
+        Knockback(kick);
+        canDoubleJump = true;
+        invulnerabilityTime = DAMAGED_INVULNERABILITY_TIME;
     }
 
     void Die() {

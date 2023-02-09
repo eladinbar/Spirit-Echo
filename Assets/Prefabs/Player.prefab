@@ -317,7 +317,7 @@ MonoBehaviour:
   doubleJumpSpeed: 5
   dashSpeed: 24
   deathKick: {x: 0, y: 10}
-  damagedKick: {x: -3, y: 5}
+  damagedKick: {x: 0, y: 5}
   hitKick: {x: -5, y: 0}
   hitPoints: 1
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}

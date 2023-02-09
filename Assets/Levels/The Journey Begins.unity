@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228914905770855034, guid: 94a6b7f7eae27264599531f3af15b23c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 3228914905770855034, guid: 94a6b7f7eae27264599531f3af15b23c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.06
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 3228914905770855034, guid: 94a6b7f7eae27264599531f3af15b23c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -201,11 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 2023384496}
     - target: {fileID: 7307948620128756758, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 7307948620128756758, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.06
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 7307948620128756758, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -277,11 +277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0500162
+      value: 2.5291257
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63280606
+      value: 0.7006854
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20507,6 +20507,10 @@ PrefabInstance:
     - target: {fileID: 684208337906803212, guid: da75fd92b366f9e4db091747841d70c9, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 684208339125577729, guid: da75fd92b366f9e4db091747841d70c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.944092
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da75fd92b366f9e4db091747841d70c9, type: 3}
