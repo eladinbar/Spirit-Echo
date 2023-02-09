@@ -123,11 +123,20 @@ public class PlayerMechanics : MonoBehaviour
             canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump;
             if (value.isPressed && playerCanJump) {
                 audioSource.PlayOneShot(jumpSFX);
-                playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
+                if(!isFlipped){
+                    playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
+                }
+                else{
+                    playerRigidbody.velocity += new Vector2(0f, -1 * jumpSpeed);
+                }
                 canDoubleJump = true;
             } else if (value.isPressed && canDoubleJump) {
                 audioSource.PlayOneShot(jumpSFX);
-                playerRigidbody.velocity += new Vector2(0f, doubleJumpSpeed);
+                if(!isFlipped){
+                    playerRigidbody.velocity += new Vector2(0f, doubleJumpSpeed);
+                }else{
+                    playerRigidbody.velocity += new Vector2(0f, -1 * doubleJumpSpeed);
+                }
                 playerAnimator.SetTrigger(DoubleJump);
                 canDoubleJump = false;
             }
