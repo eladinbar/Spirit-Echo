@@ -3,7 +3,11 @@ guid: 6d04ad2fbe90be24b8df0d00d59f5522
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
+  - timeTravelSFX: {instanceID: 0}
+  - presentTilemap: {instanceID: 0}
+  - pastTilemap: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

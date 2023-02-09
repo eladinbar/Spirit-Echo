@@ -8,6 +8,8 @@ TagManager:
   - Tilemap
   - Sprite
   - Rendered
+  - Enemy
+  - Hazard
   layers:
   - Default
   - TransparentFX

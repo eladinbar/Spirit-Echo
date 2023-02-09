@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Levels/Main Menu.unity
+    guid: 88b7443fd6f148145a512a9043417280
+  - enabled: 1
+    path: Assets/Levels/The Journey Begins.unity
+    guid: 96bba748803822e47bc7a9476eff6961
+  - enabled: 1
+    path: Assets/Levels/ANITAZZ LEVEL.unity
+    guid: 95eace0faedc09548ad9744d10683625
+  - enabled: 1
+    path: Assets/Levels/Level_Roy.unity
+    guid: 2a47aa1bf01d2534baf3c00e8e87214b
   m_configObjects: {}

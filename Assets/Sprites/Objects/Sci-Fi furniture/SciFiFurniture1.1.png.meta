@@ -300,7 +300,7 @@ TextureImporter:
         x: 197
         y: 584
         width: 39
-        height: 84
+        height: 85
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,7 +321,7 @@ TextureImporter:
         x: 245
         y: 584
         width: 39
-        height: 84
+        height: 85
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,8 +364,8 @@ TextureImporter:
         y: 576
         width: 92
         height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -889,8 +889,8 @@ TextureImporter:
         y: 0
         width: 138
         height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -910,8 +910,8 @@ TextureImporter:
         y: 0
         width: 86
         height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1581,13 +1581,13 @@ TextureImporter:
       SciFiFurniture1.1_43: -427394747
       SciFiFurniture1.1_60: -1217062193
       SciFiFurniture1.1_52: -1135504489
-      SciFiFurniture1.1_16: 725379708
-      SciFiFurniture1.1_26: -1166759457
-      SciFiFurniture1.1_36: -2093084172
       SciFiFurniture1.1_29: 1643795743
+      SciFiFurniture1.1_41: 1074705647
+      SciFiFurniture1.1_36: -2093084172
+      SciFiFurniture1.1_16: 725379708
       SciFiFurniture1.1_14: -1069696859
       SciFiFurniture1.1_50: -211933143
-      SciFiFurniture1.1_41: 1074705647
+      SciFiFurniture1.1_26: -1166759457
       SciFiFurniture1.1_40: -362241551
   spritePackingTag: 
   pSDRemoveMatte: 0
