@@ -36,6 +36,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
     protected State state;
     
     protected float waitTimeInPosition = 0f;
+    protected float damagedDuration = 0f;
 
     public int HitPoints {
         get => hitPoints;
@@ -76,6 +77,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
 
     protected virtual void DeductTimers() {
         waitTimeInPosition -= Time.deltaTime;
+        damagedDuration -= Time.deltaTime;
     }
 
     internal virtual void Roam() {
@@ -126,8 +128,15 @@ public abstract class EnemyMechanics : MonoBehaviour {
         bool canSeeTarget = CanSeeTarget(aggroRange, blindAggroRange);
         // bool canSeeTargetByRange = Math.Abs(enemyPosition.x - PlayerMechanics.Instance.GetPosition().x) < aggroRange &&
         //                            Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 1f; // Old
-        
+
+        State previousState = state;
         state = canSeeTarget ? State.ChaseTarget : State.Roaming;
+        // If state changed, define a new roaming position
+        if (previousState != state)
+            roamPosition = GetRoamingPosition();
+        // If target spotted, stop waiting
+        if (canSeeTarget)
+            waitTimeInPosition = 0f;
     }
 
     protected bool CanSeeTarget(float distance, float blindDistance) {
