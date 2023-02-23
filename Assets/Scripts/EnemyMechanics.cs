@@ -1,24 +1,36 @@
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class EnemyMechanics : MonoBehaviour {
+public abstract class EnemyMechanics : MonoBehaviour {
     protected enum State {
         Roaming,
         ChaseTarget,
         Attacking
     }
     
-    private const float MIN_WAIT_TIME = 1f;
-    private const float MAX_WAIT_TIME = 5f;
+    protected static readonly int Hurt = Animator.StringToHash("Hurt");
+    protected static readonly int Death = Animator.StringToHash("Death");
+    
+    protected const float MIN_WAIT_TIME = 1f;
+    protected const float MAX_WAIT_TIME = 5f;
+    protected const float KNOCKBACK_TIME = 1f;
+    protected float DEATH_ANIMATION_LENGTH;
     
     [SerializeField] protected float moveSpeed = 1f;
-    [SerializeField] protected int hitPoints = 1;
+    [SerializeField] protected int hitPoints;
+    protected int currentHealth;
     [SerializeField] protected float aggroRange = 5f;
     [SerializeField] protected float blindAggroRange = 1.5f;
+
+    [SerializeField] AudioClip hurtSFX;
+    [SerializeField] AudioClip deathSFX;
+
+    protected AudioSource audioSource;
+    protected Animator enemyAnimator;
     
     protected Rigidbody2D enemyRigidbody;
-    protected BoxCollider2D wallDetector;
-    
+
     protected Vector2 currentPosition;
     protected Vector2 roamPosition;
     protected State state;
@@ -34,7 +46,8 @@ public class EnemyMechanics : MonoBehaviour {
 
     protected virtual void Awake() {
         enemyRigidbody = GetComponent<Rigidbody2D>();
-        wallDetector = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
+        enemyAnimator = GetComponent<Animator>();
         state = State.Roaming;
     }
 
@@ -44,8 +57,11 @@ public class EnemyMechanics : MonoBehaviour {
     }
     
     protected virtual void Update() {
-        FindTarget();
         DeductTimers();
+        FindTarget();
+
+        if (waitTimeInPosition > Mathf.Epsilon)
+            return;
         
         switch (state) {
             case State.Roaming:
@@ -138,14 +154,14 @@ public class EnemyMechanics : MonoBehaviour {
         return raycastHit.collider != null || blindRaycastHit.collider != null;
     }
 
-    void OnTriggerEnter2D(Collider2D collider2d) {
+    void OnTriggerExit2D(Collider2D collider2d) {
         waitTimeInPosition = 0f;
         if (state == State.Attacking) {
             // Target is within range - wait longer
             waitTimeInPosition += Random.Range(MIN_WAIT_TIME*2, MAX_WAIT_TIME*2);
             enemyRigidbody.velocity = Vector2.zero;
         }
-        if (wallDetector.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+        if (collider2d.CompareTag("Tilemap")) {
             moveSpeed = -moveSpeed;
             FlipSprite();
             // Get new roaming position in direction of movement - remain idle for 'waitTimeInPosition/2' seconds
@@ -159,7 +175,32 @@ public class EnemyMechanics : MonoBehaviour {
         enemyRigidbody.velocity = Vector2.zero;
     }
 
-    void FlipSprite() {
+    protected void FlipSprite() {
         this.transform.localScale = new Vector2(-Mathf.Sign(moveSpeed), transform.localScale.y);
+    }
+    
+    private void Knockback(Vector2 kick) {
+        waitTimeInPosition = KNOCKBACK_TIME;
+        // playerRigidbody.velocity = kick;
+    }
+
+    public void TakeDamage(Vector2 kick, int damage=1) {
+        currentHealth -= damage;
+        // audioSource.PlayOneShot(hurtSFX);
+        enemyAnimator.SetTrigger(Hurt);
+        if(currentHealth <= 0)
+            Die();
+        Knockback(kick);
+    }
+    
+    void Die() {
+        // audioSource.PlayOneShot(deathSFX);
+        StartCoroutine(ProcessDeath());
+    }
+
+    private IEnumerator ProcessDeath() {
+        enemyAnimator.SetTrigger(Death);
+        yield return new WaitForSeconds(DEATH_ANIMATION_LENGTH);
+        Destroy(this.gameObject);
     }
 }
