@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMechanics : MonoBehaviour
 {
@@ -18,6 +21,8 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int Death = Animator.StringToHash("Death");
     public bool jumpEnabled = true;
     public bool timeTraverseEnabled = true;
+
+    GameSession gameSessionRemote;
 
     
 
@@ -44,7 +49,7 @@ public class PlayerMechanics : MonoBehaviour
     Vector2 moveInput;
     
     [Header("Health")]
-    [SerializeField] int hitPoints = 1;
+    int hitPoints = 5;
     private float invulnerabilityTime = 0.5f;
     private float knockbackTime = 0f;
 
@@ -108,6 +113,7 @@ public class PlayerMechanics : MonoBehaviour
 
     void Awake() {
         Instance = this;
+        gameSessionRemote = FindObjectOfType<GameSession>();
     }
 
     void Start() {
@@ -119,7 +125,9 @@ public class PlayerMechanics : MonoBehaviour
             unlockedGravityShift = true;
             unlockedWallClimb = true;
         #endif
-        
+        gameSessionRemote.livesUpdate(hitPoints);
+
+
         audioSource = GetComponent<AudioSource>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
@@ -326,6 +334,7 @@ public class PlayerMechanics : MonoBehaviour
 
     public void TakeDamage(Behaviour other, Vector2 kick, int damage=1) {
         hitPoints -= damage;
+        gameSessionRemote.livesUpdate(hitPoints);
         audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(Hurt);
         if(hitPoints <= 0)
@@ -336,11 +345,15 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void Die() {
+        gameSessionRemote.livesUpdate(5);
+        hitPoints = 5;
+        audioSource.PlayOneShot(deathSFX);
+
         // isAlive = false;
-        // audioSource.PlayOneShot(deathSFX);
-        // playerAnimator.SetTrigger(Death);
-        // playerRigidbody.velocity = deathKick;
-        // FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        playerAnimator.SetTrigger(Death);
+        playerRigidbody.velocity = deathKick;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 }
    

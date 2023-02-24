@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour {
+    [SerializeField] TextMeshProUGUI livesCount;
 
     
     void Awake() {
@@ -15,7 +16,11 @@ public class GameSession : MonoBehaviour {
     }
 
     void Start() {
-        
+
+    }
+    public void livesUpdate(int count){
+        livesCount.text=count.ToString();
+
     }
 
     public void ReturnToMainMenu() {
