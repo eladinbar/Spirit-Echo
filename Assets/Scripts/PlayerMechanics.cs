@@ -16,6 +16,10 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int Using = Animator.StringToHash("Use");
     private static readonly int Hurt = Animator.StringToHash("Hurt");
     private static readonly int Death = Animator.StringToHash("Death");
+    public bool jumpEnabled = true;
+    public bool timeTraverseEnabled = true;
+
+    
 
     // Constants
     private const float DAMAGED_INVULNERABILITY_TIME = 0.5f;
@@ -159,7 +163,7 @@ public class PlayerMechanics : MonoBehaviour
 
     void OnJump(InputValue value) {
         if (isAlive) {
-            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+            bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))&& jumpEnabled;
             canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump && unlockedDoubleJump;
             if (value.isPressed && playerCanJump) {
                 audioSource.PlayOneShot(jumpSFX);
@@ -184,7 +188,7 @@ public class PlayerMechanics : MonoBehaviour
     }
     
     void OnTraverseTime() {
-        if (isAlive && unlockedTimeTraversal && timeTraversalDelay <= Mathf.Epsilon) {
+        if (isAlive && unlockedTimeTraversal && timeTraverseEnabled && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
             timeTraversalDelay = TIME_TRAVERSAL_COOLDOWN;
 
