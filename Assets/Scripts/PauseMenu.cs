@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.F11))
-            settingsMenu.ToggleFullscreen(!settingsMenu.FullscreenToggle.isOn);
+            settingsMenu.FullscreenToggle.isOn = !settingsMenu.FullscreenToggle.isOn; 
 
         if(Input.GetKeyDown(KeyCode.Escape))
             if (gameIsPaused)

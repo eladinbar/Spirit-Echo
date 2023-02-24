@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public Toggle FullscreenToggle => fullscreenToggle;
 
-#if UNITY_EDITOR
+    #if UNITY_EDITOR
     private EditorWindow window;
     private bool initialToggle = true;
     #endif
