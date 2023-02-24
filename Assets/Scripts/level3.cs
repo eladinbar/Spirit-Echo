@@ -82,110 +82,112 @@ public class level3 : MonoBehaviour
 
         
     }
-    void OnTraverseTime() {
-        toLab = !toLab;
-        if(toLab == true){
-            if(isJumpEnabledInPast)
-                playermechanicsRemote.jumpEnabled=true;
-            else
-                playermechanicsRemote.jumpEnabled=false;
+    // void OnTraverseTime() {
+    //     toLab = !toLab;
+    //     if(toLab == true){
+    //         if(isJumpEnabledInPast)
+    //             playermechanicsRemote.jumpEnabled=true;
+    //         else
+    //             playermechanicsRemote.jumpEnabled=false;
 
 
-            playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
-            donny.SetActive(true);
-            StartCoroutine(FadeIn(donny.GetComponent<SpriteRenderer>()));
+    //         playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
+    //         //donny.SetActive(true);
+    //         //StartCoroutine(FadeIn(donny.GetComponent<SpriteRenderer>()));
 
 
 
-            if(phase==1)
-            {
-                System.Threading.Thread.Sleep(2500);
-                text1.SetActive(true);
-            }
-            if(phase==2)
-                text2.SetActive(true);
-            if(phase==3)
-                text3.SetActive(true);
-            if(phase==4)
-                text4.SetActive(true);
-            if(phase==5){
-                text5.SetActive(true);
-            }
-            text1v.SetActive(false);
-            text2v.SetActive(false);
-            text3v.SetActive(false);
-            text4v.SetActive(false);
-            text5v.SetActive(false);
-            text6v.SetActive(false);
-            text1v2.SetActive(false);
-            text2v2.SetActive(false);
-            text3v2.SetActive(false);
-            text4v2.SetActive(false);
-            text5v2.SetActive(false);
+    //         if(phase==1)
+    //         {
+    //             System.Threading.Thread.Sleep(2500);
+    //             text1.SetActive(true);
+    //         }
+    //         if(phase==2)
+    //             text2.SetActive(true);
+    //         if(phase==3)
+    //             text3.SetActive(true);
+    //         if(phase==4)
+    //             text4.SetActive(true);
+    //         if(phase==5){
+    //             text5.SetActive(true);
+    //         }
+    //         text1v.SetActive(false);
+    //         text2v.SetActive(false);
+    //         text3v.SetActive(false);
+    //         text4v.SetActive(false);
+    //         text5v.SetActive(false);
+    //         text6v.SetActive(false);
+    //         text1v2.SetActive(false);
+    //         text2v2.SetActive(false);
+    //         text3v2.SetActive(false);
+    //         text4v2.SetActive(false);
+    //         text5v2.SetActive(false);
 
 
-        }
-        else{
-            if(phase>=5 & phase2<2)
-                text1v.SetActive(true);
+    //     }
+    //     else{
+    //         if(phase>=5 & phase2<2)
+    //             text1v.SetActive(true);
                 
-            if(phase2==2)
-                text2v.SetActive(true);
-            if(phase2==3)
-                text3v.SetActive(true);
-            if(phase2==4)
-                text4v.SetActive(true);
-            if(phase2==5){
-                text5v.SetActive(true);
-            }
-            if(phase2==6){
-                text6v.SetActive(true);
-            }
+    //         if(phase2==2)
+    //             text2v.SetActive(true);
+    //         if(phase2==3)
+    //             text3v.SetActive(true);
+    //         if(phase2==4)
+    //             text4v.SetActive(true);
+    //         if(phase2==5){
+    //             text5v.SetActive(true);
+    //         }
+    //         if(phase2==6){
+    //             text6v.SetActive(true);
+    //         }
 
-            if(phase3==2)
-                text1v2.SetActive(true);
-            if(phase3==3)
-                text2v2.SetActive(true);
-            if(phase3==4)
-                text3v2.SetActive(true);
-            if(phase3==5){
-                text4v2.SetActive(true);
-            }
-            if(phase3==6){
-                text5v2.SetActive(true);
-            }
+    //         if(phase3==2)
+    //             text1v2.SetActive(true);
+    //         if(phase3==3)
+    //             text2v2.SetActive(true);
+    //         if(phase3==4)
+    //             text3v2.SetActive(true);
+    //         if(phase3==5){
+    //             text4v2.SetActive(true);
+    //         }
+    //         if(phase3==6){
+    //             text5v2.SetActive(true);
+    //         }
 
-            if(isJumpEnabledInPresent)
-                playermechanicsRemote.jumpEnabled=true;
-            else
-                playermechanicsRemote.jumpEnabled=false;
-            donny.SetActive(false);
-            text1.SetActive(false);
-            text2.SetActive(false);
-            text3.SetActive(false);
-            text4.SetActive(false);
-            text5.SetActive(false);
-            if(isNewJumpEnabled)
-                playerBoxCollider.size = new Vector2((float)0.75, (float)0.12);
-            else
-                playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
-
-
-        }        
+    //         if(isJumpEnabledInPresent)
+    //             playermechanicsRemote.jumpEnabled=true;
+    //         else
+    //             playermechanicsRemote.jumpEnabled=false;
+    //         //donny.SetActive(false);
+    //         text1.SetActive(false);
+    //         text2.SetActive(false);
+    //         text3.SetActive(false);
+    //         text4.SetActive(false);
+    //         text5.SetActive(false);
+    //         if(isNewJumpEnabled)
+    //             playerBoxCollider.size = new Vector2((float)0.75, (float)0.12);
+    //         else
+    //             playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
 
 
+    //     }        
 
 
-    }
+
+
+    // }
 
     void OnJump() {
         bool isPast = pastTilemap.activeSelf;
         if(isPast){
             phase+=1;
-
+            playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
 
         }
         else{
+            if(phase>=3)
+                playerBoxCollider.size = new Vector2((float)0.75, (float)0.12);
             if(phase2>0)
                 phase2+=1;
             if(phase3>1)
@@ -193,6 +195,7 @@ public class level3 : MonoBehaviour
         }
 
         if(phase==1){
+            playermechanicsRemote.timeTraverseEnabled=false;
             text1.SetActive(true);
         }
         if(phase==2){
@@ -212,6 +215,7 @@ public class level3 : MonoBehaviour
             text4.SetActive(false);
             text5.SetActive(true);
             isNewJumpEnabled=true;
+            playermechanicsRemote.timeTraverseEnabled=true;
             playermechanicsRemote.jumpEnabled=true;
             isJumpEnabledInPast = true;
             text1v.SetActive(true);

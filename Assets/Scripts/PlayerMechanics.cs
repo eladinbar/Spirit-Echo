@@ -13,6 +13,8 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int WasHurt = Animator.StringToHash("wasHurt");
     private static readonly int Death = Animator.StringToHash("Death");
     public bool jumpEnabled = true;
+    public bool timeTraverseEnabled = true;
+
     
 
     private const float ENTER_INVULNERABILITY_TIME = 0.5f;
@@ -146,7 +148,7 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void OnTraverseTime() {
-        if (isAlive && timeTraversalDelay <= Mathf.Epsilon) {
+        if (isAlive && timeTraverseEnabled && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
             timeTraversalDelay = 3f;
 
