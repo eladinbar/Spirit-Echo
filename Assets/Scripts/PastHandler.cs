@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -14,7 +12,6 @@ public class PastHandler : MonoBehaviour {
     [SerializeField] GameObject backgroundTilemap;
     private PolygonCollider2D boundingBox;
     private TilemapRenderer backgroundRend;
-    private Dictionary<Transform, Renderer> children;
 
     [SerializeField] CinemachineVirtualCamera virtualCamera;
 
@@ -22,7 +19,6 @@ public class PastHandler : MonoBehaviour {
         rend = GetComponent<TilemapRenderer>();
         boundingBox = backgroundTilemap.GetComponent<PolygonCollider2D>();
         backgroundRend = backgroundTilemap.GetComponent<TilemapRenderer>();
-        AddAllChildren();
         cinemachineConfiner = virtualCamera.GetComponent<CinemachineConfiner>();
         audioSource = GetComponent<AudioSource>();
         
@@ -32,16 +28,6 @@ public class PastHandler : MonoBehaviour {
         color.a = 0f;
         material.color = color;
         this.gameObject.SetActive(false);
-    }
-
-    private void AddAllChildren() {
-        children = new Dictionary<Transform, Renderer>();
-
-        foreach (Transform child in this.gameObject.transform) {
-            if (!child.gameObject.CompareTag("Background")) {
-                children.Add(child, child.GetComponent<Renderer>());
-            }
-        }
     }
 
     private IEnumerator FadeIn(Renderer render) {
@@ -72,17 +58,22 @@ public class PastHandler : MonoBehaviour {
         cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
         StartCoroutine(FadeIn(backgroundRend));
 
-        foreach (KeyValuePair<Transform, Renderer> child in children) {
-            child.Key.gameObject.SetActive(true);
-            StartCoroutine(FadeIn(child.Value));
+        foreach (Transform child in this.gameObject.transform) {
+            if (!child.gameObject.CompareTag("Background")) {
+                child.gameObject.SetActive(true);
+                StartCoroutine(FadeIn(child.GetComponent<Renderer>()));
+            }
         }
 
         audioSource.Play();
     }
 
     public void StartFading() {
-        foreach (KeyValuePair<Transform, Renderer> child in children)
-            StartCoroutine(FadeOut(child.Value));
+        foreach (Transform child in this.gameObject.transform) {
+            if (!child.gameObject.CompareTag("Background")) {
+                StartCoroutine(FadeOut(child.GetComponent<Renderer>()));
+            }
+        }
         StartCoroutine(FadeOut(backgroundRend));
         StartCoroutine(FadeOut(this.rend));
         
