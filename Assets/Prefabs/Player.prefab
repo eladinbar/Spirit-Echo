@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &86843513764994941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351490945825138608}
+  m_Layer: 7
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &351490945825138608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86843513764994941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.582, y: 0.056, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3228914905770855034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3228914905770855036
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,7 +66,8 @@ Transform:
   m_LocalPosition: {x: -4.48, y: -1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 351490945825138608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -324,8 +356,20 @@ MonoBehaviour:
   hurtSFX: {fileID: 8300000, guid: 338d7f42fd2808e41a56baf8e86dca61, type: 3}
   deathSFX: {fileID: 0}
   timeTravelSFX: {fileID: 8300000, guid: a825a35aeb93dc244ba0ee758d61579a, type: 3}
+  dashSFX: {fileID: 8300000, guid: 6706f89efff14d64385bbf62e48430d4, type: 3}
+  flipGravitySFX: {fileID: 8300000, guid: 87106723fd5406348b2a01db144c9b24, type: 3}
+  attackSFX: {fileID: 8300000, guid: 5ad895a70d7828142bd31555e148a784, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
-  unlockedTimeTraversal: 1
-  unlockedDoubleJump: 1
-  unlockedDash: 1
+  unlockedTimeTraversal: 0
+  unlockedDoubleJump: 0
+  unlockedDash: 0
+  unlockedAttack: 0
+  attackPoint: {fileID: 351490945825138608}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 1.5
+  attackDamage: 1
+  unlockedGravityShift: 0
+  unlockedWallClimb: 0

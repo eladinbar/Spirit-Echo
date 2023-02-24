@@ -4,18 +4,26 @@ using UnityEngine.InputSystem;
 
 public class PlayerMechanics : MonoBehaviour
 {
+    // Player Instance
+    public static PlayerMechanics Instance { get; private set; }
+    
+    // Animation state hashes
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
-    private static readonly int Dashing = Animator.StringToHash("dashing");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
-    private static readonly int DoubleJump = Animator.StringToHash("doubleJump");
-    private static readonly int WasHurt = Animator.StringToHash("wasHurt");
+    private static readonly int DoubleJump = Animator.StringToHash("DoubleJump");
+    private static readonly int Dashing = Animator.StringToHash("Dash");
+    private static readonly int Attacking = Animator.StringToHash("Attack");
+    private static readonly int Using = Animator.StringToHash("Use");
+    private static readonly int Hurt = Animator.StringToHash("Hurt");
     private static readonly int Death = Animator.StringToHash("Death");
 
+    // Constants
     private const float DAMAGED_INVULNERABILITY_TIME = 0.5f;
     private const float KNOCKBACK_TIME = 0.25f;
     private const float TIME_TRAVERSAL_COOLDOWN = 3f;
     private const float DASH_COOLDOWN = 1f;
-    public static PlayerMechanics Instance { get; private set; }
+    private const float ATTACK_COOLDOWN = 0.667f;
+    
     [Header("Stats")]
     
     [Header("Movement Speed")]
@@ -41,6 +49,9 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] AudioClip hurtSFX;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] AudioClip timeTravelSFX;
+    [SerializeField] AudioClip dashSFX;
+    [SerializeField] AudioClip flipGravitySFX;
+    [SerializeField] AudioClip attackSFX;
 
     AudioSource audioSource;
 
@@ -53,31 +64,58 @@ public class PlayerMechanics : MonoBehaviour
 
     // Physics
     Rigidbody2D playerRigidbody;
-    Animator playerAnimator;
     BoxCollider2D feetCollider;
     CapsuleCollider2D bodyCollider;
+    
+    Animator playerAnimator;
 
     // States
     bool isAlive = true;
-    bool isFlipped = false;
-    
-    public bool unlockedTimeTraversal = true;
+
+    //// Time Traversal
+    public bool unlockedTimeTraversal = false;
     private float timeTraversalDelay = 0f;
 
-    public bool unlockedDoubleJump = true;
+    //// Double Jump
+    public bool unlockedDoubleJump = false;
     private bool canDoubleJump = false;
 
-    public bool unlockedDash = true;
+    //// Dash
+    public bool unlockedDash = false;
     private bool canDash = true;
     private bool isDashing;
     private float dashingTime = 0.2f;
     private float dashCooldown = 1f;
 
+    //// Attack
+    public bool unlockedAttack = false;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] LayerMask enemyLayers;
+    private float attackCooldown = 0f;
+    [SerializeField] float attackRange = 1.5f;
+    [SerializeField] int attackDamage = 1;
+
+    //// Gravity Shift
+    public bool unlockedGravityShift = false;
+    private bool isFlipped = false;
+    
+    //// Wall CLimb
+    public bool unlockedWallClimb = false;
+
     void Awake() {
         Instance = this;
     }
 
-    void Start()    {
+    void Start() {
+        #if UNITY_EDITOR
+            unlockedTimeTraversal = true;
+            unlockedDoubleJump = true;
+            unlockedDash = true;
+            unlockedAttack = true;
+            unlockedGravityShift = true;
+            unlockedWallClimb = true;
+        #endif
+        
         audioSource = GetComponent<AudioSource>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
@@ -86,13 +124,14 @@ public class PlayerMechanics : MonoBehaviour
         pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
         damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
+        enemyLayers = LayerMask.GetMask("Enemies");
     }
 
     void Update() {
         if (isAlive) {
             DeductTimers();
             
-            if (isDashing)
+            if (isDashing || knockbackTime > Mathf.Epsilon)
                 return;
             
             Run();
@@ -105,6 +144,7 @@ public class PlayerMechanics : MonoBehaviour
         knockbackTime -= Time.deltaTime;
         timeTraversalDelay -= Time.deltaTime;
         dashCooldown -= Time.deltaTime;
+        attackCooldown -= Time.deltaTime;
     }
 
     public Vector3 GetPosition() {
@@ -120,7 +160,7 @@ public class PlayerMechanics : MonoBehaviour
     void OnJump(InputValue value) {
         if (isAlive) {
             bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-            canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump;
+            canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump && unlockedDoubleJump;
             if (value.isPressed && playerCanJump) {
                 audioSource.PlayOneShot(jumpSFX);
                 if(!isFlipped){
@@ -142,18 +182,9 @@ public class PlayerMechanics : MonoBehaviour
             }
         }
     }
-
-    void OnDash() {
-        canDash = canDash || feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        if (isAlive && dashCooldown <= Mathf.Epsilon && canDash) {
-            StartCoroutine(Dash());
-            canDash = false;
-            dashCooldown = DASH_COOLDOWN;
-        }
-    }
-
+    
     void OnTraverseTime() {
-        if (isAlive && timeTraversalDelay <= Mathf.Epsilon) {
+        if (isAlive && unlockedTimeTraversal && timeTraversalDelay <= Mathf.Epsilon) {
             audioSource.PlayOneShot(timeTravelSFX);
             timeTraversalDelay = TIME_TRAVERSAL_COOLDOWN;
 
@@ -169,18 +200,57 @@ public class PlayerMechanics : MonoBehaviour
         }
     }
 
+    void OnDash() {
+        canDash = (canDash || feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) && unlockedDash;
+        if (isAlive && dashCooldown <= Mathf.Epsilon && canDash) {
+            StartCoroutine(Dash());
+            canDash = false;
+            dashCooldown = DASH_COOLDOWN;
+        }
+    }
+
+    void OnAttack() {
+        if (isAlive && knockbackTime <= Mathf.Epsilon && attackCooldown <= Mathf.Epsilon && unlockedAttack) {
+            playerAnimator.SetTrigger(Attacking);
+            audioSource.PlayOneShot(attackSFX);
+            Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            foreach (Collider2D enemy in enemiesHit) {
+                enemy.GetComponent<EnemyMechanics>().TakeDamage(Vector2.zero, attackDamage);
+            }
+            attackCooldown = ATTACK_COOLDOWN;
+        }
+    }
+
+    // Show attack sphere in editor while Gizmos are enabled
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    void OnFlip() {
+        if (unlockedGravityShift) {
+            audioSource.PlayOneShot(flipGravitySFX);
+            if (isFlipped) {
+                transform.localScale = new Vector3(transform.localScale.x, 1, transform.localScale.z);
+                playerRigidbody.gravityScale = 1;
+            }
+            else {
+                transform.localScale = new Vector3(transform.localScale.x, -1, transform.localScale.z);
+                playerRigidbody.gravityScale = -1;
+            }
+
+            isFlipped = !isFlipped;
+        }
+    }
+
     void FlipSprite(bool playerIsRunning, float moveSpeed) {
-        if (playerIsRunning)
+        if (playerIsRunning && attackCooldown <= Mathf.Epsilon)
             transform.localScale = new Vector2(Mathf.Sign(moveSpeed), transform.localScale.y);
     }
 
     void Run() {
-        Vector2 runVelocity = playerRigidbody.velocity;
-        
-        if (knockbackTime <= Mathf.Epsilon) {
-            runVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
-            playerRigidbody.velocity = runVelocity;
-        }
+        Vector2 runVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
+        playerRigidbody.velocity = runVelocity;
 
         bool playerIsRunning = Mathf.Abs(runVelocity.x) > Mathf.Epsilon;
         playerAnimator.SetBool(IsRunning, playerIsRunning);
@@ -191,6 +261,7 @@ public class PlayerMechanics : MonoBehaviour
     private IEnumerator Dash() {
         isDashing = true;
         playerAnimator.SetTrigger(Dashing);
+        audioSource.PlayOneShot(dashSFX);
         float originalGravity = playerRigidbody.gravityScale;
         playerRigidbody.gravityScale = 0f;
         playerRigidbody.velocity = new Vector2(this.transform.localScale.x * dashSpeed, 0f);
@@ -205,22 +276,6 @@ public class PlayerMechanics : MonoBehaviour
         playerAnimator.SetBool(IsJumping, playerIsJumping);
     }
 
-
-    void OnFlip()
-    {
-        if (isFlipped)
-        {
-            transform.localScale = new Vector3(transform.localScale.x, 1, transform.localScale.z);
-            playerRigidbody.gravityScale = 1;
-        }
-        else 
-        {
-            transform.localScale = new Vector3(transform.localScale.x, -1, transform.localScale.z);
-            playerRigidbody.gravityScale = -1;
-        }
-        isFlipped = !isFlipped;
-    }
-    
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Tilemap"))
             canDash = true;
@@ -268,7 +323,7 @@ public class PlayerMechanics : MonoBehaviour
     public void TakeDamage(Behaviour other, Vector2 kick, int damage=1) {
         hitPoints -= damage;
         audioSource.PlayOneShot(hurtSFX);
-        playerAnimator.SetTrigger(WasHurt);
+        playerAnimator.SetTrigger(Hurt);
         if(hitPoints <= 0)
             Die();
         Knockback(kick);
