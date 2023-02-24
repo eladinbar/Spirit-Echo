@@ -1274,7 +1274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.9439697, y: 200}
+  m_AnchoredPosition: {x: -4.944092, y: 200}
   m_SizeDelta: {x: -1309.887, y: -600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &684208339125577759
@@ -1516,6 +1516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684208337617286657}
     m_Modifications:
+    - target: {fileID: 5138587570463311361, guid: 6dd3ccecf28822b49ae21ff6e50a28f0, type: 3}
+      propertyPath: m_Value
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5138587570875000456, guid: 6dd3ccecf28822b49ae21ff6e50a28f0, type: 3}
       propertyPath: m_Name
       value: Settings Panel
