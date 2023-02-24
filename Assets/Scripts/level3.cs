@@ -33,7 +33,6 @@ public class level3 : MonoBehaviour
     BoxCollider2D playerBoxCollider;
     bool isNewJumpEnabled= false;
     bool init=true;
-    bool toLab= false;
     int phase = 0, phase2=0, phase3=0;
     [SerializeField] GameObject pastTilemap;
 
