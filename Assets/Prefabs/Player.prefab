@@ -344,6 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d04ad2fbe90be24b8df0d00d59f5522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEnabled: 1
+  timeTraverseEnabled: 1
   runSpeed: 5
   jumpSpeed: 5
   doubleJumpSpeed: 5
@@ -351,7 +353,7 @@ MonoBehaviour:
   deathKick: {x: 0, y: 10}
   damagedKick: {x: 0, y: 5}
   hitKick: {x: -5, y: 0}
-  hitPoints: 1
+  hitPoints: 5
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
   hurtSFX: {fileID: 8300000, guid: 338d7f42fd2808e41a56baf8e86dca61, type: 3}
   deathSFX: {fileID: 0}

@@ -49,7 +49,7 @@ public class PlayerMechanics : MonoBehaviour
     Vector2 moveInput;
     
     [Header("Health")]
-    int hitPoints = 5;
+    [SerializeField] int hitPoints = 5;
     private float invulnerabilityTime = 0.5f;
     private float knockbackTime = 0f;
 
@@ -113,10 +113,13 @@ public class PlayerMechanics : MonoBehaviour
 
     void Awake() {
         Instance = this;
-        gameSessionRemote = FindObjectOfType<GameSession>();
+
+
     }
 
     void Start() {
+        gameSessionRemote = FindObjectOfType<GameSession>();
+        gameSessionRemote.livesUpdate(hitPoints);
         #if UNITY_EDITOR
             unlockedTimeTraversal = true;
             unlockedDoubleJump = true;
@@ -125,7 +128,6 @@ public class PlayerMechanics : MonoBehaviour
             unlockedGravityShift = true;
             unlockedWallClimb = true;
         #endif
-        gameSessionRemote.livesUpdate(hitPoints);
 
 
         audioSource = GetComponent<AudioSource>();
@@ -345,7 +347,7 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void Die() {
-        gameSessionRemote.livesUpdate(5);
+        
         hitPoints = 5;
         audioSource.PlayOneShot(deathSFX);
 

@@ -19,8 +19,8 @@ public class GameSession : MonoBehaviour {
 
     }
     public void livesUpdate(int count){
+        print(count);
         livesCount.text=count.ToString();
-
     }
 
     public void ReturnToMainMenu() {
