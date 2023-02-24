@@ -2,20 +2,33 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour {
-    public static bool gameIsPaused = false;
+    private static bool gameIsPaused = false;
+    public static bool GameIsPaused => gameIsPaused;
 
     private GameSession gameSession;
     private PlayerInput playerInput;
 
     [SerializeField] GameObject pauseMenuUI;
     [SerializeField] GameObject settingsPanel;
+    private SettingsMenu settingsMenu;
 
     void Start() {
         gameSession = FindObjectOfType<GameSession>();
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
+        settingsMenu = settingsPanel.GetComponent<SettingsMenu>();
+        
+        //Initialize settings menu
+        Pause();
+        settingsPanel.SetActive(true);
+        settingsMenu.SetVolume(-10f);
+        Resume();
+        settingsPanel.SetActive(false);
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.F11))
+            settingsMenu.ToggleFullscreen(!settingsMenu.FullscreenToggle.isOn);
+
         if(Input.GetKeyDown(KeyCode.Escape))
             if (gameIsPaused)
                 Resume();
