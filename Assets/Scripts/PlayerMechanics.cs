@@ -61,6 +61,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] AudioClip dashSFX;
     [SerializeField] AudioClip flipGravitySFX;
     [SerializeField] AudioClip attackSFX;
+    [SerializeField] AudioClip ErrorSFX;
 
     AudioSource audioSource;
 
@@ -209,6 +210,9 @@ public class PlayerMechanics : MonoBehaviour
                 pastTilemap.SetActive(true);
                 presentTilemapHandler.StartFading();
             }
+        }
+        if(!timeTraverseEnabled){
+            audioSource.PlayOneShot(ErrorSFX);
         }
     }
 
