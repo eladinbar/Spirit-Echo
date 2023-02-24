@@ -361,6 +361,7 @@ MonoBehaviour:
   dashSFX: {fileID: 8300000, guid: 6706f89efff14d64385bbf62e48430d4, type: 3}
   flipGravitySFX: {fileID: 8300000, guid: 87106723fd5406348b2a01db144c9b24, type: 3}
   attackSFX: {fileID: 8300000, guid: 5ad895a70d7828142bd31555e148a784, type: 3}
+  errorSFX: {fileID: 0}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
   unlockedTimeTraversal: 0
