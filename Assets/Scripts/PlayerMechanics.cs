@@ -1,15 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerMechanics : MonoBehaviour
 {
     // Player Instance
     public static PlayerMechanics Instance { get; private set; }
-    
+
     // Animation state hashes
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
@@ -21,10 +18,6 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int Death = Animator.StringToHash("Death");
     public bool jumpEnabled = true;
     public bool timeTraverseEnabled = true;
-
-    GameSession gameSessionRemote;
-
-    
 
     // Constants
     private const float DAMAGED_INVULNERABILITY_TIME = 0.5f;
@@ -49,9 +42,13 @@ public class PlayerMechanics : MonoBehaviour
     Vector2 moveInput;
     
     [Header("Health")]
-    [SerializeField] int hitPoints = 5;
+    [SerializeField] int maxHitPoints = 5;
+    [SerializeField] int currentHitPoints;
     private float invulnerabilityTime = 0.5f;
     private float knockbackTime = 0f;
+
+    public int MaxHitPoints => maxHitPoints;
+    public int CurrentHitPoints => currentHitPoints;
 
     [Header("SFX")]
     [SerializeField] AudioClip jumpSFX;
@@ -61,7 +58,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] AudioClip dashSFX;
     [SerializeField] AudioClip flipGravitySFX;
     [SerializeField] AudioClip attackSFX;
-    [SerializeField] AudioClip ErrorSFX;
+    [SerializeField] AudioClip errorSFX;
 
     AudioSource audioSource;
 
@@ -114,13 +111,9 @@ public class PlayerMechanics : MonoBehaviour
 
     void Awake() {
         Instance = this;
-
-
     }
 
     void Start() {
-        gameSessionRemote = FindObjectOfType<GameSession>();
-        gameSessionRemote.livesUpdate(hitPoints);
         #if UNITY_EDITOR
             unlockedTimeTraversal = true;
             unlockedDoubleJump = true;
@@ -129,7 +122,6 @@ public class PlayerMechanics : MonoBehaviour
             unlockedGravityShift = true;
             unlockedWallClimb = true;
         #endif
-
 
         audioSource = GetComponent<AudioSource>();
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -140,6 +132,7 @@ public class PlayerMechanics : MonoBehaviour
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
         damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
         enemyLayers = LayerMask.GetMask("Enemies");
+        currentHitPoints = maxHitPoints;
     }
 
     void Update() {
@@ -213,8 +206,8 @@ public class PlayerMechanics : MonoBehaviour
                 presentTilemapHandler.StartFading();
             }
         }
-        if(!timeTraverseEnabled){
-            audioSource.PlayOneShot(ErrorSFX);
+        if(isAlive && !timeTraverseEnabled){
+            audioSource.PlayOneShot(errorSFX);
         }
     }
 
@@ -232,6 +225,7 @@ public class PlayerMechanics : MonoBehaviour
             playerAnimator.SetTrigger(Attacking);
             audioSource.PlayOneShot(attackSFX);
             Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            
             foreach (Collider2D enemy in enemiesHit) {
                 enemy.GetComponent<EnemyMechanics>().TakeDamage(Vector2.zero, attackDamage);
             }
@@ -339,11 +333,11 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     public void TakeDamage(Behaviour other, Vector2 kick, int damage=1) {
-        hitPoints -= damage;
-        gameSessionRemote.livesUpdate(hitPoints);
+        currentHitPoints -= damage;
+        FindObjectOfType<GameSession>().UpdateLives(currentHitPoints);
         audioSource.PlayOneShot(hurtSFX);
         playerAnimator.SetTrigger(Hurt);
-        if(hitPoints <= 0)
+        if(currentHitPoints <= 0)
             Die();
         Knockback(kick);
         canDoubleJump = true;
@@ -351,15 +345,12 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void Die() {
-        
-        hitPoints = 5;
         audioSource.PlayOneShot(deathSFX);
 
-        // isAlive = false;
+        isAlive = false;
         playerAnimator.SetTrigger(Death);
         playerRigidbody.velocity = deathKick;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 }
    

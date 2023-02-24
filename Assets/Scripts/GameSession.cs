@@ -1,8 +1,13 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour {
+    private readonly string prefix = ":";
+    
+    [SerializeField] float levelLoadDelay = 1.5f;
+    
     [SerializeField] TextMeshProUGUI livesCount;
 
     
@@ -16,11 +21,21 @@ public class GameSession : MonoBehaviour {
     }
 
     void Start() {
-
+        livesCount.text = prefix + PlayerMechanics.Instance.MaxHitPoints.ToString();
     }
-    public void livesUpdate(int count){
-        print(count);
-        livesCount.text=count.ToString();
+
+    public void UpdateLives(int count) {
+        livesCount.text = prefix + count.ToString();
+    }
+    
+    public void ProcessPlayerDeath() {
+        StartCoroutine(RestartLevel());
+    }
+    
+    private IEnumerator RestartLevel() {
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
+        livesCount.text = prefix + PlayerMechanics.Instance.MaxHitPoints.ToString();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu() {
