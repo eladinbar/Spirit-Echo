@@ -65,7 +65,8 @@ public class PresentHandler : MonoBehaviour {
             }
 
             audioSource.Play();
-        }
+        } else
+            cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
     }
     
     public void StartFading() {
