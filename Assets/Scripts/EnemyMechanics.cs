@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public abstract class EnemyMechanics : MonoBehaviour {
     protected enum State {
         Idling,
         Roaming,
-        ChaseTarget,
-        Attacking
+        ChasingTarget,
+        Attacking,
+        Teleporting
     }
     
     protected static readonly int Hurt = Animator.StringToHash("Hurt");
@@ -62,7 +62,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
         damagedDuration -= Time.deltaTime;
     }
 
-    protected void FlipSprite() {
+    protected virtual void FlipSprite() {
         this.transform.localScale = new Vector2(-Mathf.Sign(moveSpeed), transform.localScale.y);
     }
     
@@ -75,7 +75,9 @@ public abstract class EnemyMechanics : MonoBehaviour {
         currentHealth -= damage;
         if(hurtSFX)
             audioSource.PlayOneShot(hurtSFX);
-        enemyAnimator.SetTrigger(Hurt);
+        if(enemyAnimator.HasState(0, Hurt))
+            enemyAnimator.SetTrigger(Hurt);
+        
         if(currentHealth <= 0)
             Die();
         Knockback(kick);
@@ -84,6 +86,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
     void Die() {
         if(deathSFX)
             audioSource.PlayOneShot(deathSFX);
+        enemyAnimator.SetTrigger(Death);
         StartCoroutine(ProcessDeath());
     }
 
