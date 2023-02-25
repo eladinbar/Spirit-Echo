@@ -29,7 +29,7 @@ public abstract class RoamingEnemyMechanics : EnemyMechanics
                 Roam();
                 break;
             
-            case State.ChaseTarget:
+            case State.ChasingTarget:
                 ChaseTarget();
                 break;
         }
@@ -85,7 +85,7 @@ public abstract class RoamingEnemyMechanics : EnemyMechanics
         //                            Math.Abs(enemyPosition.y - PlayerMechanics.Instance.GetPosition().y) < 1f; // Old
 
         State previousState = state;
-        state = canSeeTarget ? State.ChaseTarget : State.Roaming;
+        state = canSeeTarget ? State.ChasingTarget : State.Roaming;
         // If state changed, define a new roaming position
         if (previousState != state)
             roamPosition = GetRoamingPosition();
