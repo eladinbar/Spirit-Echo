@@ -14,7 +14,6 @@ public class BlockingScript : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other) {
         if(other.CompareTag("Player")){
-            print("Entered Blocking Zone.");
             PlayerMechanics.Instance.timeTraverseEnabled = false;
         }
 
@@ -22,7 +21,6 @@ public class BlockingScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
-            print("Exited Blocking Zone.");
             PlayerMechanics.Instance.timeTraverseEnabled = true;
         }
     }
