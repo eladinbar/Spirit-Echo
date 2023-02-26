@@ -59,9 +59,12 @@ public class PastHandler : MonoBehaviour {
         StartCoroutine(FadeIn(backgroundRend));
 
         foreach (Transform child in this.gameObject.transform) {
-            if (!child.gameObject.CompareTag("Background")) {
+            Renderer render = child.GetComponent<Renderer>();
+            if (!render)
                 child.gameObject.SetActive(true);
-                StartCoroutine(FadeIn(child.GetComponent<Renderer>()));
+            else if (!child.gameObject.CompareTag("Background")) {
+                child.gameObject.SetActive(true);
+                StartCoroutine(FadeIn(render));
             }
         }
 
@@ -70,9 +73,11 @@ public class PastHandler : MonoBehaviour {
 
     public void StartFading() {
         foreach (Transform child in this.gameObject.transform) {
-            if (!child.gameObject.CompareTag("Background")) {
-                StartCoroutine(FadeOut(child.GetComponent<Renderer>()));
-            }
+            Renderer render = child.GetComponent<Renderer>();
+            if (!render)
+                child.gameObject.SetActive(false);
+            else if (!child.gameObject.CompareTag("Background"))
+                StartCoroutine(FadeOut(render));
         }
         StartCoroutine(FadeOut(backgroundRend));
         StartCoroutine(FadeOut(this.rend));
