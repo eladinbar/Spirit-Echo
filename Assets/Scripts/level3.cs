@@ -23,20 +23,22 @@ public class level3 : MonoBehaviour
     [SerializeField] GameObject text3v2;
     [SerializeField] GameObject text4v2;
     [SerializeField] GameObject text5v2;
-
     [SerializeField] GameObject player;
-    bool isViverDied;
+    [SerializeField] GameObject timeTraverseInstruction;
+    
+    
+    bool isViverDied = false;
     bool isJumpEnabledInPresent = true;
     bool isJumpEnabledInPast = true;
-
+	bool isVisitedInPast = false;
     PlayerMechanics playermechanicsRemote;
     BoxCollider2D playerBoxCollider;
     bool isNewJumpEnabled= false;
     bool init=true;
     int phase = 0, phase2=0, phase3=0;
     [SerializeField] GameObject pastTilemap;
-
-
+    bool got_time_traverse_instruction = false;
+    float time_traverse_cooldown = 8f;
 
 
 
@@ -58,7 +60,7 @@ public class level3 : MonoBehaviour
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
         
         playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
-
+		
         donny.SetActive(false);
         text1.SetActive(false);
         text2.SetActive(false);
@@ -81,101 +83,14 @@ public class level3 : MonoBehaviour
 
         
     }
-    // void OnTraverseTime() {
-    //     toLab = !toLab;
-    //     if(toLab == true){
-    //         if(isJumpEnabledInPast)
-    //             playermechanicsRemote.jumpEnabled=true;
-    //         else
-    //             playermechanicsRemote.jumpEnabled=false;
-
-
-    //         playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
-    //         //donny.SetActive(true);
-    //         //StartCoroutine(FadeIn(donny.GetComponent<SpriteRenderer>()));
-
-
-
-    //         if(phase==1)
-    //         {
-    //             System.Threading.Thread.Sleep(2500);
-    //             text1.SetActive(true);
-    //         }
-    //         if(phase==2)
-    //             text2.SetActive(true);
-    //         if(phase==3)
-    //             text3.SetActive(true);
-    //         if(phase==4)
-    //             text4.SetActive(true);
-    //         if(phase==5){
-    //             text5.SetActive(true);
-    //         }
-    //         text1v.SetActive(false);
-    //         text2v.SetActive(false);
-    //         text3v.SetActive(false);
-    //         text4v.SetActive(false);
-    //         text5v.SetActive(false);
-    //         text6v.SetActive(false);
-    //         text1v2.SetActive(false);
-    //         text2v2.SetActive(false);
-    //         text3v2.SetActive(false);
-    //         text4v2.SetActive(false);
-    //         text5v2.SetActive(false);
-
-
-    //     }
-    //     else{
-    //         if(phase>=5 & phase2<2)
-    //             text1v.SetActive(true);
-                
-    //         if(phase2==2)
-    //             text2v.SetActive(true);
-    //         if(phase2==3)
-    //             text3v.SetActive(true);
-    //         if(phase2==4)
-    //             text4v.SetActive(true);
-    //         if(phase2==5){
-    //             text5v.SetActive(true);
-    //         }
-    //         if(phase2==6){
-    //             text6v.SetActive(true);
-    //         }
-
-    //         if(phase3==2)
-    //             text1v2.SetActive(true);
-    //         if(phase3==3)
-    //             text2v2.SetActive(true);
-    //         if(phase3==4)
-    //             text3v2.SetActive(true);
-    //         if(phase3==5){
-    //             text4v2.SetActive(true);
-    //         }
-    //         if(phase3==6){
-    //             text5v2.SetActive(true);
-    //         }
-
-    //         if(isJumpEnabledInPresent)
-    //             playermechanicsRemote.jumpEnabled=true;
-    //         else
-    //             playermechanicsRemote.jumpEnabled=false;
-    //         //donny.SetActive(false);
-    //         text1.SetActive(false);
-    //         text2.SetActive(false);
-    //         text3.SetActive(false);
-    //         text4.SetActive(false);
-    //         text5.SetActive(false);
-    //         if(isNewJumpEnabled)
-    //             playerBoxCollider.size = new Vector2((float)0.75, (float)0.12);
-    //         else
-    //             playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
-
-
-    //     }        
-
-
-
-
-    // }
+    void OnTraverseTime() {
+		isVisitedInPast = true;
+        if (!got_time_traverse_instruction)
+        {
+            //DEACTIVE INSTRUCTION
+            got_time_traverse_instruction = true;
+        }
+    }
 
     void OnJump() {
         bool isPast = pastTilemap.activeSelf;
@@ -292,6 +207,14 @@ public class level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time_traverse_cooldown -= Time.deltaTime;
+        if (!got_time_traverse_instruction && time_traverse_cooldown <= Mathf.Epsilon)
+        {
+            got_time_traverse_instruction = true;
+            //Active instruction
+            
+            
+        }
         float distance = Vector3.Distance(player.transform.position, viver.transform.position);
         if(phase2>=8 && phase3==0 &  distance > 21){
             viver.transform.position=new Vector3((float)126,(float)86, (float)0);
