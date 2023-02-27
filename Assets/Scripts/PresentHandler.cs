@@ -75,7 +75,10 @@ public class PresentHandler : MonoBehaviour {
             if (SceneManager.GetActiveScene().buildIndex != 4) {
                 virtualCamera.m_Lens.OrthographicSize = 3.5f;
                 cinemachineConfiner.m_ConfineScreenEdges = true;
-            }
+            } else {
+				virtualCamera.m_Lens.OrthographicSize = 6f;
+				cinemachineConfiner.m_ConfineScreenEdges = false;
+			}
         }
     }
     
