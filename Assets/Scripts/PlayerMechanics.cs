@@ -3,8 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class PlayerMechanics : MonoBehaviour
-{
+public class PlayerMechanics : MonoBehaviour {
     // Player Instance
     public static PlayerMechanics Instance { get; private set; }
 
@@ -17,9 +16,7 @@ public class PlayerMechanics : MonoBehaviour
     private static readonly int Using = Animator.StringToHash("Use");
     private static readonly int Hurt = Animator.StringToHash("Hurt");
     private static readonly int Death = Animator.StringToHash("Death");
-    public bool jumpEnabled = true;
-    public bool timeTraverseEnabled = true;
-
+    
     // Constants
     private const float DAMAGED_INVULNERABILITY_TIME = 0.5f;
     private const float KNOCKBACK_TIME = 0.25f;
@@ -80,12 +77,17 @@ public class PlayerMechanics : MonoBehaviour
     // States
     bool isAlive = true;
     
+    //// Move
+    public bool moveEnabled = true;
+    
     //// Jump
     public UnityEvent onJump;
+    public bool jumpEnabled = true;
 
     //// Time Traversal
     public UnityEvent onTraverseTime;
     public bool unlockedTimeTraversal = false;
+    public bool timeTraverseEnabled = true;
     private float timeTraversalDelay = 0f;
 
     //// Double Jump
@@ -169,7 +171,7 @@ public class PlayerMechanics : MonoBehaviour
     }
 
     void OnMove(InputValue value) {
-        if (isAlive) {
+        if (isAlive && moveEnabled) {
             moveInput = value.Get<Vector2>();
         }
     }
@@ -201,7 +203,7 @@ public class PlayerMechanics : MonoBehaviour
         }
     }
     
-    void OnTraverseTime() {
+    internal void OnTraverseTime() {
         if (isAlive && unlockedTimeTraversal && timeTraverseEnabled && timeTraversalDelay <= Mathf.Epsilon) {
             onTraverseTime.Invoke();
             audioSource.PlayOneShot(timeTravelSFX);
