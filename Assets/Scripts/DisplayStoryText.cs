@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DisplayStoryText : MonoBehaviour {
     private PlayerInput playerInput;
-    private int triggerID;
 
-    [SerializeField] Canvas canvas;
     [SerializeField] List<TextMeshProUGUI> textList;
+    [SerializeField] Image spaceImage;
+    [SerializeField] TextMeshProUGUI continueText;
     [SerializeField] TextMeshProUGUI tutorialText;
+    [SerializeField] List<Image> tutorialImages;
 
     private int currentIndex = 0;
     private bool triggered;
@@ -19,7 +21,6 @@ public class DisplayStoryText : MonoBehaviour {
 
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
-        triggerID = this.gameObject.GetComponent<BoxCollider2D>().GetInstanceID();
         PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
     }
 
@@ -27,8 +28,14 @@ public class DisplayStoryText : MonoBehaviour {
         foreach (TextMeshProUGUI text in textList) {
             text.gameObject.SetActive(false);
         }
-        if (currentIndex < textList.Count)
+
+        if (currentIndex < textList.Count) {
             tutorialText.gameObject.SetActive(false);
+            spaceImage.gameObject.SetActive(false);
+            continueText.gameObject.SetActive(false);
+            foreach (Image image in tutorialImages)
+                image.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -63,9 +70,15 @@ public class DisplayStoryText : MonoBehaviour {
     private void ShowNextText() {
         if (currentIndex >= textList.Count) {
             textList[currentIndex - 1].gameObject.SetActive(false);
+            spaceImage.gameObject.SetActive(false);
+            continueText.gameObject.SetActive(false);
             playerInput.ActivateInput();
-            if(tutorialText)
+            if (tutorialText) {
                 tutorialText.gameObject.SetActive(true);
+                foreach (Image image in tutorialImages)
+                    image.gameObject.SetActive(true);
+            }
+
             triggered = false;
         }
         else {
@@ -73,6 +86,11 @@ public class DisplayStoryText : MonoBehaviour {
             if (currentIndex > 0) {
                 textList[currentIndex - 1].gameObject.SetActive(false);
             }
+            else {
+                spaceImage.gameObject.SetActive(true);
+                continueText.gameObject.SetActive(true);
+            }
+
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
