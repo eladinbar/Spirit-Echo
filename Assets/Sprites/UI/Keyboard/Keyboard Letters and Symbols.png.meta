@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_0
+      name: Keyboard-Up
       rect:
         serializedVersion: 2
         x: 1
@@ -137,7 +137,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,7 +150,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_1
+      name: Keyboard-Down
       rect:
         serializedVersion: 2
         x: 17
@@ -158,7 +158,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_2
+      name: Keyboard-Left
       rect:
         serializedVersion: 2
         x: 33
@@ -179,7 +179,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_3
+      name: Keyboard-Right
       rect:
         serializedVersion: 2
         x: 49
@@ -200,7 +200,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_4
+      name: Keyboard-F1
       rect:
         serializedVersion: 2
         x: 65
@@ -221,7 +221,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,7 +234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_5
+      name: Keyboard-F2
       rect:
         serializedVersion: 2
         x: 81
@@ -242,7 +242,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_6
+      name: Keyboard-F3
       rect:
         serializedVersion: 2
         x: 97
@@ -263,7 +263,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_7
+      name: Keyboard-F4
       rect:
         serializedVersion: 2
         x: 113
@@ -284,7 +284,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_8
+      name: Keyboard-F5
       rect:
         serializedVersion: 2
         x: 1
@@ -305,7 +305,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_9
+      name: Keyboard-F6
       rect:
         serializedVersion: 2
         x: 17
@@ -326,7 +326,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_10
+      name: Keyboard-F7
       rect:
         serializedVersion: 2
         x: 33
@@ -347,7 +347,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,7 +360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_11
+      name: Keyboard-F8
       rect:
         serializedVersion: 2
         x: 49
@@ -368,7 +368,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,7 +381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_12
+      name: Keyboard-F9
       rect:
         serializedVersion: 2
         x: 65
@@ -389,7 +389,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -402,7 +402,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_13
+      name: Keyboard-F10
       rect:
         serializedVersion: 2
         x: 81
@@ -410,7 +410,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_14
+      name: Keyboard-F11
       rect:
         serializedVersion: 2
         x: 97
@@ -431,7 +431,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_15
+      name: Keyboard-F12
       rect:
         serializedVersion: 2
         x: 113
@@ -452,7 +452,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,7 +465,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_16
+      name: Keyboard-A
       rect:
         serializedVersion: 2
         x: 1
@@ -473,7 +473,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,7 +486,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_17
+      name: Keyboard-B
       rect:
         serializedVersion: 2
         x: 17
@@ -494,7 +494,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -507,7 +507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_18
+      name: Keyboard-C
       rect:
         serializedVersion: 2
         x: 33
@@ -515,7 +515,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -528,7 +528,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_19
+      name: Keyboard-D
       rect:
         serializedVersion: 2
         x: 49
@@ -536,7 +536,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -549,7 +549,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_20
+      name: Keyboard-E
       rect:
         serializedVersion: 2
         x: 65
@@ -557,7 +557,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -570,7 +570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_21
+      name: Keyboard-F
       rect:
         serializedVersion: 2
         x: 81
@@ -578,7 +578,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,7 +591,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_22
+      name: Keyboard-G
       rect:
         serializedVersion: 2
         x: 97
@@ -599,7 +599,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -612,7 +612,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_23
+      name: Keyboard-H
       rect:
         serializedVersion: 2
         x: 113
@@ -620,7 +620,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -633,7 +633,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_24
+      name: Keyboard-I
       rect:
         serializedVersion: 2
         x: 1
@@ -641,7 +641,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -654,7 +654,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_25
+      name: Keyboard-J
       rect:
         serializedVersion: 2
         x: 17
@@ -662,7 +662,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,7 +675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_26
+      name: Keyboard-K
       rect:
         serializedVersion: 2
         x: 33
@@ -683,7 +683,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -696,7 +696,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_27
+      name: Keyboard-L
       rect:
         serializedVersion: 2
         x: 49
@@ -704,7 +704,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -717,7 +717,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_28
+      name: Keyboard-M
       rect:
         serializedVersion: 2
         x: 65
@@ -725,7 +725,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -738,7 +738,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_29
+      name: Keyboard-N
       rect:
         serializedVersion: 2
         x: 81
@@ -746,7 +746,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -759,7 +759,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_30
+      name: Keyboard-O
       rect:
         serializedVersion: 2
         x: 97
@@ -767,7 +767,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -780,7 +780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_31
+      name: Keyboard-P
       rect:
         serializedVersion: 2
         x: 113
@@ -788,7 +788,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -801,7 +801,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_32
+      name: Keyboard-Q
       rect:
         serializedVersion: 2
         x: 1
@@ -809,7 +809,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -822,7 +822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_33
+      name: Keyboard-R
       rect:
         serializedVersion: 2
         x: 17
@@ -830,7 +830,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -843,7 +843,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_34
+      name: Keyboard-S
       rect:
         serializedVersion: 2
         x: 33
@@ -851,7 +851,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -864,7 +864,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_35
+      name: Keyboard-T
       rect:
         serializedVersion: 2
         x: 49
@@ -872,7 +872,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -885,7 +885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_36
+      name: Keyboard-U
       rect:
         serializedVersion: 2
         x: 65
@@ -893,7 +893,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -906,7 +906,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_37
+      name: Keyboard-V
       rect:
         serializedVersion: 2
         x: 81
@@ -914,7 +914,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -927,7 +927,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_38
+      name: Keyboard-W
       rect:
         serializedVersion: 2
         x: 97
@@ -935,7 +935,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -948,7 +948,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_39
+      name: Keyboard-X
       rect:
         serializedVersion: 2
         x: 113
@@ -956,7 +956,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -969,7 +969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_40
+      name: Keyboard-Y
       rect:
         serializedVersion: 2
         x: 1
@@ -977,7 +977,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -990,7 +990,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_41
+      name: Keyboard-Z
       rect:
         serializedVersion: 2
         x: 17
@@ -998,7 +998,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1011,7 +1011,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_42
+      name: Keyboard-Dot
       rect:
         serializedVersion: 2
         x: 33
@@ -1019,7 +1019,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1032,7 +1032,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_43
+      name: Keyboard-Comma
       rect:
         serializedVersion: 2
         x: 49
@@ -1040,7 +1040,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1053,7 +1053,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_44
+      name: Keyboard-QuestionMark
       rect:
         serializedVersion: 2
         x: 65
@@ -1061,7 +1061,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1074,7 +1074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_45
+      name: Keyboard-ForwardDash
       rect:
         serializedVersion: 2
         x: 81
@@ -1082,7 +1082,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1095,7 +1095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_46
+      name: Keyboard-BackwardDash
       rect:
         serializedVersion: 2
         x: 97
@@ -1103,7 +1103,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1116,7 +1116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_47
+      name: Keyboard-Semicolon
       rect:
         serializedVersion: 2
         x: 113
@@ -1124,7 +1124,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1137,7 +1137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_48
+      name: Keyboard-Apostrophe
       rect:
         serializedVersion: 2
         x: 1
@@ -1145,7 +1145,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1158,7 +1158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_49
+      name: Keyboard-LeftBracket
       rect:
         serializedVersion: 2
         x: 17
@@ -1166,7 +1166,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1179,7 +1179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_50
+      name: Keyboard-RightBracket
       rect:
         serializedVersion: 2
         x: 33
@@ -1187,7 +1187,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1200,7 +1200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_51
+      name: Keyboard-Equals
       rect:
         serializedVersion: 2
         x: 49
@@ -1208,7 +1208,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1221,7 +1221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_52
+      name: Keyboard-Dash
       rect:
         serializedVersion: 2
         x: 65
@@ -1229,7 +1229,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1242,7 +1242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_53
+      name: Keyboard-Tilde
       rect:
         serializedVersion: 2
         x: 81
@@ -1250,7 +1250,7 @@ TextureImporter:
         width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1263,7 +1263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_54
+      name: Keyboard-Up_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -1271,7 +1271,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1284,7 +1284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_55
+      name: Keyboard-Down_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -1292,7 +1292,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1305,7 +1305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_56
+      name: Keyboard-Left_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -1313,7 +1313,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1326,7 +1326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_57
+      name: Keyboard-Right_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -1334,7 +1334,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1347,7 +1347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_58
+      name: Keyboard-F1_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -1355,7 +1355,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1368,7 +1368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_59
+      name: Keyboard-F2_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -1376,7 +1376,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1389,7 +1389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_60
+      name: Keyboard-F3_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -1397,7 +1397,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1410,7 +1410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_61
+      name: Keyboard-F4_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -1418,7 +1418,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1431,7 +1431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_62
+      name: Keyboard-F5_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -1439,7 +1439,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1452,7 +1452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_63
+      name: Keyboard-F6_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -1460,7 +1460,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1473,7 +1473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_64
+      name: Keyboard-F7_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -1481,7 +1481,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1494,7 +1494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_65
+      name: Keyboard-F8_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -1502,7 +1502,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1515,7 +1515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_66
+      name: Keyboard-F9_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -1523,7 +1523,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1536,7 +1536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_67
+      name: Keyboard-F10_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -1544,7 +1544,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1557,7 +1557,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_68
+      name: Keyboard-F11_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -1565,7 +1565,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1578,7 +1578,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_69
+      name: Keyboard-F12_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -1586,7 +1586,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1599,7 +1599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_70
+      name: Keyboard-A_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -1607,7 +1607,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1620,7 +1620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_71
+      name: Keyboard-B_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -1628,7 +1628,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1641,7 +1641,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_72
+      name: Keyboard-C_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -1649,7 +1649,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1662,7 +1662,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_73
+      name: Keyboard-D_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -1670,7 +1670,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1683,7 +1683,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_74
+      name: Keyboard-E_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -1691,7 +1691,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1704,7 +1704,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_75
+      name: Keyboard-F_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -1712,7 +1712,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1725,7 +1725,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_76
+      name: Keyboard-G_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -1733,7 +1733,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1746,7 +1746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_77
+      name: Keyboard-H_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -1754,7 +1754,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1767,7 +1767,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_78
+      name: Keyboard-I_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -1775,7 +1775,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1788,7 +1788,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_79
+      name: Keyboard-J_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -1796,7 +1796,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1809,7 +1809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_80
+      name: Keyboard-K_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -1817,7 +1817,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1830,7 +1830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_81
+      name: Keyboard-L_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -1838,7 +1838,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1851,7 +1851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_82
+      name: Keyboard-M_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -1859,7 +1859,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1872,7 +1872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_83
+      name: Keyboard-N_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -1880,7 +1880,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1893,7 +1893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_84
+      name: Keyboard-O_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -1901,7 +1901,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1914,7 +1914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_85
+      name: Keyboard-P_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -1922,7 +1922,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1935,7 +1935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_86
+      name: Keyboard-Q_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -1943,7 +1943,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1956,7 +1956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_87
+      name: Keyboard-R_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -1964,7 +1964,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1977,7 +1977,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_88
+      name: Keyboard-S_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -1985,7 +1985,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1998,7 +1998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_89
+      name: Keyboard-T_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -2006,7 +2006,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2019,7 +2019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_90
+      name: Keyboard-U_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -2027,7 +2027,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2040,7 +2040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_91
+      name: Keyboard-V_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -2048,7 +2048,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2061,7 +2061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_92
+      name: Keyboard-W_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -2069,7 +2069,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2082,7 +2082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_93
+      name: Keyboard-X_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -2090,7 +2090,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2103,7 +2103,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_94
+      name: Keyboard-Y_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -2111,7 +2111,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2124,7 +2124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_95
+      name: Keyboard-Z_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -2132,7 +2132,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2145,7 +2145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_96
+      name: Keyboard-Dot_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -2153,7 +2153,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2166,7 +2166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_97
+      name: Keyboard-Comma_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -2174,7 +2174,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2187,7 +2187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_98
+      name: Keyboard-QuestionMark_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -2195,7 +2195,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2208,7 +2208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_99
+      name: Keyboard-ForwardDash_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -2216,7 +2216,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2229,7 +2229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_100
+      name: Keyboard-BackwardDash_Pressed
       rect:
         serializedVersion: 2
         x: 97
@@ -2237,7 +2237,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2250,7 +2250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_101
+      name: Keyboard-Semicolon_Pressed
       rect:
         serializedVersion: 2
         x: 113
@@ -2258,7 +2258,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2271,7 +2271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_102
+      name: Keyboard-Apostrophe_Pressed
       rect:
         serializedVersion: 2
         x: 1
@@ -2279,7 +2279,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2292,7 +2292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_103
+      name: Keyboard-LeftBracket_Pressed
       rect:
         serializedVersion: 2
         x: 17
@@ -2300,7 +2300,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2313,7 +2313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_104
+      name: Keyboard-RightBracket_Pressed
       rect:
         serializedVersion: 2
         x: 33
@@ -2321,7 +2321,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2334,7 +2334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_105
+      name: Keyboard-Equals_Pressed
       rect:
         serializedVersion: 2
         x: 49
@@ -2342,7 +2342,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2355,7 +2355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_106
+      name: Keyboard-Dash_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -2363,7 +2363,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2376,7 +2376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Letters and Symbols_107
+      name: Keyboard-Tilde_Pressed
       rect:
         serializedVersion: 2
         x: 81
@@ -2384,7 +2384,7 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2407,114 +2407,114 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Keyboard Letters and Symbols_37: 1991471206
-      Keyboard Letters and Symbols_4: -63048692
-      Keyboard Letters and Symbols_106: -1917804402
-      Keyboard Letters and Symbols_101: -1228698702
-      Keyboard Letters and Symbols_97: -1186288563
-      Keyboard Letters and Symbols_14: -405036125
-      Keyboard Letters and Symbols_36: 817457797
-      Keyboard Letters and Symbols_12: -1402347593
-      Keyboard Letters and Symbols_43: 1351853383
-      Keyboard Letters and Symbols_91: -192547486
-      Keyboard Letters and Symbols_68: -640711385
-      Keyboard Letters and Symbols_78: -1770361245
-      Keyboard Letters and Symbols_74: 1351221320
-      Keyboard Letters and Symbols_46: -982212088
-      Keyboard Letters and Symbols_7: -676899033
-      Keyboard Letters and Symbols_35: 890808935
-      Keyboard Letters and Symbols_95: 1800918011
-      Keyboard Letters and Symbols_17: -559723441
-      Keyboard Letters and Symbols_48: 793309382
-      Keyboard Letters and Symbols_57: 2131474805
-      Keyboard Letters and Symbols_58: -654437607
-      Keyboard Letters and Symbols_100: -2095060750
-      Keyboard Letters and Symbols_92: 766727839
-      Keyboard Letters and Symbols_38: 2089350561
-      Keyboard Letters and Symbols_61: -1352833548
-      Keyboard Letters and Symbols_77: 2001569327
-      Keyboard Letters and Symbols_59: 1724205592
-      Keyboard Letters and Symbols_10: -1344012400
-      Keyboard Letters and Symbols_89: 2115652688
-      Keyboard Letters and Symbols_81: -1622631542
-      Keyboard Letters and Symbols_27: 758600273
-      Keyboard Letters and Symbols_15: 1200097745
-      Keyboard Letters and Symbols_85: 983658212
-      Keyboard Letters and Symbols_73: -1914300189
-      Keyboard Letters and Symbols_87: 1581820802
-      Keyboard Letters and Symbols_52: -1223474342
-      Keyboard Letters and Symbols_18: 2108497857
-      Keyboard Letters and Symbols_55: 1777735678
-      Keyboard Letters and Symbols_47: 786465649
-      Keyboard Letters and Symbols_28: -1150994040
-      Keyboard Letters and Symbols_8: 2076503799
-      Keyboard Letters and Symbols_72: -2028451879
-      Keyboard Letters and Symbols_41: -1505549369
-      Keyboard Letters and Symbols_70: 2142579328
-      Keyboard Letters and Symbols_22: 151935050
-      Keyboard Letters and Symbols_107: 946991692
-      Keyboard Letters and Symbols_62: -473587275
-      Keyboard Letters and Symbols_67: 1924009642
-      Keyboard Letters and Symbols_69: -1498305125
-      Keyboard Letters and Symbols_56: 1997163148
-      Keyboard Letters and Symbols_25: 301887385
-      Keyboard Letters and Symbols_79: 990992930
-      Keyboard Letters and Symbols_93: -2084235407
-      Keyboard Letters and Symbols_30: -701161770
-      Keyboard Letters and Symbols_54: 1618744220
-      Keyboard Letters and Symbols_9: -2057665816
-      Keyboard Letters and Symbols_44: -1014911223
-      Keyboard Letters and Symbols_26: 419376888
-      Keyboard Letters and Symbols_65: -47136622
-      Keyboard Letters and Symbols_13: -1598055274
-      Keyboard Letters and Symbols_71: -2111697089
-      Keyboard Letters and Symbols_16: -1623208463
-      Keyboard Letters and Symbols_33: -94012327
-      Keyboard Letters and Symbols_84: -864440572
-      Keyboard Letters and Symbols_94: -668721745
-      Keyboard Letters and Symbols_6: -631204187
-      Keyboard Letters and Symbols_45: 1916277565
-      Keyboard Letters and Symbols_11: -49744105
-      Keyboard Letters and Symbols_64: -1750239969
-      Keyboard Letters and Symbols_66: -1884775809
-      Keyboard Letters and Symbols_29: 1483316786
-      Keyboard Letters and Symbols_76: -544395753
-      Keyboard Letters and Symbols_80: -674363876
-      Keyboard Letters and Symbols_105: -106300412
-      Keyboard Letters and Symbols_90: -1085335331
-      Keyboard Letters and Symbols_24: 472137017
-      Keyboard Letters and Symbols_96: -1875545836
-      Keyboard Letters and Symbols_50: 1944021154
-      Keyboard Letters and Symbols_21: -845794634
-      Keyboard Letters and Symbols_2: 97949406
-      Keyboard Letters and Symbols_49: -1000399189
-      Keyboard Letters and Symbols_88: 68909
-      Keyboard Letters and Symbols_3: 1875054774
-      Keyboard Letters and Symbols_53: 1113870403
-      Keyboard Letters and Symbols_31: 1799266720
-      Keyboard Letters and Symbols_1: 819650610
-      Keyboard Letters and Symbols_39: 1971259955
-      Keyboard Letters and Symbols_82: -1480358460
-      Keyboard Letters and Symbols_99: 937441874
-      Keyboard Letters and Symbols_83: -1183989282
-      Keyboard Letters and Symbols_51: -255492757
-      Keyboard Letters and Symbols_42: -373818577
-      Keyboard Letters and Symbols_103: 1636396670
-      Keyboard Letters and Symbols_86: -1569416931
-      Keyboard Letters and Symbols_34: 1439042508
-      Keyboard Letters and Symbols_40: 1368325780
-      Keyboard Letters and Symbols_19: -1015755581
-      Keyboard Letters and Symbols_104: 1817403289
-      Keyboard Letters and Symbols_20: -727897763
-      Keyboard Letters and Symbols_60: -1406044984
-      Keyboard Letters and Symbols_23: -117288053
-      Keyboard Letters and Symbols_32: 1017863516
-      Keyboard Letters and Symbols_63: -1625766506
-      Keyboard Letters and Symbols_75: -1557821289
-      Keyboard Letters and Symbols_0: 1774253547
-      Keyboard Letters and Symbols_98: -185859079
-      Keyboard Letters and Symbols_5: 932029465
-      Keyboard Letters and Symbols_102: -527753811
+      Keyboard-R_Pressed: 1581820802
+      Keyboard-W_Pressed: 766727839
+      Keyboard-X_Pressed: -2084235407
+      Keyboard-F7: -1344012400
+      Keyboard-I_Pressed: -1770361245
+      Keyboard-C_Pressed: -2028451879
+      Keyboard-H_Pressed: 2001569327
+      Keyboard-B_Pressed: -2111697089
+      Keyboard-Z: -1505549369
+      Keyboard-F: -845794634
+      Keyboard-R: -94012327
+      Keyboard-Tilde_Pressed: 946991692
+      Keyboard-Equals: -255492757
+      Keyboard-Left_Pressed: 1997163148
+      Keyboard-F9_Pressed: -1884775809
+      Keyboard-V: 1991471206
+      Keyboard-Apostrophe: 793309382
+      Keyboard-ForwardDash_Pressed: 937441874
+      Keyboard-T_Pressed: 2115652688
+      Keyboard-Dot: -373818577
+      Keyboard-BackwardDash: -982212088
+      Keyboard-RightBracket_Pressed: 1817403289
+      Keyboard-O: -701161770
+      Keyboard-T: 890808935
+      Keyboard-A_Pressed: 2142579328
+      Keyboard-H: -117288053
+      Keyboard-Right: 1875054774
+      Keyboard-Tilde: 1113870403
+      Keyboard-Down: 819650610
+      Keyboard-J_Pressed: 990992930
+      Keyboard-S_Pressed: 68909
+      Keyboard-F3_Pressed: -1406044984
+      Keyboard-F5: 2076503799
+      Keyboard-M: -1150994040
+      Keyboard-Apostrophe_Pressed: -527753811
+      Keyboard-W: 2089350561
+      Keyboard-ForwardDash: 1916277565
+      Keyboard-G_Pressed: -544395753
+      Keyboard-QuestionMark_Pressed: -185859079
+      Keyboard-F_Pressed: -1557821289
+      Keyboard-F8_Pressed: -47136622
+      Keyboard-S: 1439042508
+      Keyboard-N_Pressed: -1183989282
+      Keyboard-E_Pressed: 1351221320
+      Keyboard-F11: -405036125
+      Keyboard-F9: -1402347593
+      Keyboard-Z_Pressed: 1800918011
+      Keyboard-Q_Pressed: -1569416931
+      Keyboard-E: -727897763
+      Keyboard-D_Pressed: -1914300189
+      Keyboard-F10: -1598055274
+      Keyboard-F1: -63048692
+      Keyboard-Right_Pressed: 2131474805
+      Keyboard-F7_Pressed: -1750239969
+      Keyboard-J: 301887385
+      Keyboard-I: 472137017
+      Keyboard-L_Pressed: -1622631542
+      Keyboard-X: 1971259955
+      Keyboard-Y: 1368325780
+      Keyboard-Dash_Pressed: -1917804402
+      Keyboard-Up_Pressed: 1618744220
+      Keyboard-F1_Pressed: -654437607
+      Keyboard-V_Pressed: -192547486
+      Keyboard-K: 419376888
+      Keyboard-BackwardDash_Pressed: -2095060750
+      Keyboard-M_Pressed: -1480358460
+      Keyboard-O_Pressed: -864440572
+      Keyboard-Down_Pressed: 1777735678
+      Keyboard-K_Pressed: -674363876
+      Keyboard-F4: -676899033
+      Keyboard-P_Pressed: 983658212
+      Keyboard-F4_Pressed: -1352833548
+      Keyboard-Y_Pressed: -668721745
+      Keyboard-F2_Pressed: 1724205592
+      Keyboard-Comma_Pressed: -1186288563
+      Keyboard-G: 151935050
+      Keyboard-LeftBracket: -1000399189
+      Keyboard-QuestionMark: -1014911223
+      Keyboard-F6_Pressed: -1625766506
+      Keyboard-F12: 1200097745
+      Keyboard-Q: 1017863516
+      Keyboard-A: -1623208463
+      Keyboard-U_Pressed: -1085335331
+      Keyboard-Dot_Pressed: -1875545836
+      Keyboard-Left: 97949406
+      Keyboard-F2: 932029465
+      Keyboard-N: 1483316786
+      Keyboard-L: 758600273
+      Keyboard-Dash: -1223474342
+      Keyboard-F8: -49744105
+      Keyboard-P: 1799266720
+      Keyboard-Semicolon: 786465649
+      Keyboard-F5_Pressed: -473587275
+      Keyboard-D: -1015755581
+      Keyboard-Comma: 1351853383
+      Keyboard-F10_Pressed: 1924009642
+      Keyboard-F11_Pressed: -640711385
+      Keyboard-C: 2108497857
+      Keyboard-F12_Pressed: -1498305125
+      Keyboard-F3: -631204187
+      Keyboard-Up: 1774253547
+      Keyboard-Semicolon_Pressed: -1228698702
+      Keyboard-B: -559723441
+      Keyboard-U: 817457797
+      Keyboard-RightBracket: 1944021154
+      Keyboard-LeftBracket_Pressed: 1636396670
+      Keyboard-Equals_Pressed: -106300412
+      Keyboard-F6: -2057665816
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

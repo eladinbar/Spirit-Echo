@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Keyboard Extras_0
+      name: Keyboard-Tab
       rect:
         serializedVersion: 2
         x: 4
@@ -137,7 +137,7 @@ TextureImporter:
         width: 24
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,7 +150,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_1
+      name: Keyboard-Esc
       rect:
         serializedVersion: 2
         x: 39
@@ -158,7 +158,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_2
+      name: Keyboard-Print
       rect:
         serializedVersion: 2
         x: 66
@@ -179,7 +179,7 @@ TextureImporter:
         width: 28
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_3
+      name: Keyboard-Backspace
       rect:
         serializedVersion: 2
         x: 98
@@ -200,7 +200,7 @@ TextureImporter:
         width: 28
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_4
+      name: Keyboard-Shift
       rect:
         serializedVersion: 2
         x: 2
@@ -221,7 +221,7 @@ TextureImporter:
         width: 28
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,7 +234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_5
+      name: Keyboard-PageUp
       rect:
         serializedVersion: 2
         x: 38
@@ -242,7 +242,7 @@ TextureImporter:
         width: 20
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_6
+      name: Keyboard-PageDown
       rect:
         serializedVersion: 2
         x: 70
@@ -263,7 +263,7 @@ TextureImporter:
         width: 20
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_7
+      name: Keyboard-Enter
       rect:
         serializedVersion: 2
         x: 98
@@ -284,7 +284,7 @@ TextureImporter:
         width: 28
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_8
+      name: Keyboard-Ctrl
       rect:
         serializedVersion: 2
         x: 4
@@ -305,7 +305,7 @@ TextureImporter:
         width: 24
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_9
+      name: Keyboard-Alt
       rect:
         serializedVersion: 2
         x: 39
@@ -326,7 +326,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_10
+      name: Keyboard-Space
       rect:
         serializedVersion: 2
         x: 65
@@ -347,7 +347,7 @@ TextureImporter:
         width: 30
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,7 +360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_11
+      name: Keyboard-Insert
       rect:
         serializedVersion: 2
         x: 103
@@ -368,7 +368,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,7 +381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_12
+      name: Keyboard-Delete
       rect:
         serializedVersion: 2
         x: 7
@@ -389,7 +389,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -402,7 +402,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_13
+      name: Keyboard-End
       rect:
         serializedVersion: 2
         x: 39
@@ -410,7 +410,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_14
+      name: Keyboard-Home
       rect:
         serializedVersion: 2
         x: 71
@@ -431,7 +431,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_15
+      name: Keyboard-Pause
       rect:
         serializedVersion: 2
         x: 98
@@ -452,7 +452,7 @@ TextureImporter:
         width: 28
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,7 +465,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_16
+      name: Keyboard-Tab_Pressed
       rect:
         serializedVersion: 2
         x: 4
@@ -473,7 +473,7 @@ TextureImporter:
         width: 24
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,7 +486,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_17
+      name: Keyboard-Esc_Pressed
       rect:
         serializedVersion: 2
         x: 39
@@ -494,7 +494,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -507,7 +507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_18
+      name: Keyboard-Print_Pressed
       rect:
         serializedVersion: 2
         x: 66
@@ -515,7 +515,7 @@ TextureImporter:
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -528,7 +528,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_19
+      name: Keyboard-Backspace_Pressed
       rect:
         serializedVersion: 2
         x: 98
@@ -536,7 +536,7 @@ TextureImporter:
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -549,7 +549,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_20
+      name: Keyboard-Shift_Pressed
       rect:
         serializedVersion: 2
         x: 2
@@ -557,7 +557,7 @@ TextureImporter:
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -570,7 +570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_21
+      name: Keyboard-PageUp_Pressed
       rect:
         serializedVersion: 2
         x: 38
@@ -578,7 +578,7 @@ TextureImporter:
         width: 20
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,7 +591,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_22
+      name: Keyboard-PageDown_Pressed
       rect:
         serializedVersion: 2
         x: 70
@@ -599,7 +599,7 @@ TextureImporter:
         width: 20
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -612,7 +612,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_23
+      name: Keyboard-Enter_Pressed
       rect:
         serializedVersion: 2
         x: 98
@@ -620,7 +620,7 @@ TextureImporter:
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -633,7 +633,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_24
+      name: Keyboard-Ctrl_Pressed
       rect:
         serializedVersion: 2
         x: 4
@@ -641,7 +641,7 @@ TextureImporter:
         width: 24
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -654,7 +654,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_25
+      name: Keyboard-Alt_Pressed
       rect:
         serializedVersion: 2
         x: 39
@@ -662,7 +662,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,7 +675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_26
+      name: Keyboard-Space_Pressed
       rect:
         serializedVersion: 2
         x: 65
@@ -683,7 +683,7 @@ TextureImporter:
         width: 30
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -696,7 +696,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_27
+      name: Keyboard-Insert_Pressed
       rect:
         serializedVersion: 2
         x: 103
@@ -704,7 +704,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -717,7 +717,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_28
+      name: Keyboard-Delete_Pressed
       rect:
         serializedVersion: 2
         x: 7
@@ -725,7 +725,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -738,7 +738,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_29
+      name: Keyboard-End_Pressed
       rect:
         serializedVersion: 2
         x: 39
@@ -746,7 +746,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -759,7 +759,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_30
+      name: Keyboard-Home_Pressed
       rect:
         serializedVersion: 2
         x: 71
@@ -767,7 +767,7 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -780,7 +780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Extras_31
+      name: Keyboard-Pause_Pressed
       rect:
         serializedVersion: 2
         x: 98
@@ -788,7 +788,7 @@ TextureImporter:
         width: 28
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -811,38 +811,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Keyboard Extras_14: 767171327
-      Keyboard Extras_6: -1959530210
-      Keyboard Extras_0: -1879846754
-      Keyboard Extras_17: -1644574517
-      Keyboard Extras_24: 79981502
-      Keyboard Extras_5: -754886877
-      Keyboard Extras_10: 633439401
-      Keyboard Extras_13: 1788432683
-      Keyboard Extras_22: -1235579640
-      Keyboard Extras_18: -682336079
-      Keyboard Extras_4: 614286502
-      Keyboard Extras_7: -373361270
-      Keyboard Extras_26: -530428127
-      Keyboard Extras_19: 1724879086
-      Keyboard Extras_31: -236339408
-      Keyboard Extras_12: 903640263
-      Keyboard Extras_23: 1283951220
-      Keyboard Extras_15: 1942177700
-      Keyboard Extras_28: 1268547134
-      Keyboard Extras_30: 1780073056
-      Keyboard Extras_2: -1614133857
-      Keyboard Extras_21: 1811835054
-      Keyboard Extras_25: 1783154623
-      Keyboard Extras_20: -1553135935
-      Keyboard Extras_27: 702656561
-      Keyboard Extras_3: -5727571
-      Keyboard Extras_11: -527237394
-      Keyboard Extras_29: -1091654150
-      Keyboard Extras_16: 1870526301
-      Keyboard Extras_1: -651428305
-      Keyboard Extras_9: -1838927182
-      Keyboard Extras_8: -183389342
+      Keyboard-Print: -1614133857
+      Keyboard-PageUp: -754886877
+      Keyboard-Space_Pressed: -530428127
+      Keyboard-Alt: -1838927182
+      Keyboard-Home: 767171327
+      Keyboard-Ctrl: -183389342
+      Keyboard-End_Pressed: -1091654150
+      Keyboard-Esc_Pressed: -1644574517
+      Keyboard-Pause: 1942177700
+      Keyboard-Shift_Pressed: -1553135935
+      Keyboard-Pause_Pressed: -236339408
+      Keyboard-Insert: -527237394
+      Keyboard-Space: 633439401
+      Keyboard-End: 1788432683
+      Keyboard-Shift: 614286502
+      Keyboard-Insert_Pressed: 702656561
+      Keyboard-Delete: 903640263
+      Keyboard-Print_Pressed: -682336079
+      Keyboard-Enter_Pressed: 1283951220
+      Keyboard-Enter: -373361270
+      Keyboard-Alt_Pressed: 1783154623
+      Keyboard-Tab: -1879846754
+      Keyboard-Backspace: -5727571
+      Keyboard-Home_Pressed: 1780073056
+      Keyboard-PageUp_Pressed: 1811835054
+      Keyboard-Delete_Pressed: 1268547134
+      Keyboard-Backspace_Pressed: 1724879086
+      Keyboard-Esc: -651428305
+      Keyboard-PageDown: -1959530210
+      Keyboard-Tab_Pressed: 1870526301
+      Keyboard-Ctrl_Pressed: 79981502
+      Keyboard-PageDown_Pressed: -1235579640
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
