@@ -134,6 +134,17 @@ public abstract class RoamingEnemyMechanics : EnemyMechanics
             roamPosition = Mathf.Sign(moveSpeed) < 0 ? GetLeftRoamingPosition() : GetRightRoamingPosition();
         }
     }
+    
+    void OnTriggerEnter2D(Collider2D collider2d) {
+        if (collider2d.CompareTag("Hazard")) {
+            moveSpeed = -moveSpeed;
+            FlipSprite();
+            // Get new roaming position in direction of movement - remain idle for 'waitTimeInPosition/2' seconds
+            waitTimeInPosition += Random.Range(MIN_WAIT_TIME / 2, MAX_WAIT_TIME / 2);
+            enemyRigidbody.velocity = Vector2.zero;
+            roamPosition = Mathf.Sign(moveSpeed) < 0 ? GetLeftRoamingPosition() : GetRightRoamingPosition();
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D collider2d) {
         enemyRigidbody.velocity = Vector2.zero;
