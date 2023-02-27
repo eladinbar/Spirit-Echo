@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerMechanics : MonoBehaviour
@@ -78,8 +79,12 @@ public class PlayerMechanics : MonoBehaviour
 
     // States
     bool isAlive = true;
+    
+    //// Jump
+    public UnityEvent onJump;
 
     //// Time Traversal
+    public UnityEvent onTraverseTime;
     public bool unlockedTimeTraversal = false;
     private float timeTraversalDelay = 0f;
 
@@ -170,6 +175,7 @@ public class PlayerMechanics : MonoBehaviour
             bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))&& jumpEnabled;
             canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump && unlockedDoubleJump;
             if (value.isPressed && playerCanJump) {
+                onJump.Invoke();
                 audioSource.PlayOneShot(jumpSFX);
                 if(!isFlipped){
                     playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
@@ -193,6 +199,7 @@ public class PlayerMechanics : MonoBehaviour
     
     void OnTraverseTime() {
         if (isAlive && unlockedTimeTraversal && timeTraverseEnabled && timeTraversalDelay <= Mathf.Epsilon) {
+            onTraverseTime.Invoke();
             audioSource.PlayOneShot(timeTravelSFX);
             timeTraversalDelay = TIME_TRAVERSAL_COOLDOWN;
 
