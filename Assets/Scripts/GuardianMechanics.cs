@@ -4,6 +4,17 @@ using UnityEngine;
 public class GuardianMechanics : AttackingEnemyMechanics {
     private static readonly int Teleporting = Animator.StringToHash("Teleport");
     
+    private const float MIN_DISTANCE_TELEPORT = 2f;
+    private const float MAX_DISTANCE_TELEPORT = 10f;
+    [SerializeField] float TOLERANCE = 1f;
+    
+    RaycastHit2D raycastHitMax;
+    RaycastHit2D raycastHitMin;
+    
+    // Boundaries
+    private float maxPosition;
+    private float minPosition;
+    
     // Laser beam points
     private float y0 = -2f;
     private float x1 = 7f;
@@ -35,20 +46,51 @@ public class GuardianMechanics : AttackingEnemyMechanics {
         raycastsHit = new RaycastHit2D[raysCast];
         // Calculate the step between each ray
         xStep = (x1-x3) / (raysCast-1);
+        
+        SetBoundaries();
+        FixInitialPosition();
     }
 
     protected override void Update() {
         base.Update();
+        
+        SetBoundaries();
+
+        if (raycastHitMax.collider != null)
+            Debug.DrawLine(this.transform.position, raycastHitMax.point, Color.red);
+        else
+            Debug.DrawRay(this.transform.position, Vector2.right, Color.blue);
+        if (raycastHitMin.collider != null)
+            Debug.DrawLine(this.transform.position, raycastHitMin.point, Color.red);
+        else
+            Debug.DrawRay(this.transform.position, Vector2.left, Color.blue);
 
         DebugDrawRays();
         
-        if (damagedDuration < Mathf.Epsilon && teleportInterval < Mathf.Epsilon && state == State.Teleporting)
-            Teleport();
+        // if (damagedDuration < Mathf.Epsilon && teleportInterval < Mathf.Epsilon && state == State.Teleporting)
+        //     Teleport();
     }
 
     protected override void DeductTimers() {
         base.DeductTimers();
         teleportInterval -= Time.deltaTime;
+    }
+
+    private void SetBoundaries() {
+        LayerMask groundHazardMask = LayerMask.GetMask("Ground", "Hazards");
+        raycastHitMax = Physics2D.Raycast(this.transform.position, Vector2.right, Mathf.Infinity, 1 << groundHazardMask);
+        maxPosition = raycastHitMax.collider ? raycastHitMax.point.x : Mathf.Infinity;
+        raycastHitMin = Physics2D.Raycast(this.transform.position, Vector2.left, Mathf.Infinity, 1 << groundHazardMask);
+        minPosition = raycastHitMin.collider ? raycastHitMin.point.x : -Mathf.Infinity;
+        print("Max Position = " + maxPosition);
+        print("Min Position = " + minPosition);
+    }
+
+    private void FixInitialPosition() {
+        float xPosition = this.transform.position.x;
+        Vector2 facingDirection = new Vector2(this.transform.localScale.x, 0f);
+        if((xPosition - minPosition < MIN_DISTANCE_TELEPORT && facingDirection.x < 0) || (maxPosition - xPosition < MIN_DISTANCE_TELEPORT && facingDirection.x > 0))
+           FlipSprite();
     }
 
     protected override void Attack() {
@@ -112,6 +154,10 @@ public class GuardianMechanics : AttackingEnemyMechanics {
         return colliders.Length > 0;
     }
 
+    private bool IsWithinBoundaries(Vector2 point) {
+        return point.x > minPosition && point.x < maxPosition;
+    }
+
     protected override void FlipSprite() {
         this.transform.localScale = new Vector2(-this.transform.localScale.x, transform.localScale.y);
         // Flip the x values for ray casting
@@ -122,8 +168,8 @@ public class GuardianMechanics : AttackingEnemyMechanics {
 
     private void Teleport() {
         Vector2 facingDirection = new Vector2(this.transform.localScale.x, 0f);
-        Vector3 newPosition = currentPosition + facingDirection * Random.Range(2, 10);
-        bool canTeleport = !IsPointOnWall(newPosition);
+        Vector3 newPosition = currentPosition + facingDirection * Random.Range(MIN_DISTANCE_TELEPORT, MAX_DISTANCE_TELEPORT);
+        bool canTeleport = IsWithinBoundaries(newPosition);
         if (canTeleport) {
             enemyAnimator.SetTrigger(Teleporting);
             FlipSprite();
