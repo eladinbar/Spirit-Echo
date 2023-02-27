@@ -65,6 +65,9 @@ TagManager:
   - name: UI
     uniqueID: 4116249899
     locked: 0
+  - name: NPC
+    uniqueID: 2300990607
+    locked: 0
   - name: Enemies
     uniqueID: 3446275881
     locked: 0
