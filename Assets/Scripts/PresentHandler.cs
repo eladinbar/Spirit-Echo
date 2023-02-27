@@ -1,6 +1,7 @@
 using System.Collections;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class PresentHandler : MonoBehaviour {
@@ -70,7 +71,11 @@ public class PresentHandler : MonoBehaviour {
             audioSource.Play();
         } else {
             cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
-            cinemachineConfiner.m_ConfineScreenEdges = true;
+            // Check if level isn't escape level
+            if (SceneManager.GetActiveScene().buildIndex != 4) {
+                virtualCamera.m_Lens.OrthographicSize = 3.5f;
+                cinemachineConfiner.m_ConfineScreenEdges = true;
+            }
         }
     }
     
