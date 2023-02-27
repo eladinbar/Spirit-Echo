@@ -68,8 +68,10 @@ public class PresentHandler : MonoBehaviour {
             }
 
             audioSource.Play();
-        } else
+        } else {
             cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
+            cinemachineConfiner.m_ConfineScreenEdges = true;
+        }
     }
     
     public void StartFading() {
