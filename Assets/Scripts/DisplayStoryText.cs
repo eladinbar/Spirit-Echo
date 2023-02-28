@@ -1,12 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DisplayStoryText : MonoBehaviour {
     private PlayerInput playerInput;
+    
+    public UnityEvent trigger;
 
     [SerializeField] List<TextMeshProUGUI> textList;
     [SerializeField] Image spaceImage;
@@ -19,6 +22,9 @@ public class DisplayStoryText : MonoBehaviour {
     private bool traversed;
     private bool isPresent = true;
 
+    // Specific check
+    private int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
@@ -40,7 +46,6 @@ public class DisplayStoryText : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         // Specific check, can be expanded upon
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (sceneIndex == 1 && this.transform.position.x == -5.079998f) {
             float xPosition = PlayerMechanics.Instance.GetPosition().x;
             bool inPosition = isPresent && traversed && xPosition is >= -7f and <= 2.5f;
@@ -68,6 +73,21 @@ public class DisplayStoryText : MonoBehaviour {
     }
 
     private void ShowNextText() {
+        // Specific check
+        // Omer's level
+        if (sceneIndex == 3 && this.transform.position.x is >= -10f and <= -2f && currentIndex == 5) {
+            trigger.Invoke();
+        }
+        
+        else if (sceneIndex == 3 && this.transform.position.x is >= 50f and <= 65f && currentIndex >= textList.Count) {
+            trigger.Invoke();
+        }
+        
+        else if (sceneIndex == 3 && this.transform.position.x is >= 110f and <= 130f && currentIndex >= textList.Count) {
+            trigger.Invoke();
+        }
+        // Specific check
+        
         if (currentIndex >= textList.Count) {
             textList[currentIndex - 1].gameObject.SetActive(false);
             spaceImage.gameObject.SetActive(false);
