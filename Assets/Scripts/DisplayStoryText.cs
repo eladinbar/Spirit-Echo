@@ -23,11 +23,12 @@ public class DisplayStoryText : MonoBehaviour {
     private bool isPresent = true;
 
     // Specific check
-    private int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    private int sceneIndex;
     
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void OnEnable() {
