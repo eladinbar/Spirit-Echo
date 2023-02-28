@@ -76,15 +76,17 @@ public class DisplayStoryText : MonoBehaviour {
     private void ShowNextText() {
         // Specific check
         // Omer's level
-        if (sceneIndex == 3 && this.transform.position.x is >= -10f and <= -2f && currentIndex == 5) {
+        print("Scene Index = " + sceneIndex);
+        print("Position = " + PlayerMechanics.Instance.GetPosition().x);
+        if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
             trigger.Invoke();
         }
         
-        else if (sceneIndex == 3 && this.transform.position.x is >= 50f and <= 65f && currentIndex >= textList.Count) {
+        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex >= textList.Count) {
             trigger.Invoke();
         }
         
-        else if (sceneIndex == 3 && this.transform.position.x is >= 110f and <= 130f && currentIndex >= textList.Count) {
+        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 110f and <= 130f && currentIndex >= textList.Count) {
             trigger.Invoke();
         }
         // Specific check

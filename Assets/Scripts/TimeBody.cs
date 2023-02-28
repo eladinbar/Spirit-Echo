@@ -6,12 +6,12 @@ public class TimeBody : MonoBehaviour {
     
     Stack<Vector3> positions;
     Stack<Quaternion> rotations;
-    Rigidbody2D rigidbody;
+    Rigidbody2D rigidbody2d;
     
     void Start()    {
         positions = new Stack<Vector3>();
         rotations = new Stack<Quaternion>();
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() {
@@ -23,12 +23,12 @@ public class TimeBody : MonoBehaviour {
 
     public void StartRewind() {
         isRewinding = true;
-        rigidbody.isKinematic = true;
+        rigidbody2d.isKinematic = true;
     }
 
     public void StopRewind() {
         isRewinding = false;
-        rigidbody.isKinematic = false;
+        rigidbody2d.isKinematic = false;
     }
 
     void Rewind() {
