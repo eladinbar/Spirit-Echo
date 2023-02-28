@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using DefaultNamespace;
 
 public class level3 : MonoBehaviour
 {
@@ -23,24 +24,27 @@ public class level3 : MonoBehaviour
     [SerializeField] GameObject text3v2;
     [SerializeField] GameObject text4v2;
     [SerializeField] GameObject text5v2;
-    [SerializeField] GameObject player;
+    [SerializeField] public GameObject player;
     [SerializeField] GameObject timeTraverseInstruction;
+    [SerializeField] public AudioClip part1AudioClip;
+    [SerializeField] AudioClip part2AudioClip;
+    [SerializeField] AudioClip part3AudioClip;
+
     
-    
-    bool isViverDied = false;
+    public bool isViverDied = false;
     bool isJumpEnabledInPresent = true;
     bool isJumpEnabledInPast = true;
-	bool isVisitedInPast = false;
     PlayerMechanics playermechanicsRemote;
     BoxCollider2D playerBoxCollider;
     bool isNewJumpEnabled= false;
     bool init=true;
     int phase = 0, phase2=0, phase3=0;
     [SerializeField] GameObject pastTilemap;
+    [SerializeField] public GameObject presentTilemap;
+
     bool got_time_traverse_instruction = false;
     float time_traverse_cooldown = 8f;
-
-
+    private bool init1 = true;    
 
 
     private IEnumerator FadeIn(Renderer render) {
@@ -56,6 +60,7 @@ public class level3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         playermechanicsRemote = player.GetComponent<PlayerMechanics>();
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
         
@@ -80,16 +85,23 @@ public class level3 : MonoBehaviour
         text5v2.SetActive(false);
         isJumpEnabledInPresent = true;
         isJumpEnabledInPast=false;
-
+        timeTraverseInstruction.SetActive(false);
         
     }
     void OnTraverseTime() {
-		isVisitedInPast = true;
-        if (!got_time_traverse_instruction)
+        if (phase2 >= 7)
         {
-            //DEACTIVE INSTRUCTION
-            got_time_traverse_instruction = true;
+            presentTilemap.GetComponent<AudioSource>().clip = part3AudioClip;
+
         }
+        
+        if (got_time_traverse_instruction)
+        {
+            timeTraverseInstruction.SetActive(false);
+        }
+        got_time_traverse_instruction = true;
+
+        
     }
 
     void OnJump() {
@@ -140,8 +152,7 @@ public class level3 : MonoBehaviour
             text5v2.SetActive(true);
             isJumpEnabledInPresent=true;
             playermechanicsRemote.jumpEnabled=true;
-
-
+            viver.GetComponent<ViverMechanics>().canDie = true;
         }
         if(phase3==6){
             text3v2.SetActive(false);
@@ -170,6 +181,9 @@ public class level3 : MonoBehaviour
             playermechanicsRemote.jumpEnabled=true;
             player.GetComponent<Rigidbody2D>().gravityScale = 2.4f;
             isJumpEnabledInPresent=true;
+            presentTilemap.GetComponent<AudioSource>().clip = part2AudioClip;
+            presentTilemap.GetComponent<AudioSource>().volume = 0.4f;
+            presentTilemap.GetComponent<AudioSource>().Play();
 
         }
         if(phase2==6){
@@ -211,16 +225,17 @@ public class level3 : MonoBehaviour
         if (!got_time_traverse_instruction && time_traverse_cooldown <= Mathf.Epsilon)
         {
             got_time_traverse_instruction = true;
-            //Active instruction
+            timeTraverseInstruction.SetActive(true);
             
             
         }
         float distance = Vector3.Distance(player.transform.position, viver.transform.position);
-        if(phase2>=8 && phase3==0 &  distance > 21){
-            viver.transform.position=new Vector3((float)126,(float)86, (float)0);
+        if(phase2>=8 && phase3==0 &  distance > 21)
+        {
+            viver.transform.position=new Vector3((float)126,(float)85.45, (float)0);
             phase3=1;
         }
-        if(phase3==1 &  distance < 2){
+        if(phase3==1 &  distance < 4){
             playermechanicsRemote.jumpEnabled=false;
             text1v2.SetActive(true);
             isJumpEnabledInPresent=false;
@@ -234,10 +249,7 @@ public class level3 : MonoBehaviour
             phase2=1;
             playermechanicsRemote.jumpEnabled=false;
         }
-        if(isViverDied){
-            player.GetComponent<Rigidbody2D>().gravityScale = 1;
 
-        }
         
     }
 }
