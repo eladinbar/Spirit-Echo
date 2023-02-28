@@ -25,11 +25,14 @@ public class DisplayStoryText : MonoBehaviour {
 
     // Specific check
     private int sceneIndex;
+    level3 _level3;
     
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
+        // Specific check
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        _level3 = FindObjectOfType<level3>();
     }
 
     private void OnEnable() {
@@ -80,18 +83,18 @@ public class DisplayStoryText : MonoBehaviour {
         // print("Scene Index = " + sceneIndex);
         // print("Position = " + PlayerMechanics.Instance.GetPosition().x);
         if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
-            trigger.Invoke();
+            _level3.trigger();
         }
         
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex == 8) {
             if(sfx)
                 AudioSource.PlayClipAtPoint(sfx, PlayerMechanics.Instance.GetPosition());
-            trigger.Invoke();
+            _level3.trigger();
             print("Invoked");
         }
         
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 110f and <= 130f && currentIndex >= textList.Count) {
-            trigger.Invoke();
+            _level3.trigger();
         }
         // Specific check
         
