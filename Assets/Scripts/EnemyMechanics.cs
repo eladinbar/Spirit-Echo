@@ -66,12 +66,12 @@ public abstract class EnemyMechanics : MonoBehaviour {
         this.transform.localScale = new Vector2(-Mathf.Sign(moveSpeed), transform.localScale.y);
     }
     
-    private void Knockback(Vector2 kick) {
+    protected void Knockback(Vector2 kick) {
         waitTimeInPosition = KNOCKBACK_TIME;
         // playerRigidbody.velocity = kick;
     }
 
-    public void TakeDamage(Vector2 kick, int damage=1) {
+    public virtual void TakeDamage(Vector2 kick, int damage=1) {
         currentHealth -= damage;
         if(hurtSFX)
             audioSource.PlayOneShot(hurtSFX);
@@ -83,7 +83,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
         Knockback(kick);
     }
     
-    void Die() {
+    protected virtual void Die() {
         if(deathSFX)
             audioSource.PlayOneShot(deathSFX);
         enemyAnimator.SetTrigger(Death);
