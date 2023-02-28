@@ -82,8 +82,8 @@ public class GuardianMechanics : AttackingEnemyMechanics {
         maxPosition = raycastHitMax.collider ? raycastHitMax.point.x : Mathf.Infinity;
         raycastHitMin = Physics2D.Raycast(this.transform.position, Vector2.left, Mathf.Infinity, 1 << groundHazardMask);
         minPosition = raycastHitMin.collider ? raycastHitMin.point.x : -Mathf.Infinity;
-        print("Max Position = " + maxPosition);
-        print("Min Position = " + minPosition);
+        // print("Max Position = " + maxPosition);
+        // print("Min Position = " + minPosition);
     }
 
     private void FixInitialPosition() {
