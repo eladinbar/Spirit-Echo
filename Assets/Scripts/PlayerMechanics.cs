@@ -93,7 +93,6 @@ public class PlayerMechanics : MonoBehaviour {
     private float timeTraversalDelay = 0f;
     private TimeBody timeBody;
     [SerializeField] Canvas rewindCanvas;
-    [SerializeField] TextMeshProUGUI rewindMessage;
 
     //// Double Jump
     public bool unlockedDoubleJump = false;

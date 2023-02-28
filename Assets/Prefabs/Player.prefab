@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 3228914905770855012}
   - component: {fileID: 3228914905770855011}
   - component: {fileID: 3228914905770855013}
+  - component: {fileID: 1227774411}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1468452803
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1346110768, guid: 88a7b0d36523b1e4ebed1704ba55348d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -344,8 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d04ad2fbe90be24b8df0d00d59f5522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpEnabled: 1
-  timeTraverseEnabled: 1
   runSpeed: 5
   jumpSpeed: 5
   doubleJumpSpeed: 5
@@ -353,18 +352,30 @@ MonoBehaviour:
   deathKick: {x: 0, y: 10}
   damagedKick: {x: 0, y: 5}
   hitKick: {x: -5, y: 0}
-  hitPoints: 5
+  maxHitPoints: 5
+  currentHitPoints: 0
   jumpSFX: {fileID: 8300000, guid: 70866c6a1c2b1694a9312816898b62ef, type: 3}
   hurtSFX: {fileID: 8300000, guid: 338d7f42fd2808e41a56baf8e86dca61, type: 3}
-  deathSFX: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: 6b05415a6c07b4e448126fc35a55188b, type: 3}
   timeTravelSFX: {fileID: 8300000, guid: a825a35aeb93dc244ba0ee758d61579a, type: 3}
   dashSFX: {fileID: 8300000, guid: 6706f89efff14d64385bbf62e48430d4, type: 3}
   flipGravitySFX: {fileID: 8300000, guid: 87106723fd5406348b2a01db144c9b24, type: 3}
   attackSFX: {fileID: 8300000, guid: 5ad895a70d7828142bd31555e148a784, type: 3}
-  errorSFX: {fileID: 0}
+  errorSFX: {fileID: 8300000, guid: dd46fe98897f62f40ac979adab108546, type: 3}
+  rewindSFX: {fileID: 8300000, guid: c1b603ec2eb9060488632a1ad7f7d741, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
+  moveEnabled: 1
+  onJump:
+    m_PersistentCalls:
+      m_Calls: []
+  jumpEnabled: 1
+  onTraverseTime:
+    m_PersistentCalls:
+      m_Calls: []
   unlockedTimeTraversal: 0
+  timeTraverseEnabled: 1
+  rewindCanvas: {fileID: 6110678064694843787, guid: e2f9c1d44fb786740b728bf78f07b7ca, type: 3}
   unlockedDoubleJump: 0
   unlockedDash: 0
   unlockedAttack: 0
@@ -376,3 +387,15 @@ MonoBehaviour:
   attackDamage: 1
   unlockedGravityShift: 0
   unlockedWallClimb: 0
+--- !u!114 &1227774411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228914905770855036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6028c8b13ed808742856c6f5a27c6869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
