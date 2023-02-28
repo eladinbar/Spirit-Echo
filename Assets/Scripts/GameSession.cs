@@ -33,7 +33,7 @@ public class GameSession : MonoBehaviour {
     }
     
     private IEnumerator RestartLevel() {
-        yield return new WaitForSecondsRealtime(levelLoadDelay);
+        yield return new WaitForSecondsRealtime(5f);
         livesCount.text = prefix + PlayerMechanics.Instance.MaxHitPoints.ToString();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

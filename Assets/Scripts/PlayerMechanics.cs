@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -57,6 +58,7 @@ public class PlayerMechanics : MonoBehaviour {
     [SerializeField] AudioClip flipGravitySFX;
     [SerializeField] AudioClip attackSFX;
     [SerializeField] AudioClip errorSFX;
+    [SerializeField] AudioClip rewindSFX;
 
     AudioSource audioSource;
 
@@ -89,6 +91,9 @@ public class PlayerMechanics : MonoBehaviour {
     public bool unlockedTimeTraversal = false;
     public bool timeTraverseEnabled = true;
     private float timeTraversalDelay = 0f;
+    private TimeBody timeBody;
+    [SerializeField] Canvas rewindCanvas;
+    [SerializeField] TextMeshProUGUI rewindMessage;
 
     //// Double Jump
     public bool unlockedDoubleJump = false;
@@ -141,6 +146,7 @@ public class PlayerMechanics : MonoBehaviour {
         bodyCollider = GetComponent<CapsuleCollider2D>();
         pastTilemapHandler = pastTilemap.GetComponent<PastHandler>();
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
+        timeBody = GetComponent<TimeBody>();
         damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
         enemyLayers = LayerMask.GetMask("Enemies");
         currentHitPoints = maxHitPoints;
@@ -359,11 +365,24 @@ public class PlayerMechanics : MonoBehaviour {
 
     void Die() {
         audioSource.PlayOneShot(deathSFX);
+        if (unlockedTimeTraversal) {
+            StartCoroutine(RewindTime());
+        }
 
+        this.gameObject.layer = 0;
+        this.gameObject.tag = "Untagged";
         isAlive = false;
         playerAnimator.SetTrigger(Death);
         playerRigidbody.velocity = deathKick;
         FindObjectOfType<GameSession>().ProcessPlayerDeath();
+    }
+
+    IEnumerator RewindTime() {
+        Canvas canvas = Instantiate(rewindCanvas, this.transform.position, this.transform.rotation);
+        canvas.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        timeBody.StartRewind();
+        audioSource.PlayOneShot(rewindSFX);
     }
 }
    
