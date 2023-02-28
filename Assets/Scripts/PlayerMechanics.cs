@@ -183,6 +183,7 @@ public class PlayerMechanics : MonoBehaviour {
     void OnJump(InputValue value) {
         if (isAlive) {
             bool playerCanJump = feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))&& jumpEnabled;
+            print("player can jump: " + playerCanJump);
             canDoubleJump = playerAnimator.GetBool(IsJumping) && canDoubleJump && unlockedDoubleJump;
             if (value.isPressed && playerCanJump) {
                 onJump.Invoke();

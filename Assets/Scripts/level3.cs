@@ -60,6 +60,9 @@ public class level3 : MonoBehaviour
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
         
         playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
+        
+        PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
+        PlayerMechanics.Instance.onJump.AddListener(OnJump);
 		
         donny.SetActive(false);
         text1.SetActive(false);
@@ -93,6 +96,7 @@ public class level3 : MonoBehaviour
     }
 
     void OnJump() {
+        print("On Jump");
         bool isPast = pastTilemap.activeSelf;
         if(isPast){
             phase+=1;
