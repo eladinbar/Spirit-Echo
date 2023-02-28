@@ -16,6 +16,7 @@ public class DisplayStoryText : MonoBehaviour {
     [SerializeField] TextMeshProUGUI continueText;
     [SerializeField] TextMeshProUGUI tutorialText;
     [SerializeField] List<Image> tutorialImages;
+    [SerializeField] AudioClip sfx;
 
     private int currentIndex = 0;
     private bool triggered;
@@ -76,14 +77,17 @@ public class DisplayStoryText : MonoBehaviour {
     private void ShowNextText() {
         // Specific check
         // Omer's level
-        print("Scene Index = " + sceneIndex);
-        print("Position = " + PlayerMechanics.Instance.GetPosition().x);
+        // print("Scene Index = " + sceneIndex);
+        // print("Position = " + PlayerMechanics.Instance.GetPosition().x);
         if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
             trigger.Invoke();
         }
         
-        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex >= textList.Count) {
+        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex == 8) {
+            if(sfx)
+                AudioSource.PlayClipAtPoint(sfx, PlayerMechanics.Instance.GetPosition());
             trigger.Invoke();
+            print("Invoked");
         }
         
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 110f and <= 130f && currentIndex >= textList.Count) {
@@ -115,6 +119,7 @@ public class DisplayStoryText : MonoBehaviour {
             }
 
             textList[currentIndex].gameObject.SetActive(true);
+            textList[currentIndex].gameObject.transform.position = new Vector2(PlayerMechanics.Instance.GetPosition().x, PlayerMechanics.Instance.GetPosition().y + 1f);
             currentIndex++;
         }
     }
