@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level_Roy.unity
     guid: 2a47aa1bf01d2534baf3c00e8e87214b
+  - enabled: 1
+    path: Assets/Levels/End_Screen.unity
+    guid: c25d4a3a817c440ae807780d69ff2c84
+  - enabled: 1
+    path: Assets/Levels/Credits.unity
+    guid: dc7003976eaa54db7b07e1666bf4e9f1
+  - enabled: 0
+    path: Assets/Levels/Credits2.unity
+    guid: 446273f9161324fbf97ba947e8a9bc7f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

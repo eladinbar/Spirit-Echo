@@ -10,6 +10,12 @@ public class MainMenu : MonoBehaviour {
         Cursor.visible = false;
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+
+    }
+
     public void QuitGame()
     {
         // save any game data here
