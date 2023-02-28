@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -848691415
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -1354422294, guid: 8067da458c4f9734e9217e65f6fc1b62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -293,11 +293,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   hitPoints: 1
+  hurtSFX: {fileID: 8300000, guid: 241a685cbe8b16545b38c6ef90f58c34, type: 3}
+  deathSFX: {fileID: 8300000, guid: 94f26f5cf05b2f144968659188113034, type: 3}
+  attackSFX: {fileID: 8300000, guid: a0e7339c7f5d4db4fb1454dc2a8f5c51, type: 3}
   aggroRange: 3
   blindAggroRange: 1
-  hurtSFX: {fileID: 0}
-  deathSFX: {fileID: 0}
-  attackSFX: {fileID: 8300000, guid: a0e7339c7f5d4db4fb1454dc2a8f5c51, type: 3}
   attackRange: 1.5
   attackDamage: 1
   attackKnockback: 3

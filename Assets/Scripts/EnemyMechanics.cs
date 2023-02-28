@@ -24,7 +24,9 @@ public abstract class EnemyMechanics : MonoBehaviour {
 
     [SerializeField] protected AudioClip hurtSFX;
     [SerializeField] protected AudioClip deathSFX;
-
+    
+    AudioManager audioManager;
+    AudioSource audioManagerSource;
     protected AudioSource audioSource;
     protected Animator enemyAnimator;
     
@@ -50,6 +52,8 @@ public abstract class EnemyMechanics : MonoBehaviour {
     }
 
     protected virtual void Start() {
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManagerSource = audioManager.GetComponent<AudioSource>();
         currentPosition = this.transform.position;
     }
     
@@ -73,7 +77,7 @@ public abstract class EnemyMechanics : MonoBehaviour {
 
     public void TakeDamage(Vector2 kick, int damage=1) {
         currentHealth -= damage;
-        if(hurtSFX)
+        if(hurtSFX && currentHealth > 0)
             audioSource.PlayOneShot(hurtSFX);
         if(enemyAnimator.HasState(0, Hurt))
             enemyAnimator.SetTrigger(Hurt);
@@ -85,7 +89,8 @@ public abstract class EnemyMechanics : MonoBehaviour {
     
     void Die() {
         if(deathSFX)
-            audioSource.PlayOneShot(deathSFX);
+            audioManagerSource.PlayOneShot(deathSFX);
+
         enemyAnimator.SetTrigger(Death);
         StartCoroutine(ProcessDeath());
     }

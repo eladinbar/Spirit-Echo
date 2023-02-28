@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -128,14 +127,14 @@ public class PlayerMechanics : MonoBehaviour {
         
         #if UNITY_EDITOR
             unlockedTimeTraversal = true;
-         /*   
+            
             unlockedDoubleJump = true;
             unlockedDash = true;
             unlockedAttack = true;
           
             unlockedGravityShift = true;
             unlockedWallClimb = true;
-         */     
+              
         #endif
         
         audioSource = GetComponent<AudioSource>();
