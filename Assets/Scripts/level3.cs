@@ -34,7 +34,6 @@ public class level3 : MonoBehaviour
     public bool isViverDied = false;
     bool isJumpEnabledInPresent = true;
     bool isJumpEnabledInPast = true;
-	bool isVisitedInPast = false;
     PlayerMechanics playermechanicsRemote;
     BoxCollider2D playerBoxCollider;
     bool isNewJumpEnabled= false;
@@ -90,18 +89,18 @@ public class level3 : MonoBehaviour
         
     }
     void OnTraverseTime() {
-		isVisitedInPast = true;
         if (phase2 >= 7)
         {
             presentTilemap.GetComponent<AudioSource>().clip = part3AudioClip;
 
         }
         
-        if (!got_time_traverse_instruction)
+        if (got_time_traverse_instruction)
         {
             timeTraverseInstruction.SetActive(false);
-            got_time_traverse_instruction = true;
         }
+        got_time_traverse_instruction = true;
+
         
     }
 
@@ -153,8 +152,7 @@ public class level3 : MonoBehaviour
             text5v2.SetActive(true);
             isJumpEnabledInPresent=true;
             playermechanicsRemote.jumpEnabled=true;
-
-
+            viver.GetComponent<ViverMechanics>().canDie = true;
         }
         if(phase3==6){
             text3v2.SetActive(false);
@@ -232,12 +230,10 @@ public class level3 : MonoBehaviour
             
         }
         float distance = Vector3.Distance(player.transform.position, viver.transform.position);
-        if(phase2>=8 && phase3==0 &  distance > 21&& init1)
+        if(phase2>=8 && phase3==0 &  distance > 21)
         {
-            init1 = false;
             viver.transform.position=new Vector3((float)126,(float)85.45, (float)0);
             phase3=1;
-            viver.GetComponent<ViverMechanics>().canDie = true;
         }
         if(phase3==1 &  distance < 4){
             playermechanicsRemote.jumpEnabled=false;

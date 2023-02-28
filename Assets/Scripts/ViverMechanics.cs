@@ -39,7 +39,7 @@ namespace DefaultNamespace
             level3Remote.isViverDied = true;
             level3Remote.player.GetComponent<Rigidbody2D>().gravityScale = 1f;
             level3Remote.presentTilemap.GetComponent<AudioSource>().clip = level3Remote.part1AudioClip;
-
+            level3Remote.presentTilemap.GetComponent<AudioSource>().Play();
             enemyAnimator.SetTrigger(Death);
         }
 

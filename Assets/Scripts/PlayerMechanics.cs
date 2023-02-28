@@ -128,14 +128,14 @@ public class PlayerMechanics : MonoBehaviour {
         
         #if UNITY_EDITOR
             unlockedTimeTraversal = true;
-         /*   
+            
             unlockedDoubleJump = true;
             unlockedDash = true;
             unlockedAttack = true;
           
             unlockedGravityShift = true;
             unlockedWallClimb = true;
-         */     
+              
         #endif
         
         audioSource = GetComponent<AudioSource>();
