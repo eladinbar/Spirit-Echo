@@ -15,7 +15,6 @@ public class level3 : MonoBehaviour
     [SerializeField] AudioClip part2AudioClip;
     [SerializeField] AudioClip part3AudioClip;
     [SerializeField] GameObject Qbutton;
-    [SerializeField] DisplayStoryText _displayStoryText;
     
     public bool isViverDied = false;
     bool isJumpEnabledInPresent = true;
@@ -47,18 +46,15 @@ public class level3 : MonoBehaviour
 
         playermechanicsRemote = player.GetComponent<PlayerMechanics>();
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
-        playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
         donny.SetActive(false);
         isJumpEnabledInPresent = true;
         isJumpEnabledInPast=false;
         timeTraverseInstruction.SetActive(false);
-        _displayStoryText.trigger.AddListener(trigger);
     }
 
-    void trigger()
+    public void trigger()
     {
         order++;
-        
         switch (order)
         {
             case 1:
@@ -130,7 +126,6 @@ public class level3 : MonoBehaviour
         bool isPast = pastTilemap.activeSelf;
         if(isPast){
             //phase+=1;
-            playerBoxCollider.size = new Vector2((float)0.2,(float)0.12);
 
         }
         else{
@@ -183,7 +178,7 @@ public class level3 : MonoBehaviour
             
         }
         float distance = Vector3.Distance(player.transform.position, viver.transform.position);
-        if(order==3 & !init &  distance > 21)
+        if(order==2 & !init &  distance > 21)
         {
             init = true;
             viver.transform.position=new Vector3((float)126,(float)85.45, (float)0);
