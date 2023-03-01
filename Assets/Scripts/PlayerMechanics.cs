@@ -149,6 +149,11 @@ public class PlayerMechanics : MonoBehaviour {
         damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
         enemyLayers = LayerMask.GetMask("Enemies", "Sentries");
         currentHitPoints = maxHitPoints;
+        StartCoroutine(LateStart());
+    }
+
+    IEnumerator LateStart() {
+        yield return new WaitForSeconds(Mathf.Epsilon);
         FindObjectOfType<GameSession>().UpdateLives(currentHitPoints);
     }
 

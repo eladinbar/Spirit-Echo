@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour {
         Pause();
         settingsPanel.SetActive(true);
         settingsMenu.SetVolume(-30f);
+        settingsMenu.SetVoiceVolume(-10f);
         Resume();
         settingsPanel.SetActive(false);
     }
