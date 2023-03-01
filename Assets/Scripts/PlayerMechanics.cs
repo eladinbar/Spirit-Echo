@@ -58,6 +58,7 @@ public class PlayerMechanics : MonoBehaviour {
     [SerializeField] AudioClip attackSFX;
     [SerializeField] AudioClip errorSFX;
     [SerializeField] AudioClip rewindSFX;
+    [SerializeField] AudioClip deathVoice;
 
     AudioSource audioSource;
 
