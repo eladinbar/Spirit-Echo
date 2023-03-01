@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using DefaultNamespace;
 
@@ -27,6 +28,13 @@ public class Level3 : MonoBehaviour
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
         donny.SetActive(false);
         timeTraverseInstruction.SetActive(false);
+        StartCoroutine(LateStart());
+    }
+    
+    IEnumerator LateStart() {
+        yield return new WaitForSeconds(Mathf.Epsilon);
+        PlayerMechanics.Instance.unlockedWallClimb = false;
+        playerBoxCollider.size = new Vector2(0.2f, 0.12f);
     }
 
     public void trigger()
