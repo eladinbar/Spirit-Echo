@@ -131,8 +131,8 @@ public class GuardianMechanics : AttackingEnemyMechanics {
         }
         if(rayHit)
             PlayerMechanics.Instance.TakeDamage(this, knockbackKick, attackDamage);
-        if(teleportInterval < Mathf.Epsilon)
-            state = (State)Random.Range(3,5);
+        // if(teleportInterval < Mathf.Epsilon)
+        //     state = (State)Random.Range(3,5);
     }
 
     // Show attack rays in editor while Gizmos are enabled

@@ -6,7 +6,8 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour {
-    [SerializeField] AudioMixer audioMixer;
+    [SerializeField] AudioMixer mainMixer;
+    [SerializeField] AudioMixer voiceMixer;
     private Toggle fullscreenToggle;
 
     public Toggle FullscreenToggle => fullscreenToggle;
@@ -27,11 +28,11 @@ public class SettingsMenu : MonoBehaviour {
     }
 
     public void SetVolume(float volume) {
-        audioMixer.SetFloat("masterVolume", volume);
+        mainMixer.SetFloat("masterVolume", volume);
     }
 
-    public void SetQuality(int qualityLevel) {
-        QualitySettings.SetQualityLevel(qualityLevel);
+    public void SetVoiceVolume(float volume) {
+        voiceMixer.SetFloat("voiceVolume", volume);
     }
 
     public void ToggleFullscreen(bool toFullscreen) {
