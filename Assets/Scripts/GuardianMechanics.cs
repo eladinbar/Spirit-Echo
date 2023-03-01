@@ -96,7 +96,7 @@ public class GuardianMechanics : AttackingEnemyMechanics {
     protected override void Attack() {
         damagedDuration = ATTACK_DURATION;
         enemyAnimator.SetTrigger(Attacking);
-        audioSource.PlayOneShot(attackSFX);
+        AudioSource.PlayClipAtPoint(attackSFX, this.transform.position);
 
         StartCoroutine(ShootLaser());
 
