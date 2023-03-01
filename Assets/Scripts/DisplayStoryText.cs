@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
@@ -32,7 +33,7 @@ public class DisplayStoryText : MonoBehaviour {
     static bool farLedge;
     
     // Wall jump level
-    Level3 _level3;
+    [SerializeField] Level3 _level3;
     
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
@@ -40,9 +41,7 @@ public class DisplayStoryText : MonoBehaviour {
         audioSource = this.GetComponent<AudioSource>();
         // Specific check
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        _level3 = FindObjectOfType<Level3>();
     }
-
     private void OnEnable() {
         foreach (TextMeshProUGUI text in textList) {
             text.gameObject.SetActive(false);
