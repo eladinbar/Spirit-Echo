@@ -96,7 +96,8 @@ public class GuardianMechanics : AttackingEnemyMechanics {
     protected override void Attack() {
         damagedDuration = ATTACK_DURATION;
         enemyAnimator.SetTrigger(Attacking);
-        AudioSource.PlayClipAtPoint(attackSFX, this.transform.position);
+        if(IsPlayerInVicinity(this.transform.position))
+            AudioSource.PlayClipAtPoint(attackSFX, this.transform.position);
 
         StartCoroutine(ShootLaser());
 
@@ -131,8 +132,8 @@ public class GuardianMechanics : AttackingEnemyMechanics {
         }
         if(rayHit)
             PlayerMechanics.Instance.TakeDamage(this, knockbackKick, attackDamage);
-        if(teleportInterval < Mathf.Epsilon)
-            state = (State)Random.Range(3,5);
+        // if(teleportInterval < Mathf.Epsilon)
+        //     state = (State)Random.Range(3,5);
     }
 
     // Show attack rays in editor while Gizmos are enabled
@@ -151,6 +152,11 @@ public class GuardianMechanics : AttackingEnemyMechanics {
     
     private bool IsPointOnWall(Vector2 point) {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(point, 0.1f, LayerMask.GetMask("Ground"));
+        return colliders.Length > 0;
+    }
+    
+    private bool IsPlayerInVicinity(Vector2 point) {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(point, 10f, LayerMask.GetMask("Player"));
         return colliders.Length > 0;
     }
 

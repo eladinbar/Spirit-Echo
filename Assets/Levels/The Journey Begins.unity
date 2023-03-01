@@ -1668,11 +1668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7601657
+      value: 0.041889668
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6782962
+      value: 0.6692053
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
@@ -1818,7 +1818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.1, y: -14.5}
+  m_AnchoredPosition: {x: -8.1, y: -15.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477804124
@@ -3037,7 +3037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Luckily, It seems more \nintact than the rest though"
+  m_text: "Luckily, It seems more \nintact than the rest"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -11247,7 +11247,7 @@ AudioSource:
   m_GameObject: {fileID: 978040342}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4966bdde7922e1049875149a032acc55, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -29441,7 +29441,7 @@ GameObject:
   - component: {fileID: 2042178672}
   - component: {fileID: 2042178671}
   m_Layer: 5
-  m_Name: Key Space
+  m_Name: Key Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29465,7 +29465,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -13.6, y: -9.8}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2042178671
 Animator:
@@ -29477,7 +29477,7 @@ Animator:
   m_GameObject: {fileID: 2042178669}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 596a1c5b134bb5f48b41f097731123f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 76e14bc43ee6191418b1d022637ab22e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -29507,7 +29507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 633439401, guid: 8ec18e78c9835f146b06992fb18e6f4a, type: 3}
+  m_Sprite: {fileID: -1505549369, guid: e59f98b68e9391e4492f38c88a29eadd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
