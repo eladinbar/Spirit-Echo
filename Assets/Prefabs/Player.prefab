@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 3228914905770855011}
   - component: {fileID: 3228914905770855013}
   - component: {fileID: 1227774411}
+  - component: {fileID: 927260785}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -363,6 +364,7 @@ MonoBehaviour:
   attackSFX: {fileID: 8300000, guid: 5ad895a70d7828142bd31555e148a784, type: 3}
   errorSFX: {fileID: 8300000, guid: dd46fe98897f62f40ac979adab108546, type: 3}
   rewindSFX: {fileID: 8300000, guid: c1b603ec2eb9060488632a1ad7f7d741, type: 3}
+  deathVoice: {fileID: 8300000, guid: 7ba8fd53a61df6b4a810dcfe47a20d03, type: 3}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
   moveEnabled: 1
@@ -388,6 +390,18 @@ MonoBehaviour:
   unlockedGravityShift: 0
   unlockedWallClimb: 0
 --- !u!114 &1227774411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228914905770855036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6028c8b13ed808742856c6f5a27c6869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &927260785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -70,7 +70,7 @@ public class DisplayStoryText : MonoBehaviour {
         
         // Revelation
         // Ability Panel
-        else if (sceneIndex == 2 && this.transform.position.x is >= -35f and <= -30f) {
+        else if (sceneIndex == 2 && this.transform.position.x is >= -30f and <= -25f) {
             if (other.CompareTag("Player") && keyFlag) {
                 doubleJumpFlag = true;
                 PlayerMechanics.Instance.unlockedDoubleJump = true;
@@ -117,7 +117,7 @@ public class DisplayStoryText : MonoBehaviour {
         }
         
         // Ability Panel
-        else if (sceneIndex == 2 && this.transform.position.x is >= -35f and <= -30f && !farLedge && currentIndex == 5) {
+        else if (sceneIndex == 2 && this.transform.position.x is >= -30f and <= -25f && !farLedge && currentIndex == 5) {
             textList[currentIndex - 1].gameObject.SetActive(false);
             currentIndex = textList.Count;
         }

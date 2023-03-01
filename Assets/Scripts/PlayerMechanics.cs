@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -59,7 +60,10 @@ public class PlayerMechanics : MonoBehaviour {
     [SerializeField] AudioClip errorSFX;
     [SerializeField] AudioClip rewindSFX;
     [SerializeField] AudioClip deathVoice;
+    
+    [SerializeField] AudioMixerGroup mixerGroup;
 
+    [SerializeField] AudioManager audioManager;
     AudioSource audioSource;
 
     [Header("Tilemaps")]
