@@ -50,6 +50,9 @@ public class Level3 : MonoBehaviour
             case 3:
                 ins3();
                 break;
+            case 4:
+                ins4();
+                break;
         }
     }
     
@@ -67,10 +70,14 @@ public class Level3 : MonoBehaviour
         presentTilemap.GetComponent<AudioSource>().clip = part2AudioClip;
         presentTilemap.GetComponent<AudioSource>().volume = 0.4f;
         presentTilemap.GetComponent<AudioSource>().Play();
+    }
+    void ins3()
+    {
         viver.transform.position=new Vector3(126f,85.45f, 0f);
+
     }
     
-    void ins3()
+    void ins4()
     {
         viver.GetComponent<ViverMechanics>().canDie = true;
 
