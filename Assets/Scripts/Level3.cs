@@ -68,7 +68,6 @@ public class Level3 : MonoBehaviour
     {
         player.GetComponent<Rigidbody2D>().gravityScale = 2.4f;
         presentTilemap.GetComponent<AudioSource>().clip = part2AudioClip;
-        presentTilemap.GetComponent<AudioSource>().volume = 0.4f;
         presentTilemap.GetComponent<AudioSource>().Play();
     }
     void ins3()
