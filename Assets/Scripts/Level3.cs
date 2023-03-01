@@ -14,7 +14,6 @@ public class Level3 : MonoBehaviour
     [SerializeField] GameObject Qbutton;
     PlayerMechanics playermechanicsRemote;
     BoxCollider2D playerBoxCollider;
-    bool init=false;
     [SerializeField] GameObject pastTilemap;
     [SerializeField] public GameObject presentTilemap;
 
@@ -68,6 +67,7 @@ public class Level3 : MonoBehaviour
         presentTilemap.GetComponent<AudioSource>().clip = part2AudioClip;
         presentTilemap.GetComponent<AudioSource>().volume = 0.4f;
         presentTilemap.GetComponent<AudioSource>().Play();
+        viver.transform.position=new Vector3(126f,85.45f, 0f);
     }
     
     void ins3()
@@ -103,11 +103,6 @@ public class Level3 : MonoBehaviour
             Qbutton.SetActive(true);
         }
         
-        float distance = Vector3.Distance(player.transform.position, viver.transform.position);
-        if(order==2 & !init &  distance > 21)
-        {
-            init = true;
-            viver.transform.position=new Vector3(126f,85.45f, 0f);
-        }
+
     }
 }
