@@ -1818,7 +1818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.1, y: -14.5}
+  m_AnchoredPosition: {x: -8.1, y: -15.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477804124
@@ -3037,7 +3037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Luckily, It seems more \nintact than the rest though"
+  m_text: "Luckily, It seems more \nintact than the rest"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}

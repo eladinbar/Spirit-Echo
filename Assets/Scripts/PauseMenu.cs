@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour {
         //Initialize settings menu
         Pause();
         settingsPanel.SetActive(true);
-        settingsMenu.SetVolume(-40f);
+        settingsMenu.SetVolume(-30f);
         Resume();
         settingsPanel.SetActive(false);
     }

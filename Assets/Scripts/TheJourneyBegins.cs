@@ -124,8 +124,10 @@ public class TheJourneyBegins : MonoBehaviour {
                 textList[currentIndex - 1].gameObject.SetActive(false);
             }
             
-            if(currentIndex < voiceOvers.Count)
-                audioSource.PlayOneShot(voiceOvers[currentIndex]);
+            if (currentIndex < voiceOvers.Count) {
+                audioSource.clip = voiceOvers[currentIndex];
+                audioSource.Play();
+            }
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
