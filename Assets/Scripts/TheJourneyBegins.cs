@@ -28,11 +28,15 @@ public class TheJourneyBegins : MonoBehaviour {
     [SerializeField] TextMeshProUGUI continueText;
     [SerializeField] TextMeshProUGUI tutorialText;
     [SerializeField] List<Image> tutorialImages;
+    [SerializeField] List<AudioClip> voiceOvers;
+    
+    AudioSource audioSource;
 
     void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         playerAnimator = PlayerMechanics.Instance.GetComponent<Animator>();
         playerRigidbody = PlayerMechanics.Instance.GetComponent<Rigidbody2D>();
+        audioSource = this.GetComponent<AudioSource>();
         // Initialize all text elements
         foreach (TextMeshProUGUI text in textList)
             text.gameObject.SetActive(false);
@@ -119,6 +123,8 @@ public class TheJourneyBegins : MonoBehaviour {
             if (currentIndex > 0) {
                 textList[currentIndex - 1].gameObject.SetActive(false);
             }
+            
+            audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }

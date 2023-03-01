@@ -13,6 +13,9 @@ public class DisplayStoryText : MonoBehaviour {
     [SerializeField] TextMeshProUGUI continueText;
     [SerializeField] TextMeshProUGUI tutorialText;
     [SerializeField] List<Image> tutorialImages;
+    [SerializeField] List<AudioClip> voiceOvers;
+    
+    AudioSource audioSource;
 
     private int currentIndex = 0;
     private bool triggered;
@@ -26,6 +29,7 @@ public class DisplayStoryText : MonoBehaviour {
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         PlayerMechanics.Instance.onTraverseTime.AddListener(OnTraverseTime);
+        audioSource = this.GetComponent<AudioSource>();
         // Specific check
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         _level3 = FindObjectOfType<Level3>();
@@ -111,7 +115,8 @@ public class DisplayStoryText : MonoBehaviour {
                 spaceImage.gameObject.SetActive(true);
                 continueText.gameObject.SetActive(true);
             }
-
+            
+            audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }

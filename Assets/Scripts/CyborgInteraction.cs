@@ -12,11 +12,16 @@ public class CyborgInteraction : MonoBehaviour {
     [SerializeField] TextMeshProUGUI continueText;
     [SerializeField] TextMeshProUGUI tutorialText;
     [SerializeField] List<Image> tutorialImages;
+    [SerializeField] List<AudioClip> voiceOvers;
+    
+    AudioSource audioSource;
 
     private int currentIndex = 0;
 
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
+        audioSource = this.GetComponent<AudioSource>();
+        
         foreach (TextMeshProUGUI text in textList) {
             text.gameObject.SetActive(false);
         }
@@ -61,6 +66,7 @@ public class CyborgInteraction : MonoBehaviour {
                 continueText.gameObject.SetActive(true);
             }
 
+            audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
