@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Can I make it happen again?!'
+  m_text: I wonder if I Can make it happen again?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -1532,6 +1532,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 903567192}
@@ -1543,6 +1547,22 @@ PrefabInstance:
       propertyPath: textList.Array.data[3]
       value: 
       objectReference: {fileID: 577798158}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb0be2c9a2a361a41b2e05934ef6202f, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 81780c0dd082d9148b733c932cdc5233, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 169a83d2f499781479636a10d923032d, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1899d8a799fadf641b2f9b2794093b2b, type: 3}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
       value: Closing Thoughts Text
@@ -1648,11 +1668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.041889668
+      value: 0.7601657
       objectReference: {fileID: 0}
     - target: {fileID: 7307948621541480413, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6692053
+      value: 0.6782962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4529f41156935d643a1a4322cdf73b64, type: 3}
@@ -1821,7 +1841,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What is.. this place?
+  m_text: 'What?
+
+    What is this place?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -2330,6 +2352,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 2136714543}
@@ -2354,6 +2380,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1983819556}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 51b4d2444be12f14c8b2e877e783c737, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f0ab3c7d9766c54ea3668a5f801279d, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ecc8663c5393176479aa90dcdc959b1a, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: de51e1a6c070a91478d7aad8d181ac4c, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 594a5e32686d7dc41b8fafb7670659cc, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1fea83824a907b44b3421d19ca1841e, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: tutorialImages.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2367,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 16456404}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
-      value: Initial Time Traverse Text 1
+      value: Initial Time Traverse Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
@@ -2852,7 +2902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Everything seems to be broken or otherwise non-functional
+  m_text: Everything seems to be broken
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -2941,7 +2991,7 @@ GameObject:
   - component: {fileID: 668758943}
   - component: {fileID: 668758942}
   m_Layer: 5
-  m_Name: Initial Time Traverse Text 1 (4)
+  m_Name: Initial Time Traverse Text  (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3363,7 +3413,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1019469822676191246, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_text
-      value: The blood on these walls...
+      value: There's blood on these walls...
       objectReference: {fileID: 0}
     - target: {fileID: 1343344028076123638, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
@@ -3478,6 +3528,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 778201092}
@@ -3485,6 +3539,18 @@ PrefabInstance:
       propertyPath: textList.Array.data[2]
       value: 
       objectReference: {fileID: 1390111004}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 656eaa25ea3b5f246b8bd15c24bcb991, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 71ad45d2398ee1f419f125fc6ba5c56e, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c0a77b70052baa648bafc04c6d923c43, type: 3}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
       value: Danger Text
@@ -3513,7 +3579,7 @@ GameObject:
   - component: {fileID: 726623870}
   - component: {fileID: 726623869}
   m_Layer: 5
-  m_Name: Initial Time Traverse Text 1 (2)
+  m_Name: Initial Time Traverse Text  (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3833,7 +3899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Maybe I shouldn't go much \nfurther along this path"
+  m_text: Maybe I shouldn't go there
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -11118,6 +11184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978040343}
   - component: {fileID: 978040344}
+  - component: {fileID: 978040345}
   m_Layer: 0
   m_Name: The Journey Begins
   m_TagString: Untagged
@@ -11166,6 +11233,107 @@ MonoBehaviour:
   - {fileID: 1346664369}
   - {fileID: 2007626522}
   - {fileID: 802970034}
+  voiceOvers:
+  - {fileID: 8300000, guid: 7e6308ae2ab066c40909218ef93f8ac4, type: 3}
+  - {fileID: 8300000, guid: 226e38d74e798614dae4d22fcb5a1744, type: 3}
+  - {fileID: 8300000, guid: 433acb7a4c0b151408fe8c66aa5cb2f9, type: 3}
+  - {fileID: 8300000, guid: bb7884c5879df4447b058e484d43ff96, type: 3}
+--- !u!82 &978040345
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978040342}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1008820246
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,7 +11628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: And surely that door wasn't locked beforehand?
+  m_text: And surely that door wasn't locked before?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -11684,7 +11852,7 @@ GameObject:
   - component: {fileID: 1147133212}
   - component: {fileID: 1147133211}
   m_Layer: 5
-  m_Name: Initial Time Traverse Text 1 (3)
+  m_Name: Initial Time Traverse Text  (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11828,7 +11996,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1019469822676191246, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_text
-      value: What... just... happened?
+      value: What just happened?
       objectReference: {fileID: 0}
     - target: {fileID: 1343344028076123638, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
@@ -11923,6 +12091,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 2052099513}
@@ -11934,6 +12106,22 @@ PrefabInstance:
       propertyPath: textList.Array.data[3]
       value: 
       objectReference: {fileID: 1145104807}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 996a2d00adddc8149b4c276024b253d1, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2f1c73185b5c0c4dab22bfc3799a63b, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52cd09d96597b3243901b55251a5ccae, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 05cfd87ba9bde244ebca365678285cf4, type: 3}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
       value: Surprise Text
@@ -12571,6 +12759,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 1021252981}
@@ -12586,6 +12778,26 @@ PrefabInstance:
       propertyPath: textList.Array.data[4]
       value: 
       objectReference: {fileID: 237743026}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 00ea7831a5eaec54cb2a12c884d50860, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 81d5f47955842b64a9ef628eaa8bf9ed, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: dbdc857a1b3fcee4bb4203094c9c2f82, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: ee9eaac53c56cb04094b3b5fa7d7784d, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f507d540a8abb41499c455982aa1534d, type: 3}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: tutorialImages.Array.size
       value: 1
@@ -12815,9 +13027,21 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 1847027042}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0105df343c6fb304394428dfd37bae2a, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 914f0c615ea79c44dabde54247ad16ac, type: 3}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
       value: Thorn Warning Text
@@ -13555,9 +13779,21 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 1016086842}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 95cac31a1fd02244a89ff6806c3aeff8, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c53e19d3512fbe428796abcbf0deac2, type: 3}
     - target: {fileID: 8664398691327330506, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: m_Name
       value: Capsule Text
@@ -22603,7 +22839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Am I imagining things, what's going on here?
+  m_text: "Am I imagining things? \r\nwhat's going on here?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
   m_sharedMaterial: {fileID: 5145127544691469902, guid: 15a3b192f9ea895459a6eefcf9bc82d3, type: 2}
@@ -22692,7 +22928,7 @@ GameObject:
   - component: {fileID: 1983819557}
   - component: {fileID: 1983819556}
   m_Layer: 5
-  m_Name: Initial Time Traverse Text 1 (5)
+  m_Name: Initial Time Traverse Text  (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29436,7 +29672,7 @@ GameObject:
   - component: {fileID: 2136714544}
   - component: {fileID: 2136714543}
   m_Layer: 5
-  m_Name: Initial Time Traverse Text 1 (1)
+  m_Name: Initial Time Traverse Text  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29803,6 +30039,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: textList.Array.data[1]
       value: 
       objectReference: {fileID: 583492362}
@@ -29810,6 +30050,18 @@ PrefabInstance:
       propertyPath: textList.Array.data[2]
       value: 
       objectReference: {fileID: 1360590458}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a40ac34b198fe240af666805bc8526b, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a6825dafb6fdd44fa5190b3f6e3dded, type: 3}
+    - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
+      propertyPath: voiceOvers.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c098627f8dfa7a4f9d8404ff0449763, type: 3}
     - target: {fileID: 8300200047662686505, guid: 4ab78bc2755889c4ab817141d21d8c25, type: 3}
       propertyPath: tutorialImages.Array.size
       value: 1
