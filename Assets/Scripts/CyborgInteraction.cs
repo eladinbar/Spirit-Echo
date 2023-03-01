@@ -65,7 +65,7 @@ public class CyborgInteraction : MonoBehaviour {
                 spaceImage.gameObject.SetActive(true);
                 continueText.gameObject.SetActive(true);
             }
-
+            
             if(currentIndex < voiceOvers.Count)
                 audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
