@@ -549,6 +549,8 @@ MonoBehaviour:
   continueText: {fileID: 3107583015225767678}
   tutorialText: {fileID: 37161787108218337}
   tutorialImages: []
+  voiceOvers: []
+  _gameObject: {fileID: 0}
 --- !u!1 &8229812852020846891
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +564,7 @@ GameObject:
   - component: {fileID: 2190501115495658093}
   - component: {fileID: 3148104507498858181}
   m_Layer: 5
-  m_Name: Key Space
+  m_Name: Key Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,7 +588,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 3.6}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3825113887148661664
 CanvasRenderer:
@@ -616,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 633439401, guid: 8ec18e78c9835f146b06992fb18e6f4a, type: 3}
+  m_Sprite: {fileID: -1505549369, guid: e59f98b68e9391e4492f38c88a29eadd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -636,7 +638,7 @@ Animator:
   m_GameObject: {fileID: 8229812852020846891}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 596a1c5b134bb5f48b41f097731123f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 76e14bc43ee6191418b1d022637ab22e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

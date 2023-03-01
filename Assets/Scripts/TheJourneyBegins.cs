@@ -63,7 +63,7 @@ public class TheJourneyBegins : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) && !finishedDisplaying) {
+        if (Input.GetKeyDown(KeyCode.Z) && !finishedDisplaying) {
             playerRigidbody.velocity = Vector2.zero;
             ShowNextText();
         }

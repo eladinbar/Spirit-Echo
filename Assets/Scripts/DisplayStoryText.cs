@@ -14,6 +14,7 @@ public class DisplayStoryText : MonoBehaviour {
     [SerializeField] TextMeshProUGUI tutorialText;
     [SerializeField] List<Image> tutorialImages;
     [SerializeField] List<AudioClip> voiceOvers;
+    [SerializeField] GameObject _gameObject;
     
     AudioSource audioSource;
 
@@ -24,6 +25,13 @@ public class DisplayStoryText : MonoBehaviour {
 
     // Specific check
     private int sceneIndex;
+    
+    // Revelation level
+    static bool keyFlag;
+    static bool doubleJumpFlag;
+    static bool farLedge;
+    
+    // Wall jump level
     Level3 _level3;
     
     private void Start() {
@@ -50,11 +58,37 @@ public class DisplayStoryText : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        // Specific check, can be expanded upon
+        // Specific check
+        // The Journey Begins
         if (sceneIndex == 1 && this.transform.position.x == -5.079998f) {
             float xPosition = PlayerMechanics.Instance.GetPosition().x;
             bool inPosition = isPresent && traversed && xPosition is >= -7f and <= 2.5f;
             if (other.CompareTag("Player") && inPosition && !triggered) {
+                triggered = true;
+                ShowNextText();
+            }
+        }
+        
+        // Revelation
+        // Ability Panel
+        else if (sceneIndex == 2 && this.transform.position.x is >= -35f and <= -30f) {
+            if (other.CompareTag("Player") && keyFlag) {
+                doubleJumpFlag = true;
+                PlayerMechanics.Instance.unlockedDoubleJump = true;
+                triggered = true;
+                ShowNextText();
+            }
+        }
+        
+        // Double Jump/Far Ledge
+        else if (sceneIndex == 2 && this.transform.position.x is >= -1f and <= 3f) {
+            print("Double Jump Flag " + doubleJumpFlag);
+            if (textList.Count == 2 && !doubleJumpFlag) {
+                farLedge = true;
+                triggered = true;
+                ShowNextText();
+            } else if(textList.Count == 1 && doubleJumpFlag) {
+                print("current index " + currentIndex);
                 triggered = true;
                 ShowNextText();
             }
@@ -72,15 +106,27 @@ public class DisplayStoryText : MonoBehaviour {
     }
 
     private void Update() {
-        if (triggered && Input.GetKeyDown(KeyCode.Space)) {
+        if (triggered && Input.GetKeyDown(KeyCode.Z)) {
             ShowNextText();
         }
     }
 
     private void ShowNextText() {
         // Specific check
-        // Omer's level
-        if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
+        // Revelation level
+        // Key
+        if (sceneIndex == 2 && this.transform.position.x is >= -45f and <= -40f && currentIndex >= textList.Count) {
+            keyFlag = true;
+        }
+        
+        // Ability Panel
+        else if (sceneIndex == 2 && this.transform.position.x is >= -35f and <= -30f && !farLedge && currentIndex == 5) {
+            textList[currentIndex - 1].gameObject.SetActive(false);
+            currentIndex = textList.Count;
+        }
+
+        // Wall jump level
+        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
             _level3.trigger();
         }
         
@@ -91,10 +137,12 @@ public class DisplayStoryText : MonoBehaviour {
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 110f and <= 130f && currentIndex >= textList.Count) {
             _level3.trigger();
         }
-        // Specific check
+        // End specific check
         
         if (currentIndex >= textList.Count) {
             textList[currentIndex - 1].gameObject.SetActive(false);
+            if(_gameObject)
+                Destroy(_gameObject);
             spaceImage.gameObject.SetActive(false);
             continueText.gameObject.SetActive(false);
             playerInput.ActivateInput();
@@ -116,7 +164,7 @@ public class DisplayStoryText : MonoBehaviour {
                 continueText.gameObject.SetActive(true);
             }
             
-            audioSource.PlayOneShot(voiceOvers[currentIndex]);
+            // audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
