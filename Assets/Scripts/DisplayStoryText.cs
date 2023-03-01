@@ -82,13 +82,11 @@ public class DisplayStoryText : MonoBehaviour {
         
         // Double Jump/Far Ledge
         else if (sceneIndex == 2 && this.transform.position.x is >= -1f and <= 3f) {
-            print("Double Jump Flag " + doubleJumpFlag);
             if (textList.Count == 2 && !doubleJumpFlag) {
                 farLedge = true;
                 triggered = true;
                 ShowNextText();
             } else if(textList.Count == 1 && doubleJumpFlag) {
-                print("current index " + currentIndex);
                 triggered = true;
                 ShowNextText();
             }
