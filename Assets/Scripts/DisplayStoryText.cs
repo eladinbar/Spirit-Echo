@@ -164,7 +164,8 @@ public class DisplayStoryText : MonoBehaviour {
                 continueText.gameObject.SetActive(true);
             }
             
-            // audioSource.PlayOneShot(voiceOvers[currentIndex]);
+            if(currentIndex < voiceOvers.Count)
+                audioSource.PlayOneShot(voiceOvers[currentIndex]);
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
