@@ -5,7 +5,7 @@ namespace DefaultNamespace
     public class ViverMechanics : EnemyMechanics
     {
         public bool canDie;
-        level3 level3Remote;
+        Level3 level3Remote;
         [SerializeField] private GameObject tilemapGrid;
 
 
@@ -13,7 +13,7 @@ namespace DefaultNamespace
         {
             canDie = false;
             currentPosition = this.transform.position;
-            level3Remote = tilemapGrid.GetComponent<level3>();
+            level3Remote = tilemapGrid.GetComponent<Level3>();
 
         }
         public override void TakeDamage(Vector2 kick, int damage = 1)
