@@ -160,7 +160,7 @@ public abstract class RoamingAttackingEnemyMechanics : EnemyMechanics
             waitTimeInPosition += Random.Range(MIN_WAIT_TIME*2, MAX_WAIT_TIME*2);
             enemyRigidbody.velocity = Vector2.zero;
         }
-        if (collider2d.CompareTag("Tilemap") || collider2d.CompareTag("Hazard")) {
+        if (collider2d.CompareTag("Tilemap")) {
             moveSpeed = -moveSpeed;
             FlipSprite();
             // Get new roaming position in direction of movement - remain idle for 'waitTimeInPosition/2' seconds
