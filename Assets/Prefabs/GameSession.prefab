@@ -358,5 +358,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01dc423caad7b994293b0e380a09963d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoadDelay: 1.5
+  levelLoadDelay: 5
   livesCount: {fileID: 102054709416703581}

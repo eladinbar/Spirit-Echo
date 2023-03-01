@@ -157,6 +157,9 @@ public class PlayerMechanics : MonoBehaviour {
             if (isDashing || knockbackTime > Mathf.Epsilon)
                 return;
             
+            if(unlockedWallClimb)
+                feetCollider.size = new Vector2(0.75f, 0.12f);
+            
             Run();
             Jump();
         }

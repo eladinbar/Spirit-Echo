@@ -6,7 +6,7 @@ public class GuardianMechanics : AttackingEnemyMechanics {
     
     private const float MIN_DISTANCE_TELEPORT = 2f;
     private const float MAX_DISTANCE_TELEPORT = 10f;
-    [SerializeField] float TOLERANCE = 1f;
+    // [SerializeField] float TOLERANCE = 1f;
     
     RaycastHit2D raycastHitMax;
     RaycastHit2D raycastHitMin;

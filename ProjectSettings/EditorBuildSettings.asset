@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/Levels/The Journey Begins.unity
     guid: 96bba748803822e47bc7a9476eff6961
   - enabled: 1
-    path: Assets/Levels/ANITAZZ LEVEL.unity
+    path: Assets/Levels/Revelation.unity
     guid: 95eace0faedc09548ad9744d10683625
   - enabled: 1
     path: Assets/Levels/Omer's level.unity
     guid: d8f848ece87624eb0b5f281e93ff7c44
   - enabled: 1
-    path: Assets/Levels/Level_Roy.unity
+    path: Assets/Levels/I'm Not Alone.unity
     guid: 2a47aa1bf01d2534baf3c00e8e87214b
   - enabled: 1
-    path: Assets/Levels/End_Screen.unity
+    path: Assets/Levels/End Screen.unity
     guid: c25d4a3a817c440ae807780d69ff2c84
   - enabled: 1
     path: Assets/Levels/Credits.unity

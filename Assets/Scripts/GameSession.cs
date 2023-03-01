@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour {
     private readonly string prefix = ":";
     
-    [SerializeField] float levelLoadDelay = 1.5f;
+    [SerializeField] float levelLoadDelay = 5f;
     
     [SerializeField] TextMeshProUGUI livesCount;
 
@@ -33,7 +33,7 @@ public class GameSession : MonoBehaviour {
     }
     
     private IEnumerator RestartLevel() {
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
         livesCount.text = prefix + PlayerMechanics.Instance.MaxHitPoints.ToString();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

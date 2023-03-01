@@ -21,11 +21,8 @@ public class Level3 : MonoBehaviour
     float time_traverse_instruction = 8f;
     private int order = 0;
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
+    
+    void Start() {
         playermechanicsRemote = player.GetComponent<PlayerMechanics>();
         playerBoxCollider= player.GetComponent<BoxCollider2D>();
         donny.SetActive(false);
@@ -48,10 +45,12 @@ public class Level3 : MonoBehaviour
                 break;
         }
     }
+    
     void ins1()
     {
         donny.SetActive(false);
-        playerBoxCollider.size = new Vector2((float)0.75, (float)0.12);
+        playerBoxCollider.size = new Vector2(0.75f, 0.12f);
+        PlayerMechanics.Instance.unlockedWallClimb = true;
 
     }
 
@@ -62,11 +61,13 @@ public class Level3 : MonoBehaviour
         presentTilemap.GetComponent<AudioSource>().volume = 0.4f;
         presentTilemap.GetComponent<AudioSource>().Play();
     }
+    
     void ins3()
     {
         viver.GetComponent<ViverMechanics>().canDie = true;
 
     }
+    
     void OnTraverseTime() {
         if (order >= 2)
         {
@@ -84,11 +85,8 @@ public class Level3 : MonoBehaviour
         
     }
 
-   
-
-    // Update is called once per frame
-    void Update()
-    {
+    
+    void Update() {
         time_traverse_instruction -= Time.deltaTime;
         if (!got_time_traverse_instruction && time_traverse_instruction <= Mathf.Epsilon)
         {
@@ -101,7 +99,7 @@ public class Level3 : MonoBehaviour
         if(order==2 & !init &  distance > 21)
         {
             init = true;
-            viver.transform.position=new Vector3((float)126,(float)85.45, (float)0);
+            viver.transform.position=new Vector3(126f,85.45f, 0f);
         }
     }
 }
