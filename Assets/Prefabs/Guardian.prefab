@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8405215482996598598}
   - component: {fileID: 8405215482996598599}
   - component: {fileID: 8405215482996598596}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: Guardian
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8405215483110647682}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: Laser Point
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}

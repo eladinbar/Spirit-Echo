@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 using DefaultNamespace;
 
-public class level3 : MonoBehaviour
+public class Level3 : MonoBehaviour
 {
     [SerializeField] GameObject donny;
     [SerializeField] GameObject viver;

@@ -146,7 +146,7 @@ public class PlayerMechanics : MonoBehaviour {
         presentTilemapHandler = presentTilemap.GetComponent<PresentHandler>();
         timeBody = GetComponent<TimeBody>();
         damagedKickReverse = new Vector2(damagedKick.x, -damagedKick.y);
-        enemyLayers = LayerMask.GetMask("Enemies");
+        enemyLayers = LayerMask.GetMask("Enemies", "Sentries");
         currentHitPoints = maxHitPoints;
     }
 
