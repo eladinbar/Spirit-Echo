@@ -71,14 +71,8 @@ public class PresentHandler : MonoBehaviour {
             audioSource.Play();
         } else {
             cinemachineConfiner.m_BoundingShape2D = this.boundingBox;
-            // Check if level isn't escape level
-            if (SceneManager.GetActiveScene().buildIndex != 4) {
-                virtualCamera.m_Lens.OrthographicSize = 3.5f;
-                cinemachineConfiner.m_ConfineScreenEdges = true;
-            } else {
-				virtualCamera.m_Lens.OrthographicSize = 6f;
-				cinemachineConfiner.m_ConfineScreenEdges = false;
-			}
+            virtualCamera.m_Lens.OrthographicSize = 3.5f;
+            cinemachineConfiner.m_ConfineScreenEdges = true;
         }
     }
     
