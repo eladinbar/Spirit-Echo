@@ -123,17 +123,26 @@ public class DisplayStoryText : MonoBehaviour {
         }
 
         // Wall jump level
+        // Donny
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= -10f and <= -2f && currentIndex == 6) {
             _level3.trigger();
         }
         
-        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex == 8) {
-            _level3.trigger();
-        }
-
+        // Viver 2nd meeting
         else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 110f and <= 130f && currentIndex >= textList.Count) {
             _level3.trigger();
         }
+        
+        // Viver 1st meeting
+        else if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex == 8) {
+            _level3.trigger();
+        }
+        
+        if (sceneIndex == 3 && PlayerMechanics.Instance.GetPosition().x is >= 50f and <= 65f && currentIndex >= textList.Count) {
+            _level3.trigger();
+        }
+
+        
         // End specific check
         
         if (currentIndex >= textList.Count) {
