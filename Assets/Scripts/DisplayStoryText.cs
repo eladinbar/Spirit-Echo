@@ -33,7 +33,7 @@ public class DisplayStoryText : MonoBehaviour {
     static bool farLedge;
     
     // Wall jump level
-    Level3 _level3;
+    [SerializeField] Level3 _level3;
     
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
