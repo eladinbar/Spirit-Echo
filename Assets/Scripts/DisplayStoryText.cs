@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
@@ -40,6 +41,11 @@ public class DisplayStoryText : MonoBehaviour {
         audioSource = this.GetComponent<AudioSource>();
         // Specific check
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LateStart());
+    }
+
+    private IEnumerator LateStart() {
+        yield return new WaitForSeconds(Mathf.Epsilon);
         _level3 = FindObjectOfType<Level3>();
     }
 
