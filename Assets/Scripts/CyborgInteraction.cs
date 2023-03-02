@@ -19,6 +19,7 @@ public class CyborgInteraction : MonoBehaviour {
     private int currentIndex = 0;
 
     private void Start() {
+		PlayerMechanics.Instance.unlockedGravityShift = true;
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
         audioSource = this.GetComponent<AudioSource>();
         

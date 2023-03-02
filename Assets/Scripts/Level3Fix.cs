@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Level3Fix : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Level3Fix : MonoBehaviour
         PlayerMechanics.Instance.unlockedDoubleJump = true;
         PlayerMechanics.Instance.unlockedDash = true;
         PlayerMechanics.Instance.unlockedAttack = true;
+        PlayerMechanics.Instance.GetComponent<PlayerInput>().ActivateInput();
     }
 
     // Update is called once per frame
