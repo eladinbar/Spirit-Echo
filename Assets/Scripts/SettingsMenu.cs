@@ -6,8 +6,12 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour {
+    const string MASTER_VOLUME_NAME = "masterVolume";
+    const string VOICE_OVER_VOLUME_NAME = "voiceVolume";
     [SerializeField] AudioMixer mainMixer;
     [SerializeField] AudioMixer voiceMixer;
+    [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider voiceVolumeSlider;
     private Toggle fullscreenToggle;
 
     public Toggle FullscreenToggle => fullscreenToggle;
@@ -25,14 +29,32 @@ public class SettingsMenu : MonoBehaviour {
         fullscreenToggle.isOn = window.maximized;
         initialToggle = false;
         #endif
+
+        SetVolume(PlayerPrefs.GetFloat(MASTER_VOLUME_NAME));
+        SetVoiceVolume(PlayerPrefs.GetFloat(VOICE_OVER_VOLUME_NAME));
+
+        volumeSlider.value = GetVolume();
+        voiceVolumeSlider.value = GetVoiceVolume();
+    }
+
+    public float GetVolume() {
+        mainMixer.GetFloat(MASTER_VOLUME_NAME, out float volume);
+        return volume;
+    }
+
+    public float GetVoiceVolume() {
+        voiceMixer.GetFloat(VOICE_OVER_VOLUME_NAME, out float volume);
+        return volume;
     }
 
     public void SetVolume(float volume) {
-        mainMixer.SetFloat("masterVolume", volume);
+        mainMixer.SetFloat(MASTER_VOLUME_NAME, volume);
+        PlayerPrefs.SetFloat(MASTER_VOLUME_NAME, volume);
     }
 
     public void SetVoiceVolume(float volume) {
-        voiceMixer.SetFloat("voiceVolume", volume);
+        voiceMixer.SetFloat(VOICE_OVER_VOLUME_NAME, volume);
+        PlayerPrefs.SetFloat(VOICE_OVER_VOLUME_NAME, volume);
     }
 
     public void ToggleFullscreen(bool toFullscreen) {
@@ -42,6 +64,5 @@ public class SettingsMenu : MonoBehaviour {
         #else
             Screen.fullScreen = toFullscreen;
         #endif
-        
     }
 }

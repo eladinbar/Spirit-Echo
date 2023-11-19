@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2525c4cc6507d7a458cf695e03bd6336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsPanel: {fileID: 1024882959}
 --- !u!1 &335243137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 326770115}
     m_Modifications:
+    - target: {fileID: 5138587570463311361, guid: 6dd3ccecf28822b49ae21ff6e50a28f0, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5138587570875000456, guid: 6dd3ccecf28822b49ae21ff6e50a28f0, type: 3}
       propertyPath: m_Name
       value: Settings Panel

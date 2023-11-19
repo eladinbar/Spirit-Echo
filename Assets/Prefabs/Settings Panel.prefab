@@ -605,6 +605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: 8a664eb75cd3c61458b80ee71d258de0, type: 2}
   voiceMixer: {fileID: 24100000, guid: 4966bdde7922e1049875149a032acc55, type: 2}
+  volumeSlider: {fileID: 5138587570463311361}
+  voiceVolumeSlider: {fileID: 6761686717067891205}
 --- !u!1 &5138587570999575863
 GameObject:
   m_ObjectHideFlags: 0
