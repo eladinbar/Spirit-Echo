@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour {
         //Initialize settings menu
         Pause();
         settingsPanel.SetActive(true);
+        
         Resume();
         settingsPanel.SetActive(false);
     }
