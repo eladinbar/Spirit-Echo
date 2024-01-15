@@ -1,7 +1,1898 @@
 fileFormatVersion: 2
 guid: c1392088b6631bd4da4ab3cd8182db5a
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: EyeBall Monster_Frame_0
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 407
+      width: 16
+      height: 15
+    spriteID: 1ccd9383c52459c44bf1f0416686dd6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 407}
+  - name: EyeBall Monster_Frame_1
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 430
+      width: 16
+      height: 15
+    spriteID: 0e18d67e6af422b44b24d0b3c92cf751
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 430}
+  - name: EyeBall Monster_Frame_2
+    originalName: 
+    pivot: {x: 2.3529413, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 412
+      width: 17
+      height: 16
+    spriteID: 0c75d2a33203f0c4db9d72c75a948c62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 412}
+  - name: EyeBall Monster_Frame_3
+    originalName: 
+    pivot: {x: 2.857143, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 476
+      width: 14
+      height: 17
+    spriteID: e0a75323cd3207642aee66bbc1d70ad4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 476}
+  - name: EyeBall Monster_Frame_4
+    originalName: 
+    pivot: {x: 3.0000002, y: -0.84210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 361
+      width: 14
+      height: 19
+    spriteID: ca208bd49d19621498238ca0a657ceb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 361}
+  - name: EyeBall Monster_Frame_5
+    originalName: 
+    pivot: {x: 2.75, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 337
+      width: 16
+      height: 18
+    spriteID: 533a86aafa0ad7a4fb2979d605814054
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 337}
+  - name: EyeBall Monster_Frame_6
+    originalName: 
+    pivot: {x: 2.4210527, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 289
+      width: 19
+      height: 16
+    spriteID: c21fe6d41e66f7349bde5abd1cbb9f81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 289}
+  - name: EyeBall Monster_Frame_7
+    originalName: 
+    pivot: {x: 2.6470587, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 338
+      width: 17
+      height: 15
+    spriteID: a6d57434f2a306a419d7410fc5fc4b44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 338}
+  - name: EyeBall Monster_Frame_8
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 453
+      width: 16
+      height: 15
+    spriteID: 59aee17a55b604d4c9e986305e336335
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 453}
+  - name: EyeBall Monster_Frame_9
+    originalName: 
+    pivot: {x: 2.5, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 266
+      width: 16
+      height: 16
+    spriteID: f35138bcad1116745a52f4163fe8468e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 266}
+  - name: EyeBall Monster_Frame_10
+    originalName: 
+    pivot: {x: 2.6000001, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 407
+      width: 15
+      height: 15
+    spriteID: 685010ca35442ef4f936141155953331
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 407}
+  - name: EyeBall Monster_Frame_11
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 476
+      width: 16
+      height: 15
+    spriteID: 368303f0d95100348b209bf7d2d13708
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 476}
+  - name: EyeBall Monster_Frame_12
+    originalName: 
+    pivot: {x: 2.5, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 237
+      width: 16
+      height: 14
+    spriteID: 6f76910080bab664493bd2693f035fe5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 237}
+  - name: EyeBall Monster_Frame_13
+    originalName: 
+    pivot: {x: 2.6000001, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 453
+      width: 15
+      height: 14
+    spriteID: 1a896a47e05501f43968d019e1d78a36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 453}
+  - name: EyeBall Monster_Frame_14
+    originalName: 
+    pivot: {x: 2.6000001, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 430
+      width: 15
+      height: 15
+    spriteID: 258c1653e9198c243aae5b4ecb423d1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 430}
+  - name: EyeBall Monster_Frame_15
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 76
+      width: 16
+      height: 15
+    spriteID: a61e0d9761c5dd741b198d65ca92831b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 76}
+  - name: EyeBall Monster_Frame_16
+    originalName: 
+    pivot: {x: 2.5, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 259
+      width: 16
+      height: 14
+    spriteID: 0abc8358198b2224d8af262e25a70f62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 259}
+  - name: EyeBall Monster_Frame_17
+    originalName: 
+    pivot: {x: 2.6000001, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 290
+      width: 15
+      height: 14
+    spriteID: f37212c0383c87d4298608cc85e60b6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 290}
+  - name: EyeBall Monster_Frame_18
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 99
+      width: 16
+      height: 15
+    spriteID: bec3566d28d7e554c9f4f137f79051fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 99}
+  - name: EyeBall Monster_Frame_19
+    originalName: 
+    pivot: {x: 2.3529413, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 436
+      width: 17
+      height: 16
+    spriteID: 0b3e4b6b6cec1d84daaabb760ac6aadd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 436}
+  - name: EyeBall Monster_Frame_20
+    originalName: 
+    pivot: {x: 2.857143, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 415
+      width: 14
+      height: 17
+    spriteID: 779323830c3a12f4ba304461a9d41dc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 415}
+  - name: EyeBall Monster_Frame_21
+    originalName: 
+    pivot: {x: 3.0000002, y: -0.84210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 388
+      width: 14
+      height: 19
+    spriteID: 83db007d459e6fc40bebb14a369ff7da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 388}
+  - name: EyeBall Monster_Frame_22
+    originalName: 
+    pivot: {x: 2.75, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 363
+      width: 16
+      height: 18
+    spriteID: a11fe34ec3fbe2c4a988957f68afcc0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 363}
+  - name: EyeBall Monster_Frame_23
+    originalName: 
+    pivot: {x: 2.4210527, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 313
+      width: 19
+      height: 16
+    spriteID: 2d79ee8c7dadc654abf95d1a37820769
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 313}
+  - name: EyeBall Monster_Frame_24
+    originalName: 
+    pivot: {x: 2.6470587, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 361
+      width: 17
+      height: 15
+    spriteID: 6e0c48499a96dcc42a8c65fc083b5caa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 361}
+  - name: EyeBall Monster_Frame_25
+    originalName: 
+    pivot: {x: 2.8666668, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 314
+      width: 15
+      height: 14
+    spriteID: 062ee47eeeabcea4dacfaaf060e14478
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 314}
+  - name: EyeBall Monster_Frame_26
+    originalName: 
+    pivot: {x: 2.8666668, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 281
+      width: 15
+      height: 14
+    spriteID: 85ad7531aed07d84cb464e4b67bae15a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 281}
+  - name: EyeBall Monster_Frame_27
+    originalName: 
+    pivot: {x: 0.4019608, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 234
+      width: 102
+      height: 24
+    spriteID: 2abed374f2e5ddc4180420c4a0b91981
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 234}
+  - name: EyeBall Monster_Frame_28
+    originalName: 
+    pivot: {x: 0.44339624, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 198
+      width: 106
+      height: 28
+    spriteID: 9817048c3dfc7b649b3b4df9ac49a07d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 198}
+  - name: EyeBall Monster_Frame_29
+    originalName: 
+    pivot: {x: 0.4732143, y: -0.45454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 48
+      width: 112
+      height: 33
+    spriteID: 1d96d4b42f66116469ddf93d401572e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 48}
+  - name: EyeBall Monster_Frame_30
+    originalName: 
+    pivot: {x: 0.4778761, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 113
+      height: 36
+    spriteID: 4f4791e9a1307444eb3fe5a92599c425
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: EyeBall Monster_Frame_31
+    originalName: 
+    pivot: {x: 0.48245615, y: -0.53571427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 4
+      width: 114
+      height: 28
+    spriteID: ecc4b3ad5cc08a14aa4f68dff7a898e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 4}
+  - name: EyeBall Monster_Frame_32
+    originalName: 
+    pivot: {x: 0.48245615, y: -0.53571427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 40
+      width: 114
+      height: 28
+    spriteID: db60af260ee1cb44bb7e138780a015d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 40}
+  - name: EyeBall Monster_Frame_33
+    originalName: 
+    pivot: {x: 0.4587156, y: -0.4827586}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 89
+      width: 109
+      height: 29
+    spriteID: e33f3c4ee85376943ab4a510082d6c17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 89}
+  - name: EyeBall Monster_Frame_34
+    originalName: 
+    pivot: {x: 0.4587156, y: -0.53571427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 126
+      width: 109
+      height: 28
+    spriteID: daac7af656f56dc4d844777ee8a2aa30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 126}
+  - name: EyeBall Monster_Frame_35
+    originalName: 
+    pivot: {x: 0.4587156, y: -0.53571427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 109
+      height: 28
+    spriteID: 647496e846968024d9ed4c79d1177c8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  - name: EyeBall Monster_Frame_36
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 122
+      width: 16
+      height: 15
+    spriteID: 0f6613ec849fc8443a17738b47bb399c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 122}
+  - name: EyeBall Monster_Frame_37
+    originalName: 
+    pivot: {x: 2.5, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 290
+      width: 16
+      height: 16
+    spriteID: ab5026b071f737e45b43b9b67da012e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 290}
+  - name: EyeBall Monster_Frame_38
+    originalName: 
+    pivot: {x: 3.1538463, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 466
+      width: 13
+      height: 16
+    spriteID: be6d579f8ccea5642bc4582c6398a23d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 466}
+  - name: EyeBall Monster_Frame_39
+    originalName: 
+    pivot: {x: 2.3333335, y: -0.88235295}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 490
+      width: 15
+      height: 17
+    spriteID: 9f014410fbd4b2b4c8153ae507c05f60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 490}
+  - name: EyeBall Monster_Frame_40
+    originalName: 
+    pivot: {x: 1.1875, y: -0.76470596}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 460
+      width: 16
+      height: 17
+    spriteID: 28903e32ce45317429a7729b0bffb9d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 460}
+  - name: EyeBall Monster_Frame_41
+    originalName: 
+    pivot: {x: 0.4375, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 145
+      width: 16
+      height: 15
+    spriteID: e537a34fe399f3d44968c35645408f4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 145}
+  - name: EyeBall Monster_Frame_42
+    originalName: 
+    pivot: {x: -0.75, y: -0.9375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 314
+      width: 16
+      height: 16
+    spriteID: 44378f0097c7a4f4d850f9ab0dfed79a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 314}
+  - name: EyeBall Monster_Frame_43
+    originalName: 
+    pivot: {x: -2.1428573, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 266
+      width: 14
+      height: 16
+    spriteID: d58e8845c6f62124ebc666d8b81035f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 266}
+  - name: EyeBall Monster_Frame_44
+    originalName: 
+    pivot: {x: -1.7647059, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 384
+      width: 17
+      height: 15
+    spriteID: e01b06cc72d90034cbbc5cb1e40f1e96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 384}
+  - name: EyeBall Monster_Frame_45
+    originalName: 
+    pivot: {x: -1.5789474, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 389
+      width: 19
+      height: 15
+    spriteID: 94adeccf5a833664eac5612de33c48fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 389}
+  - name: EyeBall Monster_Frame_46
+    originalName: 
+    pivot: {x: -1.4285715, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 266
+      width: 21
+      height: 15
+    spriteID: 3c3ab0f458db4d247aa9596a2caf9614
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 266}
+  - name: EyeBall Monster_Frame_47
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 168
+      width: 16
+      height: 15
+    spriteID: 87dd23478ffb56f479e011f14bbbd2e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 168}
+  - name: EyeBall Monster_Frame_48
+    originalName: 
+    pivot: {x: 2.5, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
+      y: 485
+      width: 16
+      height: 17
+    spriteID: deeb83e70b7e47f4f8aa3d47a6ba9c86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 485}
+  - name: EyeBall Monster_Frame_49
+    originalName: 
+    pivot: {x: 3.0769231, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 440
+      width: 13
+      height: 18
+    spriteID: 40db24a8ccacbc44c81b2878547246c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 440}
+  - name: EyeBall Monster_Frame_50
+    originalName: 
+    pivot: {x: 3.3333335, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 338
+      width: 12
+      height: 15
+    spriteID: 66f67fae379baec49a77f4de51b40072
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 338}
+  - name: EyeBall Monster_Frame_51
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 191
+      width: 16
+      height: 15
+    spriteID: 9698524472fbc49428cef164a35b0ec6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 191}
+  - name: EyeBall Monster_Frame_52
+    originalName: 
+    pivot: {x: 2.5, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 125
+      y: 214
+      width: 16
+      height: 15
+    spriteID: 9f634175f47c60140926f4deee75bca1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 125, y: 214}
+  - name: EyeBall Monster_Frame_53
+    originalName: 
+    pivot: {x: 3.357143, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 266
+      width: 14
+      height: 23
+    spriteID: 13823210d90c6ff4db20fd2bf93cfde5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 266}
+  - name: EyeBall Monster_Frame_54
+    originalName: 
+    pivot: {x: 3.7857144, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 298
+      width: 14
+      height: 24
+    spriteID: 14c49995e9c92eb48878ca5574726bb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 298}
+  - name: EyeBall Monster_Frame_55
+    originalName: 
+    pivot: {x: 3.857143, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 330
+      width: 14
+      height: 24
+    spriteID: 9dbcff905d4304c4eb1646da1ad0894b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 330}
+  - name: EyeBall Monster_Frame_56
+    originalName: 
+    pivot: {x: 3.9285717, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 362
+      width: 14
+      height: 24
+    spriteID: a436e564301087345b679be5ada5d29f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 362}
+  - name: EyeBall Monster_Frame_57
+    originalName: 
+    pivot: {x: 4, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 394
+      width: 14
+      height: 24
+    spriteID: 697c30cc77ad3b145901121a0b95849a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 394}
+  - name: EyeBall Monster_Frame_58
+    originalName: 
+    pivot: {x: 4, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 426
+      width: 14
+      height: 24
+    spriteID: 0877ce67e82b8824bad252d8a6078d45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 426}
+  - name: EyeBall Monster_Frame_59
+    originalName: 
+    pivot: {x: 3.6666667, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 266
+      width: 15
+      height: 24
+    spriteID: 24604cc7718ec2748aedec9cab639e40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 266}
+  - name: EyeBall Monster_Frame_60
+    originalName: 
+    pivot: {x: 3.9285717, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 458
+      width: 14
+      height: 24
+    spriteID: 0754bc7b07d5d2545abe2ed676a9ce39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 458}
+  - name: EyeBall Monster_Frame_61
+    originalName: 
+    pivot: {x: 4.230769, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 297
+      width: 13
+      height: 24
+    spriteID: 6a472380a2d108f498b00399d03d6d24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 297}
+  - name: EyeBall Monster_Frame_62
+    originalName: 
+    pivot: {x: 4.230769, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 329
+      width: 13
+      height: 24
+    spriteID: d282eee1436a6c74ca673011745bea2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 329}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 887877172
+    name: EyeBall Monster
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: EyeBall Monster_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 1ccd9383c52459c44bf1f0416686dd6a
+    - name: EyeBall Monster_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 0e18d67e6af422b44b24d0b3c92cf751
+    - name: EyeBall Monster_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 24
+        y: 16
+        width: 17
+        height: 16
+      spriteId: 0c75d2a33203f0c4db9d72c75a948c62
+    - name: EyeBall Monster_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 16
+        width: 14
+        height: 17
+      spriteId: e0a75323cd3207642aee66bbc1d70ad4
+    - name: EyeBall Monster_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 22
+        y: 16
+        width: 14
+        height: 19
+      spriteId: ca208bd49d19621498238ca0a657ceb0
+    - name: EyeBall Monster_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 20
+        y: 16
+        width: 16
+        height: 18
+      spriteId: 533a86aafa0ad7a4fb2979d605814054
+    - name: EyeBall Monster_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 18
+        y: 16
+        width: 19
+        height: 16
+      spriteId: c21fe6d41e66f7349bde5abd1cbb9f81
+    - name: EyeBall Monster_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 19
+        y: 16
+        width: 17
+        height: 15
+      spriteId: a6d57434f2a306a419d7410fc5fc4b44
+    - name: EyeBall Monster_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 59aee17a55b604d4c9e986305e336335
+    - name: EyeBall Monster_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 16
+      spriteId: f35138bcad1116745a52f4163fe8468e
+    - name: EyeBall Monster_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 25
+        y: 16
+        width: 15
+        height: 15
+      spriteId: 685010ca35442ef4f936141155953331
+    - name: EyeBall Monster_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 368303f0d95100348b209bf7d2d13708
+    - name: EyeBall Monster_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 14
+      spriteId: 6f76910080bab664493bd2693f035fe5
+    - name: EyeBall Monster_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 25
+        y: 16
+        width: 15
+        height: 14
+      spriteId: 1a896a47e05501f43968d019e1d78a36
+    - name: EyeBall Monster_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 25
+        y: 16
+        width: 15
+        height: 15
+      spriteId: 258c1653e9198c243aae5b4ecb423d1b
+    - name: EyeBall Monster_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: a61e0d9761c5dd741b198d65ca92831b
+    - name: EyeBall Monster_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 14
+      spriteId: 0abc8358198b2224d8af262e25a70f62
+    - name: EyeBall Monster_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 25
+        y: 16
+        width: 15
+        height: 14
+      spriteId: f37212c0383c87d4298608cc85e60b6b
+    - name: EyeBall Monster_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: bec3566d28d7e554c9f4f137f79051fb
+    - name: EyeBall Monster_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 24
+        y: 16
+        width: 17
+        height: 16
+      spriteId: 0b3e4b6b6cec1d84daaabb760ac6aadd
+    - name: EyeBall Monster_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 24
+        y: 16
+        width: 14
+        height: 17
+      spriteId: 779323830c3a12f4ba304461a9d41dc8
+    - name: EyeBall Monster_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 22
+        y: 16
+        width: 14
+        height: 19
+      spriteId: 83db007d459e6fc40bebb14a369ff7da
+    - name: EyeBall Monster_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 20
+        y: 16
+        width: 16
+        height: 18
+      spriteId: a11fe34ec3fbe2c4a988957f68afcc0d
+    - name: EyeBall Monster_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 18
+        y: 16
+        width: 19
+        height: 16
+      spriteId: 2d79ee8c7dadc654abf95d1a37820769
+    - name: EyeBall Monster_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 19
+        y: 16
+        width: 17
+        height: 15
+      spriteId: 6e0c48499a96dcc42a8c65fc083b5caa
+    - name: EyeBall Monster_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 21
+        y: 16
+        width: 15
+        height: 14
+      spriteId: 062ee47eeeabcea4dacfaaf060e14478
+    - name: EyeBall Monster_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 21
+        y: 16
+        width: 15
+        height: 14
+      spriteId: 85ad7531aed07d84cb464e4b67bae15a
+    - name: EyeBall Monster_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 23
+        y: 16
+        width: 102
+        height: 24
+      spriteId: 2abed374f2e5ddc4180420c4a0b91981
+    - name: EyeBall Monster_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 17
+        y: 16
+        width: 106
+        height: 28
+      spriteId: 9817048c3dfc7b649b3b4df9ac49a07d
+    - name: EyeBall Monster_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 11
+        y: 15
+        width: 112
+        height: 33
+      spriteId: 1d96d4b42f66116469ddf93d401572e7
+    - name: EyeBall Monster_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 10
+        y: 12
+        width: 113
+        height: 36
+      spriteId: 4f4791e9a1307444eb3fe5a92599c425
+    - name: EyeBall Monster_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 9
+        y: 15
+        width: 114
+        height: 28
+      spriteId: ecc4b3ad5cc08a14aa4f68dff7a898e8
+    - name: EyeBall Monster_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 9
+        y: 15
+        width: 114
+        height: 28
+      spriteId: db60af260ee1cb44bb7e138780a015d8
+    - name: EyeBall Monster_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 14
+        y: 14
+        width: 109
+        height: 29
+      spriteId: e33f3c4ee85376943ab4a510082d6c17
+    - name: EyeBall Monster_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 14
+        y: 15
+        width: 109
+        height: 28
+      spriteId: daac7af656f56dc4d844777ee8a2aa30
+    - name: EyeBall Monster_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 14
+        y: 15
+        width: 109
+        height: 28
+      spriteId: 647496e846968024d9ed4c79d1177c8c
+    - name: EyeBall Monster_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 0f6613ec849fc8443a17738b47bb399c
+    - name: EyeBall Monster_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 16
+      spriteId: ab5026b071f737e45b43b9b67da012e3
+    - name: EyeBall Monster_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 23
+        y: 16
+        width: 13
+        height: 16
+      spriteId: be6d579f8ccea5642bc4582c6398a23d
+    - name: EyeBall Monster_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 29
+        y: 15
+        width: 15
+        height: 17
+      spriteId: 9f014410fbd4b2b4c8153ae507c05f60
+    - name: EyeBall Monster_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 45
+        y: 13
+        width: 16
+        height: 17
+      spriteId: 28903e32ce45317429a7729b0bffb9d1
+    - name: EyeBall Monster_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 57
+        y: 15
+        width: 16
+        height: 15
+      spriteId: e537a34fe399f3d44968c35645408f4a
+    - name: EyeBall Monster_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 76
+        y: 15
+        width: 16
+        height: 16
+      spriteId: 44378f0097c7a4f4d850f9ab0dfed79a
+    - name: EyeBall Monster_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 94
+        y: 16
+        width: 14
+        height: 16
+      spriteId: d58e8845c6f62124ebc666d8b81035f5
+    - name: EyeBall Monster_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 94
+        y: 16
+        width: 17
+        height: 15
+      spriteId: e01b06cc72d90034cbbc5cb1e40f1e96
+    - name: EyeBall Monster_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 94
+        y: 16
+        width: 19
+        height: 15
+      spriteId: 94adeccf5a833664eac5612de33c48fd
+    - name: EyeBall Monster_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 94
+        y: 16
+        width: 21
+        height: 15
+      spriteId: 3c3ab0f458db4d247aa9596a2caf9614
+    - name: EyeBall Monster_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 87dd23478ffb56f479e011f14bbbd2e2
+    - name: EyeBall Monster_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 17
+      spriteId: deeb83e70b7e47f4f8aa3d47a6ba9c86
+    - name: EyeBall Monster_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 24
+        y: 16
+        width: 13
+        height: 18
+      spriteId: 40db24a8ccacbc44c81b2878547246c4
+    - name: EyeBall Monster_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 24
+        y: 16
+        width: 12
+        height: 15
+      spriteId: 66f67fae379baec49a77f4de51b40072
+    - name: EyeBall Monster_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 9698524472fbc49428cef164a35b0ec6
+    - name: EyeBall Monster_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 24
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 9f634175f47c60140926f4deee75bca1
+    - name: EyeBall Monster_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 23
+      spriteId: 13823210d90c6ff4db20fd2bf93cfde5
+    - name: EyeBall Monster_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 11
+        y: 15
+        width: 14
+        height: 24
+      spriteId: 14c49995e9c92eb48878ca5574726bb0
+    - name: EyeBall Monster_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 10
+        y: 15
+        width: 14
+        height: 24
+      spriteId: 9dbcff905d4304c4eb1646da1ad0894b
+    - name: EyeBall Monster_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 9
+        y: 15
+        width: 14
+        height: 24
+      spriteId: a436e564301087345b679be5ada5d29f
+    - name: EyeBall Monster_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 8
+        y: 15
+        width: 14
+        height: 24
+      spriteId: 697c30cc77ad3b145901121a0b95849a
+    - name: EyeBall Monster_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 8
+        y: 15
+        width: 14
+        height: 24
+      spriteId: 0877ce67e82b8824bad252d8a6078d45
+    - name: EyeBall Monster_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 9
+        y: 15
+        width: 15
+        height: 24
+      spriteId: 24604cc7718ec2748aedec9cab639e40
+    - name: EyeBall Monster_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 9
+        y: 15
+        width: 14
+        height: 24
+      spriteId: 0754bc7b07d5d2545abe2ed676a9ce39
+    - name: EyeBall Monster_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 9
+        y: 15
+        width: 13
+        height: 24
+      spriteId: 6a472380a2d108f498b00399d03d6d24
+    - name: EyeBall Monster_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 9
+        y: 15
+        width: 13
+        height: 24
+      spriteId: d282eee1436a6c74ca673011745bea2b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 48}
