@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ee8bdb31f265f164f8568f488bf0301c, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 5109a52f200a56a459603fbd8d3356f9, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -365,6 +365,8 @@ MonoBehaviour:
   errorSFX: {fileID: 8300000, guid: dd46fe98897f62f40ac979adab108546, type: 3}
   rewindSFX: {fileID: 8300000, guid: c1b603ec2eb9060488632a1ad7f7d741, type: 3}
   deathVoice: {fileID: 8300000, guid: 7ba8fd53a61df6b4a810dcfe47a20d03, type: 3}
+  mixerGroup: {fileID: 0}
+  audioManager: {fileID: 0}
   presentTilemap: {fileID: 0}
   pastTilemap: {fileID: 0}
   moveEnabled: 1
