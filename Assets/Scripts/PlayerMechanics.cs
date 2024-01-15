@@ -84,6 +84,7 @@ public class PlayerMechanics : MonoBehaviour {
     bool isAlive = true;
     
     //// Move
+    public UnityEvent<InputValue> onMove;
     public bool moveEnabled = true;
     
     //// Jump
@@ -189,6 +190,7 @@ public class PlayerMechanics : MonoBehaviour {
     }
 
     void OnMove(InputValue value) {
+        onMove?.Invoke(value);
         if (isAlive && moveEnabled) {
             moveInput = value.Get<Vector2>();
         }
