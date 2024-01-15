@@ -38,7 +38,9 @@ public class PauseMenu : MonoBehaviour {
 
     public void Resume() {
         pauseMenuUI.SetActive(false);
+        #if !UNITY_ANDROID
         Cursor.visible = false;
+        #endif
         Time.timeScale = 1f;
         playerInput.ActivateInput();
         gameIsPaused = false;
@@ -47,7 +49,9 @@ public class PauseMenu : MonoBehaviour {
     void Pause() {
         settingsPanel.SetActive(false);
         pauseMenuUI.SetActive(true);
+        #if !UNITY_ANDROID
         Cursor.visible = true;
+        #endif
         Time.timeScale = 0f;
         playerInput.DeactivateInput();
         gameIsPaused = true;

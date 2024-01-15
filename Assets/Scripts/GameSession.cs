@@ -12,7 +12,9 @@ public class GameSession : MonoBehaviour {
 
     
     void Awake() {
+        #if !UNITY_ANDROID
         Cursor.visible = false;
+        #endif
         int gameSessionCount = FindObjectsOfType<GameSession>().Length;
         if(gameSessionCount > 1)
             Destroy(this.gameObject);
