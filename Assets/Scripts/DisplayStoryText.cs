@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +7,8 @@ using UnityEngine.UI;
 
 public class DisplayStoryText : MonoBehaviour {
     private PlayerInput playerInput;
+    private Vector2 moveInput;
+    private bool isPressed;
 
     [SerializeField] List<TextMeshProUGUI> textList;
     [SerializeField] Image spaceImage;
@@ -101,9 +102,15 @@ public class DisplayStoryText : MonoBehaviour {
         traversed = true;
         isPresent = !isPresent;
     }
+    
+    private void OnNavigate(InputValue value) {
+        moveInput = value.Get<Vector2>();
+        isPressed = true;
+    }
 
     private void Update() {
-        if (triggered && Input.GetKeyDown(KeyCode.Z)) {
+        if (triggered && (Input.GetKeyDown(KeyCode.Z) || (isPressed && moveInput is { y: > 0 }))) {
+            isPressed = false;
             ShowNextText();
         }
     }

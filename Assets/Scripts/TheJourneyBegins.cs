@@ -22,7 +22,9 @@ public class TheJourneyBegins : MonoBehaviour {
     private int currentInput = 0;
     int keyPressCount = 0;
     [SerializeField] int keyPressesRequired = 2;
-    
+    private Vector2 moveInput;
+    private bool isPressed;
+
     [SerializeField] List<TextMeshProUGUI> textList;
     [SerializeField] Image spaceImage;
     [SerializeField] TextMeshProUGUI continueText;
@@ -63,7 +65,8 @@ public class TheJourneyBegins : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Z) && !finishedDisplaying) {
+        if ((Input.GetKeyDown(KeyCode.Z) || (isPressed && moveInput is { y: > 0 })) && !finishedDisplaying) {
+            isPressed = false;
             playerRigidbody.velocity = Vector2.zero;
             ShowNextText();
         }
@@ -76,14 +79,14 @@ public class TheJourneyBegins : MonoBehaviour {
             int animatorState = keyPressCount == 0 ? Punching : Kicking;
 
             // Check for alternating left/right key presses
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || moveInput is { x: < 0 }) {
                 // Handle left arrow key press
                 currentInput = -1;
                 PlayerMechanics.Instance.transform.localScale = new Vector3(-1, 1 ,1);
                 playerAnimator.SetTrigger(animatorState);
             }
 
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || moveInput is { x: > 0 }) {
                 // Handle right arrow key press
                 currentInput = 1;
                 PlayerMechanics.Instance.transform.localScale = Vector3.one;
@@ -131,5 +134,10 @@ public class TheJourneyBegins : MonoBehaviour {
             textList[currentIndex].gameObject.SetActive(true);
             currentIndex++;
         }
+    }
+
+    private void OnNavigate(InputValue value) {
+        moveInput = value.Get<Vector2>();
+        isPressed = true;
     }
 }
