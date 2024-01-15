@@ -6,6 +6,7 @@ public class TimeTraversePortal : MonoBehaviour {
     private bool canUse;
     
     private PlayerInput playerInput;
+    private Vector2 moveInput;
 
     private void Awake() {
         //TimeTraversePortal is expected to have 1 child only
@@ -15,10 +16,11 @@ public class TimeTraversePortal : MonoBehaviour {
 
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
+        PlayerMechanics.Instance.onMove.AddListener(OnMove);
     }
     
     private void Update() {
-        if (canUse && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
+        if (canUse && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || moveInput is { y: > 0 }))
             TraverseTime();
     }
 
@@ -37,6 +39,10 @@ public class TimeTraversePortal : MonoBehaviour {
             instructionCanvas.SetActive(false);
             canUse = false;
         }
+    }
+    
+    private void OnMove(InputValue value) {
+        moveInput = value.Get<Vector2>();
     }
 
     void TraverseTime() {

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour {
     private PlayerInput playerInput;
+    private Vector2 moveInput;
     private GameObject instructionCanvas;
     private bool canExit;
     
@@ -18,10 +19,11 @@ public class LevelExit : MonoBehaviour {
 
     private void Start() {
         playerInput = PlayerMechanics.Instance.GetComponent<PlayerInput>();
+        PlayerMechanics.Instance.onMove.AddListener(OnMove);
     }
 
     private void Update() {
-        if (canExit && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
+        if (canExit && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || moveInput is { y: > 0 }))
             StartCoroutine(LoadNextLevel());
     }
     
@@ -48,4 +50,7 @@ public class LevelExit : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
+    private void OnMove(InputValue value) {
+        moveInput = value.Get<Vector2>();
+    }
 }
