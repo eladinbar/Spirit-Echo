@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Levels/Main Menu.unity
     guid: 88b7443fd6f148145a512a9043417280
   - enabled: 1
-    path: Assets/Levels/1- The Journey Begins.unity
+    path: Assets/Levels/1 - The Journey Begins.unity
     guid: 96bba748803822e47bc7a9476eff6961
   - enabled: 1
-    path: Assets/Levels/2- Revelation.unity
+    path: Assets/Levels/2 - Revelation.unity
     guid: 95eace0faedc09548ad9744d10683625
   - enabled: 1
     path: Assets/Levels/3 - Omer's level.unity
@@ -23,7 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/End Screen.unity
     guid: c25d4a3a817c440ae807780d69ff2c84
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels/Credits.unity
     guid: dc7003976eaa54db7b07e1666bf4e9f1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 2d2284d4eb0c74c45837af36a2cab57c, type: 2}
